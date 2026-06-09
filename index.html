@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual novel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="src/logo/logoBranca.png" alt="Logo">
+        <div class="infos-header">
+            <ul>
+                <li><a href="">LUNETAS</a></li>
+                <li><a href="">Sobre nós</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!--- Seria melhor uma section?-->
+    <div id="jogo">
+        <div id="cenario"></div>
+
+        <div id="caixa-de-texto">
+            <div id="falante"></div>
+            <div id="dialogo"></div>
+        </div>
+
+        <div id="overlay">
+            <img src="src/logo/logoPreta.png" alt="Logo do jogo">
+            <form>
+                <label id="overlay_nome" for="nome">Digite o seu nome:</label>
+                <input type="text" id="nome">
+
+                <button id="comecar-btn" type="submit">JOGAR</button>
+            </form>
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
