@@ -72,22 +72,26 @@ caixaDeTextoElemento.addEventListener('click', function () {
     }
 });
 
-function finalizarJogo() {   
+function finalizarJogo() {
     cenaAtual = 0;
     cenarioElemento.style.backgroundImage = 'none';
     caixaDeTextoElemento.style.display = 'none';
     overlayElemento.style.display = 'flex';
     overlayElemento.innerHTML = `
-         <h3>Fim da demonstração</h3>
+        <img src="src/images/logo/logoPreta.png" alt="">
+        <p id="final-message">Parabéns! Você completou o jogo!<p>
+        <div class="jogar-novamente">
+         <p id="jogar-novamente-msg">Deseja jogar novamente?</p>
          <button id="reiniciar-btn">Jogar novamente</button>
+         </div>
      `;
 
     const reiniciarBotaoElemento = document.getElementById('reiniciar-btn');
 
     reiniciarBotaoElemento.addEventListener("click", function () {
-     
+
         overlayElemento.innerHTML = `
-          <img src="src/logo/svg-2.svg" alt="">
+          <img src="src/images/logo/logoPreta.png" alt="">
             <form>
                 <label id="overlay_nome" for="nome">Digite o seu nome:</label>
                 <input type="text" id="nome">
@@ -99,7 +103,7 @@ function finalizarJogo() {
         recomecarBotaoElemento.addEventListener('click', function (event) {
 
             event.preventDefault();
-            overlayElemento.style.display = 'none'; 
+            overlayElemento.style.display = 'none';
             caixaDeTextoElemento.style.display = 'flex';
             mostrarCena(cenaAtual);
         });

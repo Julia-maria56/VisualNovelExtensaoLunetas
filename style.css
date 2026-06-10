@@ -10,7 +10,9 @@
 
 body {
     width: 100vw;
-    height: 100vh;
+    max-width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
     background-color: #837bb7;
     display: flex;
     flex-direction: column;
@@ -22,7 +24,7 @@ header {
     padding: 0 100px 0 100px;
     width: 100%;
     background-color: #342d59;
-    height: 10%;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,23 +32,44 @@ header {
 }
 
 header img {
-    width: 8%;
-    height: 67%;
+    width: 14%;
+    height: 70%;
 }
+
+
 
 .infos-header ul {
     list-style: none;
     display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .infos-header ul li {
-    padding-right: 30px;
+    padding-right: 60px;
 }
 
 .infos-header ul li a {
     cursor: pointer;
     color: white;
     text-decoration: none;
+    font-weight:600;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    font-size:20px;
+    white-space: nowrap;
+}
+
+.infos-header ul li a:hover{
+    transform: scale(1.07);
+}
+
+main {
+    height: calc(100vh - 80px); /* altura da tela menos o header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -54,8 +77,8 @@ header img {
     position: relative;
     background: #fef5e6;
     width: 70%;
-    height: 75%;
-    margin: auto;
+    max-width: 1200px;
+    aspect-ratio: 16/9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,8 +136,10 @@ header img {
     width: 40%;
     height: 40%;
     position: relative;
-    top: -10px;
+    top: -20px;
 }
+
+
 
 #overlay form {
     display: flex;
@@ -140,12 +165,23 @@ header img {
     font-size: 20px;
     font-family: "Sora";
     font-weight: 500;
+    transition: box-shadow 0.25s ease;
 }
 
+#overlay form input{
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
 
-#overlay form button {
+#overlay form input:hover,
+#overlay form input:focus{
+    transform: translateY(-2px);
+    box-shadow:
+        0 8px 24px rgba(52,45,89,0.25),
+        0 0 0 3px rgba(131,123,183,0.25);
+}
+
+#overlay form button, #reiniciar-btn {
     cursor: pointer;
-    background-color: red;
     margin-top: 50px;
     background-color: #837bb7;
     border: none;
@@ -155,11 +191,75 @@ header img {
     color: white;
     padding: 20px 30px;
     border-radius: 60px;
-    transition: width 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
     
 }
 
-#comecar-btn:hover{
-    width:45%;
+#comecar-btn:hover, #reiniciar-btn:hover{
+    transform: scale(1.03);
+    background-color: #6a62a0;
   
+}
+
+#final-message{
+    font-size: 29px;
+    font-weight: 600;
+}
+
+.jogar-novamente{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+#jogar-novamente-msg{
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+
+footer {
+    width: 100%;
+    padding: 100px 30px;
+    background-color: #FEF5E6;
+    color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.infos-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    gap:20px;
+    padding: 20px 15px;
+    height: 250px; 
+}
+
+.infos-footer img {
+    object-fit: contain;
+    max-height: 180px; 
+    width: auto;
+}
+
+#lunetas img {
+    width: 213px;
+    max-height: 166px;
+}
+
+.infos-footer a{
+    text-decoration: none;
+    color: black;
+    font-size: 23px;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.infos-footer a:hover{
+    transform: scale(1.07);
 }

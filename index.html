@@ -10,35 +10,52 @@
 
 <body>
     <header>
-        <img src="src/logo/logoBranca.png" alt="Logo">
-        <div class="infos-header">
+        <a href="index.html"><img src="src/images/logo/logoBranca.png" alt="Logo"></a>
+        <nav class="infos-header">
             <ul>
-                <li><a href="">LUNETAS</a></li>
-                <li><a href="">SOBRE NÓS</a></li>
+                <li><a href="">Lunetas</a></li>
+                <li><a href="">Sobre nós</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
 
     <!--- Seria melhor uma section?-->
-    <div id="jogo">
-        <div id="cenario"></div>
-
-        <div id="caixa-de-texto">
-            <div id="falante"></div>
-            <div id="dialogo"></div>
+    <main>
+        <div id="jogo">
+            <div id="cenario"></div>
+    
+            <div id="caixa-de-texto">
+                <div id="falante"></div>
+                <div id="dialogo"></div>
+            </div>
+    
+            <div id="overlay">
+                <img src="src/images/logo/logoPreta.png" alt="Logo do jogo">
+                <form>
+                    <label id="overlay_nome" for="nome">Digite o seu nome:</label>
+                    <input type="text" id="nome">
+    
+                    <button id="comecar-btn" type="submit">JOGAR</button>
+                </form>
+    
+            </div>
         </div>
-
-        <div id="overlay">
-            <img src="src/logo/logoPreta.png" alt="Logo do jogo">
-            <form>
-                <label id="overlay_nome" for="nome">Digite o seu nome:</label>
-                <input type="text" id="nome">
-
-                <button id="comecar-btn" type="submit">JOGAR</button>
-            </form>
-
-        </div>
-    </div>
+    </main>
+        
+        <footer>
+            <div class="infos-footer" id="lunetas">
+                <a href="https://www.instagram.com/projetolunetas/" target="_blank"><img src="src/images/footer/lunetas.png" alt=""></a>
+                <a href="https://www.instagram.com/projetolunetas/" target="_blank">@projetolunetas</a>
+            </div>
+            <div class="infos-footer" id="smd">
+                <a href="https://www.instagram.com/smd_ufc/" target="_blank"><img src="src/images/footer/smd.png" alt=""></a>
+                <a href="https://www.instagram.com/smd_ufc/" target="_blank">@smd_ufc</a>
+            </div>
+            <div class="infos-footer" id="iuiv">
+                <a href="https://www.instagram.com/ufcvirtual/" target="_blank"><img src="src/images/footer/iuiv.png" alt=""></a>
+                <a href="https://www.instagram.com/ufcvirtual/" target="_blank">@ufcvirtual</a>
+            </div>
+        </footer>
 
 
     <script src="script.js"></script>
