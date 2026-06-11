@@ -3,22 +3,22 @@ const cenas = [
     {
         cenario: 'src/images/bg1.webp',
         falante: 'texto01',
-        dialogo: 'bla1',
+        dialogo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a justo urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a justo urna. ',
     },
     {
         cenario: 'src/images/bg2.jpg',
         falante: 'texto02',
-        dialogo: 'bla02',
+        dialogo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a justo urna. ',
     },
     {
         cenario: 'src/images/bg3.avif',
         falante: 'texto03',
-        dialogo: 'Bla 03',
+        dialogo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a justo urna. ',
     }];
 
 // Nessa parte, relacionamos os elementos do HTML ao Javascript
 const cenarioElemento = document.getElementById('cenario');
-const caixaDeTextoElemento = document.getElementById('caixa-de-texto');
+const caixaDeDialogoElemento = document.getElementById('caixa-de-dialogo');
 const falanteElemento = document.getElementById('falante');
 const dialogoElemento = document.getElementById('dialogo');
 const overlayElemento = document.getElementById('overlay');
@@ -35,9 +35,9 @@ comecarBotaoElemento.addEventListener('click', function (event) {
     // Nós conseguimos ter acesso ao css através de: nome da variável + "style" + propriedade do css
     overlayElemento.style.display = 'none'; // Aqui, alteramos o css de overlayElemento (o texto que tem no início) - colocamos display: none. Ou seja, não aparece na tela.
 
-    //No css, o id 'caixa-de-texto' está com o display: 'none'. Isso significa que a caixa de texto, quando o jogador está na tela de começar, não aparece.
-    // Por isso, precisamos mudar essa configuração, para que, na cena seguinte, apareça a caixa de texto.
-    caixaDeTextoElemento.style.display = 'flex';
+    //No css, o id 'caixa-de-dialogo' está com o display: 'none'. Isso significa que a caixa de diálogo, quando o jogador está na tela de começar, não aparece.
+    // Por isso, precisamos mudar essa configuração, para que, na cena seguinte, apareça a caixa de diálogo.
+    caixaDeDialogoElemento.style.display = 'flex';
     // Nós chamamos a função mostrarCena
     mostrarCena(cenaAtual);
 });
@@ -58,9 +58,9 @@ function mostrarCena(indice) {
 }
 
 
-// O jogo acontece porque a jogadora aperta nos diálogos da caixa de texto. Assim, é necessária uma função que aumente o valor da cena atual sempre que houver um clique no diálogo!
+// O jogo acontece porque a jogadora aperta nos diálogos da caixa de diálogo. Assim, é necessária uma função que aumente o valor da cena atual sempre que houver um clique no diálogo!
 
-caixaDeTextoElemento.addEventListener('click', function () {
+caixaDeDialogoElemento.addEventListener('click', function () {
     cenaAtual++;
     //Se no array de cenas tem 5 objetos, as posições de cada objeto variam de 0 a 4. 
     // Por isso, caso o usuário clique novamente no diálogo e a quantidade de objetos no array ter acabado, elevai para a tela de finalizar o jogo.
@@ -75,11 +75,11 @@ caixaDeTextoElemento.addEventListener('click', function () {
 function finalizarJogo() {
     cenaAtual = 0;
     cenarioElemento.style.backgroundImage = 'none';
-    caixaDeTextoElemento.style.display = 'none';
+    caixaDeDialogoElemento.style.display = 'none';
     overlayElemento.style.display = 'flex';
     overlayElemento.innerHTML = `
         <img src="src/images/logo/logoPreta.png" alt="">
-        <p id="final-message">Parabéns! Você completou o jogo!<p>
+        <p id="mensagem-final">Parabéns! Você completou o jogo!</p>
         <div class="jogar-novamente">
          <p id="jogar-novamente-msg">Deseja jogar novamente?</p>
          <button id="reiniciar-btn">Jogar novamente</button>
@@ -90,23 +90,26 @@ function finalizarJogo() {
 
     reiniciarBotaoElemento.addEventListener("click", function () {
 
-        overlayElemento.innerHTML = `
-          <img src="src/images/logo/logoPreta.png" alt="">
-            <form>
-                <label id="overlay_nome" for="nome">Digite o seu nome:</label>
-                <input type="text" id="nome">
+    overlayElemento.innerHTML = `
+      <img src="src/images/logo/logoPreta.png" alt="">
+      <form>
+          <label id="overlay_nome" for="nome">Digite o seu nome:</label>
+          <input type="text" id="nome">
 
-                <button id="comecar-btn" type="submit">JOGAR</button>
-            </form>
-     `;
-        const recomecarBotaoElemento = document.getElementById('recomecar-btn');
-        recomecarBotaoElemento.addEventListener('click', function (event) {
+          <button id="comecar-btn" type="submit">JOGAR</button>
+      </form>
+    `;
 
-            event.preventDefault();
-            overlayElemento.style.display = 'none';
-            caixaDeTextoElemento.style.display = 'flex';
-            mostrarCena(cenaAtual);
-        });
-    })
+    const novoComecarBtn = document.getElementById('comecar-btn');
+
+    novoComecarBtn.addEventListener('click', function(event){
+        event.preventDefault();
+
+        overlayElemento.style.display = 'none';
+        caixaDeDialogoElemento.style.display = 'flex';
+
+        mostrarCena(cenaAtual);
+    });
+});
 
 }

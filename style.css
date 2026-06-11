@@ -20,6 +20,7 @@ body {
 
 }
 
+/* início Header */
 header {
     padding: 0 100px 0 100px;
     width: 100%;
@@ -35,8 +36,6 @@ header img {
     width: 14%;
     height: 70%;
 }
-
-
 
 .infos-header ul {
     list-style: none;
@@ -54,19 +53,24 @@ header img {
     cursor: pointer;
     color: white;
     text-decoration: none;
-    font-weight:600;
+    font-weight: 600;
     transition: transform 0.3s ease;
     display: inline-block;
-    font-size:20px;
+    font-size: 20px;
     white-space: nowrap;
 }
 
-.infos-header ul li a:hover{
+.infos-header ul li a:hover {
     transform: scale(1.07);
 }
 
+/* fim Header */
+
+
+/* início main */
 main {
-    height: calc(100vh - 80px); /* altura da tela menos o header */
+    height: calc(100vh - 80px);
+    /* altura da tela menos o header */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,22 +94,72 @@ main {
     background-size: cover;
     background-position: center;
     transition: opacity 0.6s ease;
+    height: 100%;
+}
+
+#caixa-de-dialogo {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    display: none;
+    padding: 10px 15px;
+    height: 30%;
+}
+
+.conversa {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rosto-personagem {
+    position: absolute;
+    left: 0;
+    width: 20%;
+    aspect-ratio: 1;
+    z-index: 2;
+    background-color: #fef5e6;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rosto-personagem img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.falas-box {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fef5e6;
+    border-radius: 20px;
+
+    flex: 1;
+    margin-left: -20px;
+    /* faz a caixa entrar atrás do avatar */
+    width: 100%;
+    margin-left: 5%;
+    padding-left: 17%;
     height: 75%;
 }
 
-#caixa-de-texto {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #fef5e6;
-    height: 25%;
-    backdrop-filter: blur(12px);
-    padding: 1.4% 3.5% 1.4% 3.5%;
-    display: none;
+.falas {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 0.4em;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0;
+    padding-top: 1.5%;
+    padding-right: 2%;
 }
 
 #falante {
@@ -120,26 +174,35 @@ main {
 #dialogo {
     font-size: clamp(0.75rem, 1.8vw, 1.05rem);
     letter-spacing: 0.06em;
-    color:black;
+    color: black;
+    font-weight: 500;
     min-height: 1.3em;
+}
+
+#dialogo:hover {
+    background-color: #837bb7;
+    border-radius: 5px;
+    padding-left: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width:100%;
+
 }
 
 #overlay {
     position: relative;
     display: flex;
     flex-direction: column;
-     align-items: center;
+    align-items: center;
     justify-content: center;
 }
 
-#overlay img{
+#overlay img {
     width: 40%;
     height: 40%;
     position: relative;
     top: -20px;
 }
-
-
 
 #overlay form {
     display: flex;
@@ -148,39 +211,40 @@ main {
     justify-content: center;
 }
 
-#overlay_nome{
+#overlay_nome {
     padding-bottom: 10px;
     font-weight: bold;
     font-size: 25px;
 }
 
-#overlay form input{
+#overlay form input {
     background-color: #342d59;
-    border:none;
+    border: none;
     width: 350px;
     height: 65px;
     border-radius: 30px;
     color: white;
-    padding-left:30px;
+    padding-left: 30px;
     font-size: 20px;
     font-family: "Sora";
     font-weight: 500;
     transition: box-shadow 0.25s ease;
 }
 
-#overlay form input{
+#overlay form input {
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 #overlay form input:hover,
-#overlay form input:focus{
+#overlay form input:focus {
     transform: translateY(-2px);
     box-shadow:
-        0 8px 24px rgba(52,45,89,0.25),
-        0 0 0 3px rgba(131,123,183,0.25);
+        0 8px 24px rgba(52, 45, 89, 0.25),
+        0 0 0 3px rgba(131, 123, 183, 0.25);
 }
 
-#overlay form button, #reiniciar-btn {
+#overlay form button,
+#reiniciar-btn {
     cursor: pointer;
     margin-top: 50px;
     background-color: #837bb7;
@@ -192,38 +256,52 @@ main {
     padding: 20px 30px;
     border-radius: 60px;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    
+
 }
 
-#comecar-btn:hover, #reiniciar-btn:hover{
+#comecar-btn:hover,
+#reiniciar-btn:hover {
     transform: scale(1.03);
     background-color: #6a62a0;
-  
+
 }
 
-#final-message{
+/* início Tela de recomeçar */
+
+#reiniciar-btn {
+    margin: 0;
+}
+
+#mensagem-final {
     font-size: 29px;
     font-weight: 600;
 }
 
-.jogar-novamente{
+.jogar-novamente {
+    margin-top: 4%;
     display: flex;
     flex-direction: column;
-    gap:10px;
+    gap: 20px;
 }
 
-#jogar-novamente-msg{
+#jogar-novamente-msg {
     font-size: 24px;
     font-weight: 700;
-    margin-top: 10px;
+    margin-top: 0;
 }
 
+/* início Tela de recomeçar */
 
+
+/* fim main */
+
+
+/* início footer */
 footer {
     width: 100%;
     padding: 100px 30px;
     background-color: #FEF5E6;
-    color:white;
+    color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -234,15 +312,16 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; 
-    gap:20px;
+    justify-content: space-between;
+    gap: 20px;
     padding: 20px 15px;
-    height: 250px; 
+    height: 250px;
+    transition: transform 0.3s ease;
 }
 
 .infos-footer img {
     object-fit: contain;
-    max-height: 180px; 
+    max-height: 180px;
     width: auto;
 }
 
@@ -251,15 +330,17 @@ footer {
     max-height: 166px;
 }
 
-.infos-footer a{
+.infos-footer a {
     text-decoration: none;
     color: black;
     font-size: 23px;
     font-weight: 600;
-    transition: transform 0.3s ease;
+
     text-align: center;
 }
 
-.infos-footer a:hover{
+.infos-footer:hover {
     transform: scale(1.07);
 }
+
+/* fim footer */
