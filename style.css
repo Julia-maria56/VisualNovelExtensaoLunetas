@@ -177,16 +177,14 @@ main {
     color: black;
     font-weight: 500;
     min-height: 1.3em;
+    padding: 3px 10px 3px 10px;
+    transition: background-color 0.1s ease;
 }
 
 #dialogo:hover {
     background-color: #837bb7;
     border-radius: 5px;
-    padding-left: 3px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    width:100%;
-
+    width: 100%;
 }
 
 #overlay {
@@ -228,11 +226,11 @@ main {
     font-size: 20px;
     font-family: "Sora";
     font-weight: 500;
-    transition: box-shadow 0.25s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-#overlay form input {
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+#overlay form input::placeholder {
+    font-weight: 400;
 }
 
 #overlay form input:hover,

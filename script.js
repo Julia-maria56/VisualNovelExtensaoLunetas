@@ -2,12 +2,12 @@
 const cenas = [
     {
         cenario: 'src/images/bg1.webp',
-        falante: 'texto01',
+        falante: 'Jogadora',
         dialogo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a justo urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a justo urna. ',
     },
     {
         cenario: 'src/images/bg2.jpg',
-        falante: 'texto02',
+        falante: 'Ada Lovelace',
         dialogo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a justo urna. ',
     },
     {
@@ -27,12 +27,23 @@ const comecarBotaoElemento = document.getElementById('comecar-btn');
 
 // Variável que guarda o índice de cada cena
 let cenaAtual = 0;
+let nomeJogadora = "";
 
 // Aqui, quando o usuário clicar no botão de começar, 
 comecarBotaoElemento.addEventListener('click', function (event) {
 
     event.preventDefault();
     // Nós conseguimos ter acesso ao css através de: nome da variável + "style" + propriedade do css
+    
+    const inputNome = document.getElementById('nome-jogadora');
+    nomeJogadora = inputNome.value.trim();
+    
+    if (nomeJogadora === '') {
+        alert('Digite seu nome para começar!');
+        inputNome.focus();
+        return;
+    }
+    
     overlayElemento.style.display = 'none'; // Aqui, alteramos o css de overlayElemento (o texto que tem no início) - colocamos display: none. Ou seja, não aparece na tela.
 
     //No css, o id 'caixa-de-dialogo' está com o display: 'none'. Isso significa que a caixa de diálogo, quando o jogador está na tela de começar, não aparece.
@@ -51,7 +62,11 @@ function mostrarCena(indice) {
     cenarioElemento.style.backgroundImage = `url(${cenas[indice].cenario})`;
 
     //Modifica o nome do personagem a partir do valor dado à chave em cada propriedade do array.
-    falanteElemento.textContent = cenas[indice].falante;
+    if (cenas[indice].falante === 'Jogadora') {
+        falanteElemento.textContent = nomeJogadora;
+    } else {
+        falanteElemento.textContent = cenas[indice].falante;
+    }
 
     //Modifica o diálogo a partir do do valor dado à chave em cada propriedade do array.
     dialogoElemento.textContent = cenas[indice].dialogo;
@@ -60,7 +75,7 @@ function mostrarCena(indice) {
 
 // O jogo acontece porque a jogadora aperta nos diálogos da caixa de diálogo. Assim, é necessária uma função que aumente o valor da cena atual sempre que houver um clique no diálogo!
 
-caixaDeDialogoElemento.addEventListener('click', function () {
+dialogoElemento.addEventListener('click', function () {
     cenaAtual++;
     //Se no array de cenas tem 5 objetos, as posições de cada objeto variam de 0 a 4. 
     // Por isso, caso o usuário clique novamente no diálogo e a quantidade de objetos no array ter acabado, elevai para a tela de finalizar o jogo.
@@ -90,26 +105,35 @@ function finalizarJogo() {
 
     reiniciarBotaoElemento.addEventListener("click", function () {
 
-    overlayElemento.innerHTML = `
+        overlayElemento.innerHTML = `
       <img src="src/images/logo/logoPreta.png" alt="">
-      <form>
+      <form onsubmit="return false">
           <label id="overlay_nome" for="nome">Digite o seu nome:</label>
           <input type="text" id="nome">
 
-          <button id="comecar-btn" type="submit">JOGAR</button>
+          <button id="comecar-btn" type="button">JOGAR</button>
       </form>
     `;
 
-    const novoComecarBtn = document.getElementById('comecar-btn');
+        const novoComecarBtn = document.getElementById('comecar-btn');
 
-    novoComecarBtn.addEventListener('click', function(event){
-        event.preventDefault();
+        novoComecarBtn.addEventListener('click', function (event) {
+            event.preventDefault();
 
-        overlayElemento.style.display = 'none';
-        caixaDeDialogoElemento.style.display = 'flex';
+            const inputNome = document.getElementById('nome');
+            nomeJogadora = inputNome.value.trim();
 
-        mostrarCena(cenaAtual);
+            if (nomeJogadora === '') {
+                alert('Digite seu nome para começar!');
+                inputNome.focus();
+                return;
+            }
+
+            overlayElemento.style.display = 'none';
+            caixaDeDialogoElemento.style.display = 'flex';
+
+            mostrarCena(cenaAtual);
+        });
     });
-});
 
 }

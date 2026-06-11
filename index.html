@@ -19,7 +19,6 @@
         </nav>
     </header>
 
-    <!--- Seria melhor uma section?-->
     <main>
         <div id="jogo">
             <div id="cenario"></div>
@@ -42,11 +41,11 @@
 
             <div id="overlay">
                 <img src="src/images/logo/logoPreta.png" alt="Logo do jogo">
-                <form>
+                <form onsubmit="return false">
                     <label id="overlay_nome" for="nome">Digite o seu nome:</label>
-                    <input type="text" id="nome">
+                    <input type="text" id="nome-jogadora" placeholder="Digite o seu nome aqui">
 
-                    <button id="comecar-btn" type="submit">JOGAR</button>
+                    <button id="comecar-btn" type="button">JOGAR</button>
                 </form>
 
             </div>
