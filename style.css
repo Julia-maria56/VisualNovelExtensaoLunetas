@@ -233,6 +233,16 @@ main {
     font-weight: 400;
 }
 
+/* Neutraliza o estilo azul que o navegador coloca automaticamente quando um campo é preenchido pelo autofill. */
+#overlay form input:-webkit-autofill,
+#overlay form input:-webkit-autofill:hover,
+#overlay form input:-webkit-autofill:focus {
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 1000px #342d59 inset;
+    box-shadow: 0 0 0px 1000px #342d59 inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
 #overlay form input:hover,
 #overlay form input:focus {
     transform: translateY(-2px);
@@ -342,3 +352,30 @@ footer {
 }
 
 /* fim footer */
+
+/* Botões no cenário */
+#botoes-cena {
+    position: absolute;
+    inset: 0;
+    pointer-events: none; /* não bloqueia cliques quando vazio */
+}
+
+.botao-cena {
+    position: absolute;
+    pointer-events: all;
+    background-color: #837bb7;
+    color: white;
+    border: none;
+    border-radius: 60px;
+    padding: 15px 25px;
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
+    font-family: "Sora";
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.botao-cena:hover {
+    transform: scale(1.05);
+    background-color: #6a62a0;
+}
