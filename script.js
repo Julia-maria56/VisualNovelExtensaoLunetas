@@ -30,7 +30,7 @@ const cenas = [
     {
         cenario: 'src/images/cenarios/mariecurie/experimento/experimento-cena02.png',
         falante: 'Marie Curie',
-        dialogo: '(CONT\'D) Muito interessante. Esta amostra produziu um resultado diferente.',
+        dialogo: 'Muito interessante. Esta amostra produziu um resultado diferente.',
         mostrarDialogo: true,
         botoes: [
             {
@@ -63,6 +63,36 @@ const cenas = [
                 proximaCena: 6
             }
         ]
+    },
+    // índice 5 - resposta ERRADA (Amostra A)
+    {
+        cenario: 'src/images/cenarios/mariecurie/experimento/experimento-cena01.png',
+        falante: 'Marie Curie',
+        dialogo: 'Observe os resultados novamente.',
+        mostrarDialogo: true,
+        proximaFala: {
+            falante: 'Marie Curie',
+            dialogo: 'Qual das amostras provocou uma alteração no eletroscópio?',
+            botoes: [
+                {
+                    texto: 'Amostra A',
+                    posicao: { bottom: '30%', left: '20%' },
+                    proximaCena: 5
+                },
+                {
+                    texto: 'Amostra B',
+                    posicao: { bottom: '30%', right: '20%' },
+                    proximaCena: 6
+                }
+            ]
+        }
+    },
+    // índice 6 - resposta CERTA (Amostra B)
+    {
+        cenario: 'src/images/cenarios/mariecurie/experimento/enquadramento-laboratorio.png',
+        falante: 'Marie Curie',
+        dialogo: ' Excelente observação! A Amostra B provavelmente contém urânio.',
+        mostrarDialogo: true,
     },
 ];
 
@@ -129,6 +159,8 @@ function mostrarCena(indice) {
 
     botoesCenaElemento.innerHTML = '';
 
+    botoesCenaElemento.innerHTML = '';
+
     if (cena.botoes) {
         cena.botoes.forEach(function (botao) {
             const btn = document.createElement('button');
@@ -137,30 +169,24 @@ function mostrarCena(indice) {
             Object.assign(btn.style, botao.posicao);
 
             btn.addEventListener('click', function () {
-
-                // Botões com ação especial de investigação
                 if (botao.acao === 'amostraA') {
                     amostraAVista = true;
-
-                    // Mostra diálogo da amostra A na mesma cena
                     caixaDeDialogoElemento.style.display = 'flex';
                     falanteElemento.textContent = 'Marie Curie';
                     dialogoElemento.textContent = 'Interessante. Parece que esta amostra não afetou o instrumento.';
 
-                    // Se as duas já foram vistas, vai para a pergunta final
                     if (amostraAVista && amostraBVista) {
                         setTimeout(function () {
-                            cenaAtual = 4; // índice da cena da pergunta
+                            cenaAtual = 4;
                             mostrarCena(cenaAtual);
                         }, 2500);
                     }
 
                 } else if (botao.acao === 'amostraB') {
                     amostraBVista = true;
-                    cenaAtual = 3; // índice da cena da amostra B
+                    cenaAtual = 3;
                     mostrarCena(cenaAtual);
 
-                    // Se as duas já foram vistas, vai para a pergunta final
                     if (amostraAVista && amostraBVista) {
                         setTimeout(function () {
                             cenaAtual = 4;
@@ -169,7 +195,6 @@ function mostrarCena(indice) {
                     }
 
                 } else {
-                    // Botões normais com proximaCena
                     cenaAtual = botao.proximaCena;
                     mostrarCena(cenaAtual);
                 }
@@ -177,6 +202,37 @@ function mostrarCena(indice) {
 
             botoesCenaElemento.appendChild(btn);
         });
+    }
+
+    // Se a cena tem uma segunda fala encadeada, mostra após clique no diálogo
+    if (cena.proximaFala) {
+        const falaEncadeada = cena.proximaFala;
+
+        dialogoElemento.addEventListener('click', function handler() {
+            falanteElemento.textContent = falaEncadeada.falante;
+            dialogoElemento.textContent = falaEncadeada.dialogo;
+
+            // Troca os botões se a próxima fala tiver os seus próprios
+            if (falaEncadeada.botoes) {
+                botoesCenaElemento.innerHTML = '';
+                falaEncadeada.botoes.forEach(function (botao) {
+                    const btn = document.createElement('button');
+                    btn.textContent = botao.texto;
+                    btn.classList.add('botao-cena');
+                    Object.assign(btn.style, botao.posicao);
+
+                    btn.addEventListener('click', function () {
+                        cenaAtual = botao.proximaCena;
+                        mostrarCena(cenaAtual);
+                    });
+
+                    botoesCenaElemento.appendChild(btn);
+                });
+            }
+
+            // Remove o listener para não acumular
+            dialogoElemento.removeEventListener('click', handler);
+        }, { once: true });
     }
 }
 

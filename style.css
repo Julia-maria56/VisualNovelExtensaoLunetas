@@ -80,7 +80,7 @@ main {
 #jogo {
     position: relative;
     background: #fef5e6;
-    width: 70%;
+    width: 70vw;
     max-width: 1200px;
     aspect-ratio: 16/9;
     display: flex;
