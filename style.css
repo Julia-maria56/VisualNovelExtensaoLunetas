@@ -82,7 +82,7 @@ main {
     background: #fef5e6;
     width: 70vw;
     max-width: 1200px;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16/8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,13 +99,13 @@ main {
 
 #caixa-de-dialogo {
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
     display: none;
     padding: 10px 15px;
-    height: 30%;
+    height: 35%;
 }
 
 .conversa {
@@ -184,6 +184,7 @@ main {
 #dialogo:hover {
     background-color: #837bb7;
     border-radius: 5px;
+    cursor:pointer;
     width: 100%;
 }
 

@@ -1,249 +1,210 @@
 // Array que conta com as cenas do jogo
 const cenas = [
+    // índice 0
     {
         cenario: 'src/images/bg1.webp',
         falante: 'Jogadora',
         dialogo: 'Lorem ipsum...',
     },
+    // índice 1
     {
         cenario: 'src/images/cenarios/mariecurie/experimento/experimento-cena01.png',
         falante: 'Marie Curie',
-        dialogo: 'Quando estiver pronta, pode começar.',
+        dialogo: 'Quando estiver pronta, pode começar. Clique na amostra que você deseja analisar primeiro.',
     },
-      {
-        cenario: 'src/images/cenarios/mariecurie/experimento/experimento-cena01.png',
-        mostrarDialogo: false,
-        botoes: [
-            {
-                texto: 'Amostra A',
-                posicao: { bottom: '30%', left: '20%' },
-                acao: 'amostraA'
-            },
-            {
-                texto: 'Amostra B',
-                posicao: { bottom: '30%', right: '20%' },
-                acao: 'amostraB'
-            }
-        ]
-    },
-    // cena da amostra B (índice 3)
+    // índice 2 - cena dos botões de investigação
     {
-        cenario: 'src/images/cenarios/mariecurie/experimento/experimento-cena02.png',
-        falante: 'Marie Curie',
-        dialogo: 'Muito interessante. Esta amostra produziu um resultado diferente.',
-        mostrarDialogo: true,
-        botoes: [
-            {
-                texto: 'Amostra A',
-                posicao: { bottom: '30%', left: '20%' },
-                acao: 'amostraA'
-            },
-            {
-                texto: 'Amostra B',
-                posicao: { bottom: '30%', right: '20%' },
-                acao: 'amostraB'
-            }
-        ]
+        cenario: 'src/images/cenarios/mariecurie/experimento/experimento-cena01.png',
+        tipo: 'investigacao',
     },
-    // cena da pergunta final (índice 4)
+    // índice 3 - pergunta final
+    {
+        cenario: 'src/images/cenarios/mariecurie/experimento/experimento-cena01.png',
+        tipo: 'perguntaFinal',
+    },
+    // índice 4 - resposta errada
+    {
+        cenario: 'src/images/cenarios/mariecurie/experimento/experimento-cena01.png',
+        tipo: 'respostaErrada',
+    },
+    // índice 5 - resposta certa
     {
         cenario: 'src/images/cenarios/mariecurie/experimento/experimento-cena01.png',
         falante: 'Marie Curie',
-        dialogo: 'Qual das amostras provavelmente contém urânio?',
-        mostrarDialogo: true,
-        botoes: [
-            {
-                texto: 'Amostra A',
-                posicao: { bottom: '30%', left: '20%' },
-                proximaCena: 5
-            },
-            {
-                texto: 'Amostra B',
-                posicao: { bottom: '30%', right: '20%' },
-                proximaCena: 6
-            }
-        ]
-    },
-    // índice 5 - resposta ERRADA (Amostra A)
-    {
-        cenario: 'src/images/cenarios/mariecurie/experimento/experimento-cena01.png',
-        falante: 'Marie Curie',
-        dialogo: 'Observe os resultados novamente.',
-        mostrarDialogo: true,
-        proximaFala: {
-            falante: 'Marie Curie',
-            dialogo: 'Qual das amostras provocou uma alteração no eletroscópio?',
-            botoes: [
-                {
-                    texto: 'Amostra A',
-                    posicao: { bottom: '30%', left: '20%' },
-                    proximaCena: 5
-                },
-                {
-                    texto: 'Amostra B',
-                    posicao: { bottom: '30%', right: '20%' },
-                    proximaCena: 6
-                }
-            ]
-        }
-    },
-    // índice 6 - resposta CERTA (Amostra B)
-    {
-        cenario: 'src/images/cenarios/mariecurie/experimento/enquadramento-laboratorio.png',
-        falante: 'Marie Curie',
-        dialogo: ' Excelente observação! A Amostra B provavelmente contém urânio.',
-        mostrarDialogo: true,
+        dialogo: 'Excelente observação! A Amostra B provavelmente contém urânio.',
     },
 ];
 
-// Nessa parte, relacionamos os elementos do HTML ao Javascript
+// Relacionamos os elementos do HTML ao Javascript
 const cenarioElemento = document.getElementById('cenario');
 const caixaDeDialogoElemento = document.getElementById('caixa-de-dialogo');
 const falanteElemento = document.getElementById('falante');
 const dialogoElemento = document.getElementById('dialogo');
 const overlayElemento = document.getElementById('overlay');
-const jogoElemento = document.getElementById('jogo');
-const comecarBotaoElemento = document.getElementById('comecar-btn');
 const botoesCenaElemento = document.getElementById('botoes-cena');
+const comecarBotaoElemento = document.getElementById('comecar-btn');
 
-
-// Variável que guarda o índice de cada cena
 let cenaAtual = 0;
 let nomeJogadora = "";
-
 let amostraAVista = false;
 let amostraBVista = false;
 
-// Aqui, quando o usuário clicar no botão de começar, 
-comecarBotaoElemento.addEventListener('click', function (event) {
+// ─── Funções auxiliares ───────────────────────────────────────────
 
-    event.preventDefault();
-    // Nós conseguimos ter acesso ao css através de: nome da variável + "style" + propriedade do css
-    
-    const inputNome = document.getElementById('nome-jogadora');
-    nomeJogadora = inputNome.value.trim();
-    
-    if (nomeJogadora === '') {
-        alert('Digite seu nome para começar!');
-        inputNome.focus();
-        return;
-    }
-
-    overlayElemento.style.display = 'none'; // Aqui, alteramos o css de overlayElemento (o texto que tem no início) - colocamos display: none. Ou seja, não aparece na tela.
-
-    //No css, o id 'caixa-de-dialogo' está com o display: 'none'. Isso significa que a caixa de diálogo, quando o jogador está na tela de começar, não aparece.
-    // Por isso, precisamos mudar essa configuração, para que, na cena seguinte, apareça a caixa de diálogo.
+function mostrarDialogo(falante, dialogo) {
     caixaDeDialogoElemento.style.display = 'flex';
-    // Nós chamamos a função mostrarCena
-    mostrarCena(cenaAtual);
-});
+    falanteElemento.textContent = falante;
+    dialogoElemento.textContent = dialogo;
+}
+
+function esconderDialogo() {
+    caixaDeDialogoElemento.style.display = 'none';
+}
+
+function limparBotoes() {
+    botoesCenaElemento.innerHTML = '';
+}
+
+// Cria um botão no cenário
+function criarBotao(texto, posicao, onClick) {
+    const btn = document.createElement('button');
+    btn.textContent = texto;
+    btn.classList.add('botao-cena');
+    Object.assign(btn.style, posicao);
+    btn.addEventListener('click', onClick);
+    botoesCenaElemento.appendChild(btn);
+}
+
+// Aguarda um clique no diálogo e executa a função
+function aoClicarNoDialogo(callback) {
+    dialogoElemento.addEventListener('click', callback, { once: true });
+}
+
+// ─── Botões reutilizáveis ─────────────────────────────────────────
+
+function mostrarBotoesInvestigacao() {
+    limparBotoes();
+    criarBotao('Amostra A', { bottom: '50%', left: '20%' }, onAmostraA);
+    criarBotao('Amostra B', { bottom: '50%', right: '20%' }, onAmostraB);
+}
+
+function mostrarBotoesResposta() {
+    limparBotoes();
+    criarBotao('Amostra A', { bottom: '50%', left: '20%' }, function () {
+        // Errou
+        mostrarDialogo('Marie Curie', 'Lembre dos resultados novamente.');
+        aoClicarNoDialogo(function () {
+            mostrarDialogo('Marie Curie', 'Qual das amostras provocou uma alteração no eletroscópio?');
+            mostrarBotoesResposta();
+        });
+    });
+    criarBotao('Amostra B', { bottom: '50%', right: '20%' }, function () {
+        // Acertou
+        cenaAtual = 5;
+        mostrarCena(cenaAtual);
+    });
+}
+
+// ─── Ações das amostras ───────────────────────────────────────────
+
+function onAmostraA() {
+    amostraAVista = true;
+    limparBotoes();
+    mostrarDialogo('Marie Curie', 'Interessante. Parece que esta amostra não afetou o instrumento. Agora, clique na Amostra B.');
+
+    // Mostra só o botão da Amostra B
+    criarBotao('Amostra B', { bottom: '50%', right: '20%' }, function () {
+        onAmostraB();
+    });
+}
+
+function onAmostraB() {
+    amostraBVista = true;
+    limparBotoes();
+
+    cenarioElemento.style.backgroundImage =
+        'url(src/images/cenarios/mariecurie/experimento/experimento-cena02.png)';
+
+    if (amostraAVista) {
+        // Veio depois da A: mostra o resultado e vai direto pra pergunta ao clicar
+        mostrarDialogo('Marie Curie', 'Muito interessante. Esta amostra produziu um resultado diferente no eletroscópio.');
+
+        aoClicarNoDialogo(function () {
+            irParaPerguntaFinal();
+        });
+
+    } else {
+        // Veio antes da A: pede pra clicar na A também
+        mostrarDialogo('Marie Curie', 'Muito interessante. Esta amostra produziu um resultado diferente no eletroscópio. Clique na Amostra A.');
+
+        // Mostra só o botão da Amostra A
+        criarBotao('Amostra A', { bottom: '50%', left: '20%' }, function () {
+            amostraAVista = true;
+            limparBotoes();
+
+            cenarioElemento.style.backgroundImage =
+                'url(src/images/cenarios/mariecurie/experimento/experimento-cena01.png)';
+
+            mostrarDialogo('Marie Curie', 'Interessante. Parece que esta amostra não afetou o instrumento.');
+
+            aoClicarNoDialogo(function () {
+                irParaPerguntaFinal();
+            });
+        });
+    }
+}
+
+function irParaPerguntaFinal() {
+    cenarioElemento.style.backgroundImage =
+        'url(src/images/cenarios/mariecurie/experimento/experimento-cena01.png)';
+    mostrarDialogo('Marie Curie', 'Qual das amostras provavelmente contém urânio?');
+    mostrarBotoesResposta();
+}
+
+// ─── Mostrar cena ─────────────────────────────────────────────────
 
 function mostrarCena(indice) {
     const cena = cenas[indice];
 
     cenarioElemento.style.backgroundImage = `url(${cena.cenario})`;
+    limparBotoes();
 
-    if (cena.mostrarDialogo === false) {
-        caixaDeDialogoElemento.style.display = 'none';
-    } else {
-        caixaDeDialogoElemento.style.display = 'flex';
-
-        if (cena.falante === 'Jogadora') {
-            falanteElemento.textContent = nomeJogadora;
-        } else {
-            falanteElemento.textContent = cena.falante ?? '';
-        }
-
-        dialogoElemento.textContent = cena.dialogo ?? '';
+    if (cena.tipo === 'investigacao') {
+        esconderDialogo();
+        mostrarBotoesInvestigacao();
+        return;
     }
 
-    botoesCenaElemento.innerHTML = '';
+    if (cena.tipo === 'perguntaFinal') {
+        irParaPerguntaFinal();
+        return;
+    }
 
-    botoesCenaElemento.innerHTML = '';
-
-    if (cena.botoes) {
-        cena.botoes.forEach(function (botao) {
-            const btn = document.createElement('button');
-            btn.textContent = botao.texto;
-            btn.classList.add('botao-cena');
-            Object.assign(btn.style, botao.posicao);
-
-            btn.addEventListener('click', function () {
-                if (botao.acao === 'amostraA') {
-                    amostraAVista = true;
-                    caixaDeDialogoElemento.style.display = 'flex';
-                    falanteElemento.textContent = 'Marie Curie';
-                    dialogoElemento.textContent = 'Interessante. Parece que esta amostra não afetou o instrumento.';
-
-                    if (amostraAVista && amostraBVista) {
-                        setTimeout(function () {
-                            cenaAtual = 4;
-                            mostrarCena(cenaAtual);
-                        }, 2500);
-                    }
-
-                } else if (botao.acao === 'amostraB') {
-                    amostraBVista = true;
-                    cenaAtual = 3;
-                    mostrarCena(cenaAtual);
-
-                    if (amostraAVista && amostraBVista) {
-                        setTimeout(function () {
-                            cenaAtual = 4;
-                            mostrarCena(cenaAtual);
-                        }, 2500);
-                    }
-
-                } else {
-                    cenaAtual = botao.proximaCena;
-                    mostrarCena(cenaAtual);
-                }
-            });
-
-            botoesCenaElemento.appendChild(btn);
+    if (cena.tipo === 'respostaErrada') {
+        mostrarDialogo('Marie Curie', '(CONT\'D) Observe os resultados novamente.');
+        aoClicarNoDialogo(function () {
+            mostrarDialogo('Marie Curie', '(CONT\'D) Qual das amostras provocou uma alteração no eletroscópio?');
+            mostrarBotoesResposta();
         });
+        return;
     }
 
-    // Se a cena tem uma segunda fala encadeada, mostra após clique no diálogo
-    if (cena.proximaFala) {
-        const falaEncadeada = cena.proximaFala;
-
-        dialogoElemento.addEventListener('click', function handler() {
-            falanteElemento.textContent = falaEncadeada.falante;
-            dialogoElemento.textContent = falaEncadeada.dialogo;
-
-            // Troca os botões se a próxima fala tiver os seus próprios
-            if (falaEncadeada.botoes) {
-                botoesCenaElemento.innerHTML = '';
-                falaEncadeada.botoes.forEach(function (botao) {
-                    const btn = document.createElement('button');
-                    btn.textContent = botao.texto;
-                    btn.classList.add('botao-cena');
-                    Object.assign(btn.style, botao.posicao);
-
-                    btn.addEventListener('click', function () {
-                        cenaAtual = botao.proximaCena;
-                        mostrarCena(cenaAtual);
-                    });
-
-                    botoesCenaElemento.appendChild(btn);
-                });
-            }
-
-            // Remove o listener para não acumular
-            dialogoElemento.removeEventListener('click', handler);
-        }, { once: true });
-    }
+    // Cena normal com diálogo
+    mostrarDialogo(
+        cena.falante === 'Jogadora' ? nomeJogadora : (cena.falante ?? ''),
+        cena.dialogo ?? ''
+    );
 }
 
-
-// O jogo acontece porque a jogadora aperta nos diálogos da caixa de diálogo. Assim, é necessária uma função que aumente o valor da cena atual sempre que houver um clique no diálogo!
+// ─── Listener global de clique no diálogo (avança cenas normais) ──
 
 dialogoElemento.addEventListener('click', function () {
-    cenaAtual++;
-    //Se no array de cenas tem 5 objetos, as posições de cada objeto variam de 0 a 4. 
-    // Por isso, caso o usuário clique novamente no diálogo e a quantidade de objetos no array ter acabado, elevai para a tela de finalizar o jogo.
+    const cena = cenas[cenaAtual];
 
+    // Cenas especiais são gerenciadas pelas suas próprias funções
+    if (cena.tipo) return;
+
+    cenaAtual++;
     if (cenaAtual < cenas.length) {
         mostrarCena(cenaAtual);
     } else {
@@ -251,8 +212,31 @@ dialogoElemento.addEventListener('click', function () {
     }
 });
 
+// ─── Iniciar jogo ─────────────────────────────────────────────────
+
+comecarBotaoElemento.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    const inputNome = document.getElementById('nome-jogadora');
+    nomeJogadora = inputNome.value.trim();
+
+    if (nomeJogadora === '') {
+        alert('Digite seu nome para começar!');
+        inputNome.focus();
+        return;
+    }
+
+    overlayElemento.style.display = 'none';
+    caixaDeDialogoElemento.style.display = 'flex';
+    mostrarCena(cenaAtual);
+});
+
+// ─── Finalizar jogo ───────────────────────────────────────────────
+
 function finalizarJogo() {
     cenaAtual = 0;
+    amostraAVista = false;
+    amostraBVista = false;
     cenarioElemento.style.backgroundImage = 'none';
     caixaDeDialogoElemento.style.display = 'none';
     overlayElemento.style.display = 'flex';
@@ -260,31 +244,24 @@ function finalizarJogo() {
         <img src="src/images/logo/logoPreta.png" alt="">
         <p id="mensagem-final">Parabéns! Você completou o jogo!</p>
         <div class="jogar-novamente">
-         <p id="jogar-novamente-msg">Deseja jogar novamente?</p>
-         <button id="reiniciar-btn">Jogar novamente</button>
-         </div>
-     `;
-
-    const reiniciarBotaoElemento = document.getElementById('reiniciar-btn');
-
-    reiniciarBotaoElemento.addEventListener("click", function () {
-
-        overlayElemento.innerHTML = `
-      <img src="src/images/logo/logoPreta.png" alt="">
-      <form onsubmit="return false">
-          <label id="overlay_nome" for="nome">Digite o seu nome:</label>
-          <input type="text" id="nome">
-
-          <button id="comecar-btn" type="button">JOGAR</button>
-      </form>
+            <p id="jogar-novamente-msg">Deseja jogar novamente?</p>
+            <button id="reiniciar-btn">Jogar novamente</button>
+        </div>
     `;
 
-        const novoComecarBtn = document.getElementById('comecar-btn');
+    document.getElementById('reiniciar-btn').addEventListener('click', function () {
+        overlayElemento.innerHTML = `
+            <img src="src/images/logo/logoPreta.png" alt="">
+            <form onsubmit="return false">
+                <label id="overlay_nome" for="nome">Digite o seu nome:</label>
+                <input type="text" id="nome-jogadora" placeholder="Digite o seu nome aqui">
+                <button id="comecar-btn" type="button">JOGAR</button>
+            </form>
+        `;
 
-        novoComecarBtn.addEventListener('click', function (event) {
+        document.getElementById('comecar-btn').addEventListener('click', function (event) {
             event.preventDefault();
-
-            const inputNome = document.getElementById('nome');
+            const inputNome = document.getElementById('nome-jogadora');
             nomeJogadora = inputNome.value.trim();
 
             if (nomeJogadora === '') {
@@ -295,9 +272,7 @@ function finalizarJogo() {
 
             overlayElemento.style.display = 'none';
             caixaDeDialogoElemento.style.display = 'flex';
-
             mostrarCena(cenaAtual);
         });
     });
-
 }
