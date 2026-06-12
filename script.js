@@ -50,11 +50,21 @@ let amostraAVista = false;
 let amostraBVista = false;
 
 // ─── Funções auxiliares ───────────────────────────────────────────
+function trocarRostoPersonagem(falante) {
+    const rostoImg = document.querySelector('.rosto-personagem img');
+    
+    if (falante === nomeJogadora || falante === 'Jogadora') {
+        rostoImg.src = 'src/images/caixa-de-dialogo/protagonista.jpg';
+    } else if (falante === 'Marie Curie') {
+        rostoImg.src = 'src/images/caixa-de-dialogo/mariecurie.png';
+    }
+}
 
 function mostrarDialogo(falante, dialogo) {
     caixaDeDialogoElemento.style.display = 'flex';
     falanteElemento.textContent = falante;
     dialogoElemento.textContent = dialogo;
+    trocarRostoPersonagem(falante);
 }
 
 function esconderDialogo() {
