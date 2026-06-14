@@ -82,7 +82,7 @@ main {
     background: #fef5e6;
     width: 70vw;
     max-width: 1200px;
-    aspect-ratio: 16/8;
+    aspect-ratio: 16/9;
     display: flex;
     justify-content: center;
     align-items: center;

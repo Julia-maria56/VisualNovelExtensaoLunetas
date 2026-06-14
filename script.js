@@ -12,7 +12,59 @@ const cenas = [
         cenario: "src/images/cenarios/mariecurie/laboratorio-Protagonistamaior.png",
         falante: "Jogadora",
         dialogo: "Porém, desde que eu iniciei minha carreira..."
-    },   
+    },
+    
+    {
+        id: "experimentoRosalind",
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Rosalind Franklin",
+        dialogo: "Falando em DNA, queria te mostrar algo."
+
+    },
+
+    {
+        id: "rosalindDNA",
+        cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena1.png",
+        falante: "Rosalind Franklin",
+        dialogo: "Vamos tentar encontrar o DNA que está escondido dentro deste morango. Para isso, precisamos seguir algumas etapas. Pode começar amassando o morango."
+    },
+
+    {
+        id:"experimentoInicio",
+        cenario:"src/images/cenarios/rosalindfrankiln/experimentos/cena2.png",
+        tipo:"amassar"
+    },
+
+    {
+        id:"experimentoMisturar",
+        cenario:"src/images/cenarios/rosalindfrankiln/experimentos/cena3.png",
+        tipo:"misturar"
+    },
+
+    {
+        id:"experimentoFiltrar",
+        cenario:"src/images/cenarios/rosalindfrankiln/experimentos/cena4.png",
+        tipo:"filtrar"
+    },
+
+    {
+        id:"experimentoAdicionar",
+        cenario:"src/images/cenarios/rosalindfrankiln/experimentos/cena5.png",
+        tipo:"adicionar"
+    },
+
+    {
+        id:"perguntaDNA",
+        cenario:"src/images/cenarios/rosalindfrankiln/experimentos/cena6.png",
+        tipo:"perguntaDNA"
+    },
+
+    {
+        id:"finalDNA",
+        cenario:"src/images/cenarios/rosalindfrankiln/experimentos/cena6.png",
+        falante:"Rosalind Franklin",
+        dialogo:"Muito bem! Esse material esbranquiçado é o DNA. Eu trabalho estudando essa substância e tentando descobrir como ela é organizada."
+    },
 
     {
         id: "explicacao",
@@ -218,6 +270,159 @@ function irParaPerguntaFinal() {
     mostrarBotoesResposta();
 }
 
+// ─── Botões do experimento Rosalind ───────────────────────────────
+
+function mostrarBotaoAmassar(){
+
+    limparBotoes();
+
+    criarBotao(
+        "AMASSAR",
+        {
+            bottom:"40%",
+            left:"20%"
+        },
+        function(){
+
+            cenaAtual++;
+            mostrarCena(cenaAtual);
+
+        }
+    );
+}
+
+
+function mostrarBotaoMisturar(){
+
+    limparBotoes();
+
+    criarBotao(
+        "MISTURAR",
+        {
+            bottom:"40%",
+            left:"30%"
+        },
+        function(){
+
+            cenaAtual++;
+
+            mostrarCena(cenaAtual);
+
+        }
+    );
+}
+
+
+function mostrarBotaoFiltrar(){
+
+    limparBotoes();
+
+    criarBotao(
+        "FILTRAR",
+        {
+            bottom:"40%",
+            left:"40%"
+        },
+        function(){
+
+            cenaAtual++;
+            mostrarCena(cenaAtual);
+
+        }
+    );
+}
+
+
+function mostrarBotaoAdicionar(){
+
+    limparBotoes();
+
+    criarBotao(
+        "ADICIONAR",
+        {
+            bottom:"40%",
+            left:"55%"
+        },
+        function(){
+
+            cenaAtual++;
+            mostrarCena(cenaAtual);
+
+        }
+    );
+}
+
+function mostrarBotoesDNA(){
+
+    limparBotoes();
+
+
+    // Líquido rosado - errado
+    criarBotao(
+        "Líquido rosado",
+        {
+            bottom:"50%",
+            left:"50%"
+        },
+        function(){
+
+            mostrarDialogo(
+                "Rosalind Franklin",
+                "Não tenho certeza se este é o correto. O DNA aparece como um material esbranquiçado após a adição do álcool."
+            );
+
+
+            aoClicarNoDialogo(function(){
+
+                mostrarBotoesDNA();
+
+            });
+
+        }
+    );
+
+
+    // Sementes - errado
+    criarBotao(
+        "Sementes",
+        {
+            bottom:"32%",
+            left:"50%"
+        },
+        function(){
+
+            mostrarDialogo(
+                "Rosalind Franklin",
+                "Não tenho certeza se este é o correto. O DNA aparece como um material esbranquiçado após a adição do álcool."
+            );
+
+
+            aoClicarNoDialogo(function(){
+
+                mostrarBotoesDNA();
+
+            });
+
+        }
+    );
+
+
+    // Nuvem branca - certo
+    criarBotao(
+        "Nuvem branca",
+        {
+            bottom:"70%",
+            right:"32%"
+        },
+        function(){
+
+            irParaCena("finalDNA");
+
+        }
+    );
+
+}
+
 // O que os Ids significam
 
 function mostrarCena(indice) {
@@ -225,6 +430,79 @@ function mostrarCena(indice) {
 
     cenarioElemento.style.backgroundImage = `url(${cena.cenario})`;
     limparBotoes();
+
+    // Experimento Rosalind DNA
+
+    if(cena.tipo === "amassar"){
+
+        esconderDialogo();
+
+        mostrarBotaoAmassar();
+
+        return;
+    }
+
+
+    if(cena.tipo === "misturar"){
+
+        esconderDialogo();
+
+        mostrarBotaoMisturar();
+
+        return;
+    }
+
+
+    if(cena.tipo === "filtrar"){
+
+        limparBotoes();
+
+        mostrarDialogo(
+            "Rosalind Franklin",
+            "A lise dissolve as membranas celulares, liberando o material que existe dentro delas, incluindo o DNA. O próximo passo é remover os pedaços maiores que podem atrapalhar nossa observação. Agora vamos filtrar a solução."
+        );
+
+
+        aoClicarNoDialogo(function(){
+
+            mostrarBotaoFiltrar();
+
+        });
+
+
+        return;
+    }
+
+
+    if(cena.tipo === "adicionar"){
+
+        esconderDialogo();
+
+        mostrarBotaoAdicionar();
+
+        return;
+    }
+
+    if(cena.tipo === "perguntaDNA"){
+
+
+        mostrarDialogo(
+            "Rosalind Franklin",
+            "Observe com atenção. Qual dessas partes você acha que é o DNA?"
+        );
+
+
+        aoClicarNoDialogo(function(){
+
+            mostrarBotoesDNA();
+
+        });
+
+
+        return;
+    }
+
+    // Experimento Marie Curie Eletroscópio
 
     if (cena.tipo === 'investigacao') {
         esconderDialogo();
