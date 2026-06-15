@@ -9,9 +9,16 @@
 const cenas = [
     {
         id: "intro",
-        cenario: "src/images/cenarios/mariecurie/laboratorio-Protagonistamaior.png",
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
         falante: "Jogadora",
-        dialogo: "Porém, desde que eu iniciei minha carreira..."
+        dialogo: "Eu acho que ciência não é para mim"
+    },
+    {
+        id: "intro",
+        
+        cenario: "src/images/cenarios/mariecurie/protagonistaempe.png",
+        falante: "Marie Curie",
+        dialogo: "Eu trabalho com radioatividade."
     },
 
     {
