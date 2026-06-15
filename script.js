@@ -394,9 +394,7 @@ function mostrarBotoesDNA() {
                 "Não tenho certeza se este é o correto. O DNA aparece como um material esbranquiçado após a adição do álcool."
             );
 
-
             aoClicarNoDialogo(function () {
-
                 mostrarBotoesDNA();
 
             });
@@ -419,7 +417,6 @@ function mostrarBotoesDNA() {
                 "Rosalind Franklin",
                 "Não tenho certeza se este é o correto. O DNA aparece como um material esbranquiçado após a adição do álcool."
             );
-
 
             aoClicarNoDialogo(function () {
 
@@ -491,11 +488,8 @@ function mostrarCena(indice) {
             "A lise dissolve as membranas celulares, liberando o material que existe dentro delas, incluindo o DNA. O próximo passo é remover os pedaços maiores que podem atrapalhar nossa observação. Para isso, vamos filtrar a solução."
         );
  
- 
-        aoClicarNoDialogo(function () { // ao clicar no diálogo (após ler a explicação)...
- 
+        aoClicarNoDialogo(function () { // ao clicar no diálogo (após ler a explicação)... 
             mostrarBotaoFiltrarRosalind(); // mostra o botão de filtrar
- 
         });
  
  
@@ -506,27 +500,20 @@ function mostrarCena(indice) {
     if (cena.tipo === "adicionarRosalind") { // se a cena for do tipo "adicionar"
  
         esconderDialogo(); // esconde a caixa de diálogo
- 
         mostrarBotaoAdicionarRosalind(); // mostra o botão de adicionar
- 
         return; // encerra a função
     }
  
     if (cena.tipo === "perguntaDNARosalind") { // se a cena for a pergunta sobre qual parte é o DNA
- 
- 
         mostrarDialogo( // mostra a pergunta
             "Rosalind Franklin",
             "Observe com atenção. Qual das partes você acha que é o DNA?"
         );
  
- 
         aoClicarNoDialogo(function () { // ao clicar no diálogo (após ler a pergunta)...
- 
             mostrarBotoesDNA(); // mostra as opções de resposta
  
         });
- 
  
         return; // encerra a função
     }
