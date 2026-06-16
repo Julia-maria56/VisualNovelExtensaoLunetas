@@ -39,7 +39,13 @@ const cenas = [
         id: "DNARosalind",
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena1.png",
         falante: "Rosalind Franklin",
-        dialogo: "Vamos tentar encontrar o DNA que está escondido dentro deste morango. Para isso, precisamos seguir algumas etapas. Pode começar amassando o morango e adicionando a solução de lise no recipiente."
+        dialogo: "Vamos tentar encontrar o DNA que está escondido dentro deste morango. Para isso, precisamos seguir algumas etapas."
+    },
+    {
+        id: "DNARosalind",
+        cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena1.png",
+        falante: "Rosalind Franklin",
+        dialogo: "Pode começar amassando o morango e adicionando a solução de lise no recipiente."
     },
 
     {
@@ -492,7 +498,12 @@ function mostrarCena(indice) {
  
         mostrarDialogo( // mostra explicação sobre o processo de lise/filtragem
             "Rosalind Franklin",
-            "A lise dissolve as membranas celulares, liberando o material que existe dentro delas, incluindo o DNA. O próximo passo é remover os pedaços maiores que podem atrapalhar nossa observação. Para isso, vamos filtrar a solução."
+            "A lise dissolve as membranas celulares, liberando o material que existe dentro delas, incluindo o DNA."
+        );
+        
+        mostrarDialogo( // mostra explicação sobre o processo de lise/filtragem
+            "Rosalind Franklin",
+            "O próximo passo é remover os pedaços maiores que podem atrapalhar nossa observação. Para isso, vamos filtrar a solução."
         );
  
         aoClicarNoDialogo(function () { // ao clicar no diálogo (após ler a explicação)... 

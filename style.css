@@ -74,8 +74,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    /* margin-top: 1%;
+    margin-bottom: 1%; */
 }
 
 
@@ -146,33 +146,22 @@ main {
     align-items: flex-start;
     background-color: #fef5e6;
     border-radius: 20px;
-
-    flex: 1;
-    margin-left: -20px;
-    /* faz a caixa entrar atrás do avatar */
-    width: 100%;
-    margin-left: 5%;
+    width: 95%;       /* era 100% */
+    margin-left: 5%;  /* 95% + 5% = 100%, não vaza mais */
     padding-left: 17%;
     height: 75%;
+    overflow: hidden;
 }
 
 .falas {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 5px;
     padding: 0;
     padding-top: 1.5%;
     padding-right: 2%;
-}
-
-#falante {
-    color: black;
-    font-size: clamp(0.75rem, 1.8vw, 1.05rem);
-    font-family: "Sora";
-    font-weight: bolder;
-    letter-spacing: 0.06em;
-    min-height: 1.3em;
+    width: 100%; /* garante uma referência fixa de largura para o #dialogo */
 }
 
 #dialogo {
@@ -181,15 +170,27 @@ main {
     color: black;
     font-weight: 500;
     min-height: 1.3em;
-    padding: 3px 10px 3px 10px;
+    padding: 3px 0px;
     transition: background-color 0.1s ease;
+    width: 100%;          /* fica sempre 100%, sem mudar no hover */
+    box-sizing: border-box;
 }
 
 #dialogo:hover {
     background-color: #837bb7;
     border-radius: 5px;
-    cursor:pointer;
-    width: 100%;
+    cursor: pointer;
+    /* width removido daqui */
+}
+
+#falante {
+    color: black;
+    font-size: clamp(0.75rem, 1.8vw, 1.05rem);
+    font-family: "Sora";
+    font-weight: bolder;
+    letter-spacing: 0.06em;
+    padding-top:8px;
+    min-height: 1.3em;
 }
 
 #overlay {
@@ -319,6 +320,7 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    margin-top:120px;
 
 }
 
