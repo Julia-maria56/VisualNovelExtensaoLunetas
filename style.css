@@ -9,7 +9,7 @@
 }
 
 body {
-    width: 100vw;
+    width: 100%;
     max-width: 100vw;
     min-height: 100vh;
     overflow-x: hidden;
@@ -25,7 +25,8 @@ header {
     padding: 0 100px 0 100px;
     width: 100%;
     background-color: #342d59;
-    height: 80px;
+    min-height: 80px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -33,8 +34,15 @@ header {
 }
 
 header img {
-    width: 14%;
-    height: 70%;
+    /* width: 14%;
+    height: 70%; */
+    height: 70px;
+    width: auto;
+    display: block;
+    flex-shrink: 0;
+    /* width: 140px;
+    aspect-ratio: 16/8;
+    align-items: center; */
 }
 
 .infos-header ul {
@@ -385,4 +393,21 @@ footer {
 .botao-cena:hover {
     transform: scale(1.05);
     background-color: #6a62a0;
+}
+
+.card-katherine {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.card-katherine img {
+    width: 180px;
+    height: auto;
+    transition: transform .2s;
+}
+
+.card-katherine:hover img {
+    transform: scale(1.05);
 }

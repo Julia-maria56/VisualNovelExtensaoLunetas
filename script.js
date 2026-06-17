@@ -20,6 +20,46 @@ const cenas = [
         dialogo: "Eu trabalho com radioatividade."
     },
 
+    // Katherine
+    {
+        id: "conversaKatherine",
+        cenario: "src/images/cenarios/katherinejohnson/experimento/computador.png",
+        falante: "Katherine Johnson",
+        dialogo: "Vamos observar três simulações e descobrir qual delas possui o maior alcance."
+    },
+    {
+        id: "conversaKatherine",
+        cenario: "src/images/cenarios/katherinejohnson/experimento/computador.png",
+        falante: "Katherine Johnson",
+        dialogo: " Vamos agora observar a trajetória de um foguete com o ângulo de lançamento de 30°."
+    },
+    {
+        id: "conversaKatherine",
+        cenario: "src/images/cenarios/katherinejohnson/experimento/computador30.png",
+        falante: "Katherine Johnson",
+        dialogo: "Esta é a trajetória de um foguete com o ângulo de lançamento de 30°. Vamos ver agora a trajetória de um foguete com o ângulo de lançamento de 45°. "
+    },
+    {
+        id: "conversaKatherine",
+        cenario: "src/images/cenarios/katherinejohnson/experimento/computador45.png",
+        falante: "Katherine Johnson",
+        dialogo: "Esta é a trajetória de um foguete com o ângulo de lançamento de 45°. Vamos ver agora a trajetória de um foguete com o ângulo de lançamento de 60°. "
+    },
+    {
+        id: "conversaKatherine",
+        cenario: "src/images/cenarios/katherinejohnson/experimento/computador60.png",
+        falante: "Katherine Johnson",
+        dialogo: "Esta é a trajetória de um foguete com o ângulo de lançamento de 60°."
+    },
+    {
+        id: "perguntaFinalKatherine",
+        cenario: "src/images/cenarios/katherinejohnson/experimento/computador.png",
+        tipo: "perguntaFinalKatherine"
+    },
+
+
+    // Experimento Rosalind
+
     {
         id: "experimentoRosalind",
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
@@ -160,6 +200,9 @@ function trocarRostoPersonagem(falante) {
     } else if (falante === 'Rosalind Franklin') {
         rostoImg.src = 'src/images/caixa-de-dialogo/mariecurie.jpg';
     }
+    else if (falante === 'Katherine Johnson') {
+        rostoImg.src = 'src/images/caixa-de-dialogo/mariecurie.jpg';
+    }
 }
 
 // Exibe uma fala na caixa de diálogo (Adiciona nome do personagem, fala e retrato)
@@ -198,9 +241,9 @@ function aoClicarNoDialogo(callback) {
             listenerDialogoAtual
         );
     }
- 
+
     listenerDialogoAtual = callback; // guarda a nova função como o listener atual
- 
+
     dialogoElemento.addEventListener( // registra o novo listener no elemento de diálogo
         'click',
         listenerDialogoAtual,
@@ -220,29 +263,29 @@ function mostrarBotoesInvestigacaoMarie() {
 // Mostra os botões das amostras na etapa de resposta final (pergunta sobre qual contém urânio)
 function mostrarBotoesRespostaMarie() {
     limparBotoes(); // remove botões anteriores
- 
+
     criarBotao( // cria o botão da Amostra A (resposta incorreta)
         'Amostra A',
         { bottom: '50%', left: '20%' },
         function () { // ao clicar na Amostra A...
- 
+
             mostrarDialogo( // mostra um diálogo pedindo para reconsiderar
                 'Marie Curie',
                 'Lembre dos resultados novamente. Qual das amostras provocou uma alteração no eletroscópio?'
             );
- 
+
             // (obs: aqui não há aoClicarNoDialogo nem nova chamada de botões, o fluxo fica parado até o jogador clicar em Amostra B)
- 
+
         }
     );
- 
+
     criarBotao( // cria o botão da Amostra B (resposta correta)
         'Amostra B',
         { bottom: '50%', right: '20%' },
         function () { // ao clicar na Amostra B...
- 
+
             irParaCena("respostaCertaMarie"); // navega para a cena de resposta correta
- 
+
         }
     );
 }
@@ -252,7 +295,7 @@ function analisarAmostraAMarie() {
     amostraAMarieFoiAnalisada = true; // marca que a Amostra A já foi analisada
     limparBotoes(); // remove os botões atuais
     mostrarDialogo('Marie Curie', 'Interessante. Parece que esta amostra não afetou o instrumento. Agora, clique na Amostra B.'); // explica o resultado e pede para analisar a Amostra B
- 
+
     // Mostra só o botão da Amostra B
     criarBotao('Amostra B', { bottom: '50%', right: '20%' }, function () { // cria o botão da Amostra B
         analisarAmostraBMarie();; // ao clicar, chama a análise da Amostra B (ponto e vírgula duplicado é só um detalhe de sintaxe sem efeito)
@@ -264,32 +307,32 @@ function analisarAmostraAMarie() {
 function analisarAmostraBMarie() {
     amostraBMarieFoiAnalisada = true; // marca que a Amostra B já foi analisada
     limparBotoes(); // remove os botões atuais
- 
+
     cenarioElemento.style.backgroundImage = // troca o cenário de fundo
         'url(src/images/cenarios/mariecurie/experimento/experimento-cena02.png)'; // para a imagem da segunda cena do experimento
- 
+
     if (amostraAMarieFoiAnalisada) { // se a Amostra A já havia sido analisada antes...
         // Veio depois da A: mostra o resultado e vai direto pra pergunta ao clicar
         mostrarDialogo('Marie Curie', 'Muito interessante. Esta amostra produziu um resultado diferente no eletroscópio.'); // mostra o resultado da Amostra B
- 
+
         aoClicarNoDialogo(function () { // ao clicar no diálogo...
             mostrarPerguntaFinalMarie() // avança direto para a pergunta final
         });
- 
+
     } else { // se a Amostra A ainda não foi analisada...
         // Veio antes da A: pede pra clicar na A também
         mostrarDialogo('Marie Curie', 'Muito interessante. Esta amostra produziu um resultado diferente no eletroscópio. Clique na Amostra A.'); // mostra resultado da B e pede para verificar a A
- 
+
         // Mostra só o botão da Amostra A
         criarBotao('Amostra A', { bottom: '50%', left: '20%' }, function () { // cria botão da Amostra A
             amostraAMarieFoiAnalisada = true; // marca a Amostra A como analisada
             limparBotoes(); // remove os botões
- 
+
             cenarioElemento.style.backgroundImage = // volta o cenário de fundo
                 'url(src/images/cenarios/mariecurie/experimento/experimento-cena01.png)'; // para a imagem da primeira cena do experimento
- 
+
             mostrarDialogo('Marie Curie', 'Interessante. Parece que esta amostra não afetou o instrumento.'); // mostra o resultado da Amostra A
- 
+
             aoClicarNoDialogo(function () { // ao clicar no diálogo...
                 mostrarPerguntaFinalMarie() // avança para a pergunta final
             });
@@ -400,16 +443,19 @@ function mostrarBotoesDNA() {
             left: "50%"
         },
         function () {
-            limparBotoes()
             mostrarDialogo(
-                "Rosalind Franklin",
-                "Não tenho certeza se este é o correto. O DNA aparece como um material esbranquiçado após a adição do álcool."
-            );
+    "Rosalind Franklin",
+    "Não tenho certeza se este é o correto. O DNA aparece como um material esbranquiçado após a adição do álcool."
+);
 
-            aoClicarNoDialogo(function () {
-                mostrarBotoesDNA();
+desabilitarBotoesDNA();
 
-            });
+aoClicarNoDialogo(function () {
+
+    habilitarBotoesDNA();
+
+    esconderDialogo();
+});
 
         }
     );
@@ -424,19 +470,21 @@ function mostrarBotoesDNA() {
         },
         function () {
 
-            limparBotoes();
-            mostrarDialogo(
-                "Rosalind Franklin",
-                "Não tenho certeza se este é o correto. O DNA aparece como um material esbranquiçado após a adição do álcool."
-            );
+    mostrarDialogo(
+        "Rosalind Franklin",
+        "Não tenho certeza se este é o correto. O DNA aparece como um material esbranquiçado após a adição do álcool."
+    );
 
-            aoClicarNoDialogo(function () {
+    desabilitarBotoesDNA();
 
-                mostrarBotoesDNA();
+    aoClicarNoDialogo(function () {
 
-            });
+        habilitarBotoesDNA();
 
-        }
+        esconderDialogo();
+    });
+
+}
     );
 
 
@@ -461,93 +509,133 @@ function mostrarBotoesDNA() {
 
 }
 
+function desabilitarBotoesDNA() {
+    const botoes = document.querySelectorAll(".botao-cena");
+
+    botoes.forEach(botao => {
+        botao.style.pointerEvents = "none";
+        botao.style.opacity = "0.7";
+    });
+}
+
+function habilitarBotoesDNA() {
+    const botoes = document.querySelectorAll(".botao-cena");
+
+    botoes.forEach(botao => {
+        botao.style.pointerEvents = "all";
+        botao.style.opacity = "1";
+    });
+}
+
 // Função central que controla a exibição de cada cena, com base no índice recebido
 
 function mostrarCena(indice) {
     const cena = cenas[indice]; // obtém o objeto da cena correspondente ao índice
- 
+
     cenarioElemento.style.backgroundImage = `url(${cena.cenario})`; // atualiza a imagem de fundo conforme a cena
     limparBotoes(); // remove qualquer botão que estivesse na tela anteriormente
- 
+
+    //Experimento Katherine
+    if (cena.tipo === "perguntaFinalKatherine") {
+
+    mostrarDialogo(
+        "Katherine Johnson",
+        "Qual lançamento possui o maior alcance?"
+    );
+
+    aoClicarNoDialogo(function () {
+        mostrarBotoesKatherine();
+    });
+
+    return;
+}
+
     // Experimento Rosalind DNA
- 
+
     if (cena.tipo === "amassarRosalind") { // se a cena for do tipo "amassar"
- 
+
         esconderDialogo(); // esconde a caixa de diálogo
- 
+
         mostrarBotaoAmassarRosalind(); // mostra o botão de amassar
- 
+
         return; // encerra a função aqui, sem processar diálogo normal
     }
- 
- 
+
+
     if (cena.tipo === "misturarRosalind") { // se a cena for do tipo "misturar"
- 
+
         esconderDialogo(); // esconde a caixa de diálogo
- 
+
         mostrarBotaoMisturarRosalind(); // mostra o botão de misturar
- 
+
         return; // encerra a função
     }
- 
- 
+
+
     if (cena.tipo === "filtrarRosalind") { // se a cena for do tipo "filtrar"
- 
+
         limparBotoes(); // garante que não há botões na tela
- 
+
         mostrarDialogo( // mostra explicação sobre o processo de lise/filtragem
             "Rosalind Franklin",
             "A lise dissolve as membranas celulares, liberando o material que existe dentro delas, incluindo o DNA."
         );
-        
+
         mostrarDialogo( // mostra explicação sobre o processo de lise/filtragem
             "Rosalind Franklin",
             "O próximo passo é remover os pedaços maiores que podem atrapalhar nossa observação. Para isso, vamos filtrar a solução."
         );
- 
+
         aoClicarNoDialogo(function () { // ao clicar no diálogo (após ler a explicação)... 
             mostrarBotaoFiltrarRosalind(); // mostra o botão de filtrar
         });
- 
- 
+
+
         return; // encerra a função
     }
- 
- 
+
+
     if (cena.tipo === "adicionarRosalind") { // se a cena for do tipo "adicionar"
- 
+
         esconderDialogo(); // esconde a caixa de diálogo
         mostrarBotaoAdicionarRosalind(); // mostra o botão de adicionar
         return; // encerra a função
     }
- 
-    if (cena.tipo === "perguntaDNARosalind") { // se a cena for a pergunta sobre qual parte é o DNA
-        mostrarDialogo( // mostra a pergunta
-            "Rosalind Franklin",
-            "Observe com atenção. Qual das partes você acha que é o DNA?"
-        );
- 
-        aoClicarNoDialogo(function () { // ao clicar no diálogo (após ler a pergunta)...
-            mostrarBotoesDNA(); // mostra as opções de resposta
- 
-        });
- 
-        return; // encerra a função
-    }
- 
+
+    if (cena.tipo === "perguntaDNARosalind") {
+
+    mostrarBotoesDNA(); // mostra os 3 botões imediatamente
+
+    desabilitarBotoesDNA(); // deixa eles visíveis mas bloqueados
+
+    mostrarDialogo(
+        "Rosalind Franklin",
+        "Observe com atenção. Qual das partes você acha que é o DNA?"
+    );
+
+    aoClicarNoDialogo(function () {
+
+        habilitarBotoesDNA(); // libera os cliques
+
+        esconderDialogo();
+    });
+
+    return;
+}
+
     // Experimento Marie Curie Eletroscópio
- 
+
     if (cena.tipo === 'investigacaoMarie') { // se a cena for a etapa de investigação das amostras
         esconderDialogo(); // esconde a caixa de diálogo
         mostrarBotoesInvestigacaoMarie(); // mostra os botões "Amostra A" e "Amostra B"
         return; // encerra a função
     }
- 
+
     if (cena.tipo === 'perguntaFinalMarie') { // se a cena for a pergunta final
         mostrarPerguntaFinalMarie() // chama a função que monta a pergunta e os botões de resposta
         return; // encerra a função
     }
- 
+
     if (cena.tipo === 'respostaErradaMarie') { // se a cena for de tratamento de resposta errada
         aoClicarNoDialogo(function () { // ao clicar no diálogo...
             mostrarDialogo('Marie Curie', 'Observe os resultados novamente. Qual das amostras provocou uma alteração no eletroscópio?'); // repete a pergunta com uma dica
@@ -555,22 +643,22 @@ function mostrarCena(indice) {
         });
         return; // encerra a função
     }
- 
+
     // Cena normal com diálogo
     mostrarDialogo( // para cenas sem "tipo" especial, mostra o diálogo normalmente
         cena.falante === 'Jogadora' ? nomeJogadora : (cena.falante ?? ''), // se o falante for "Jogadora", usa o nome digitado; senão usa o nome do falante (ou string vazia se não houver)
         cena.dialogo ?? '' // usa o texto do diálogo, ou string vazia se não houver
     );
 }
- 
+
 // Avança para a próxima cena ao clicar na caixa de diálogo
- 
+
 dialogoElemento.addEventListener('click', function () { // registra um listener de clique permanente no elemento de diálogo
     const cena = cenas[cenaAtual]; // obtém a cena atual
- 
+
     // Cenas especiais são gerenciadas pelas suas próprias funções
     if (cena.tipo) return; // se a cena tiver um "tipo" especial, não faz nada aqui (o controle é feito por outras funções/listeners)
- 
+
     cenaAtual++; // avança o índice da cena
     if (cenaAtual < cenas.length) { // se ainda existem cenas no array...
         mostrarCena(cenaAtual); // exibe a próxima cena
@@ -579,20 +667,114 @@ dialogoElemento.addEventListener('click', function () { // registra um listener 
     }
 });
 
+// FUnções para Katherine
+
+function criarCardKatherine(imagem, posicao, onClick) {
+
+    const btn = document.createElement("button");
+
+    btn.style.position = "absolute";
+    btn.style.zIndex = "1000";
+    btn.style.pointerEvents = "all";
+
+    Object.assign(btn.style, posicao);
+
+    btn.classList.add("card-katherine");
+
+    const img = document.createElement("img");
+
+    img.src = imagem;
+    img.style.width = "90px";
+    img.style.display = "block";
+
+    btn.appendChild(img);
+
+    btn.addEventListener("click", onClick);
+
+    botoesCenaElemento.appendChild(btn);
+}
+
+function mostrarBotoesKatherine() {
+    esconderDialogo();
+    limparBotoes();
+
+    criarCardKatherine(
+        "src/images/cenarios/katherinejohnson/experimento/card-30.png",
+        { left: "35%", bottom: "60%" },
+        respostaErradaKatherine
+    );
+
+    criarCardKatherine(
+        "src/images/cenarios/katherinejohnson/experimento/card-45.png",
+        { left: "45%", bottom: "60%" },
+        respostaCertaKatherine
+    );
+
+    criarCardKatherine(
+        "src/images/cenarios/katherinejohnson/experimento/card-60.png",
+        { left: "55%", bottom: "60%" },
+        respostaErradaKatherine
+    );
+}
+
+function respostaErradaKatherine() {
+
+    const cards = document.querySelectorAll(".card-katherine");
+
+    cards.forEach(card => {
+        card.style.pointerEvents = "none";
+        card.style.opacity = "0.7"; // opcional
+    });
+
+    mostrarDialogo(
+        "Katherine Johnson",
+        "Relembre novamente as trajetórias. Qual delas parece ter percorrido a maior distância antes de tocar o solo?"
+    );
+
+    aoClicarNoDialogo(function () {
+
+        cards.forEach(card => {
+            card.style.pointerEvents = "all";
+            card.style.opacity = "1";
+        });
+
+        esconderDialogo();
+    });
+}
+
+function respostaCertaKatherine() {
+
+    limparBotoes();
+
+    cenarioElemento.style.backgroundImage =
+        "url(src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png)";
+
+    mostrarDialogo(
+        "Katherine Johnson",
+        `Excelente!
+
+    O lançamento de 45° possui o maior alcance horizontal.`
+    );
+    aoClicarNoDialogo(function () {
+        cenaAtual++;
+        mostrarCena(cenaAtual);
+    });
+}
+
 // ========== Começar o jogo ==========
 
 comecarBotaoElemento.addEventListener('click', function (event) { // registra o clique no botão "JOGAR"
     event.preventDefault(); // previne o comportamento padrão (ex: envio de formulário)
- 
+
     const inputNome = document.getElementById('nome-jogadora'); // obtém o campo de input do nome
     nomeJogadora = inputNome.value.trim(); // armazena o nome digitado, removendo espaços extras
- 
+
     if (nomeJogadora === '') { // se o nome estiver vazio...
         alert('Digite seu nome para começar!'); // exibe um alerta pedindo o nome
         inputNome.focus(); // coloca o foco de volta no campo de input
         return; // interrompe a função, não inicia o jogo
     }
- 
+
     overlayElemento.style.display = 'none'; // esconde a tela de overlay (tela inicial)
     caixaDeDialogoElemento.style.display = 'flex'; // exibe a caixa de diálogo
     mostrarCena(cenaAtual); // exibe a primeira cena do jogo (cenaAtual = 0)
@@ -615,7 +797,7 @@ function finalizarJogo() {
             <button id="reiniciar-btn">Jogar novamente</button> 
         </div>
     `;
- 
+
     document.getElementById('reiniciar-btn').addEventListener('click', function () { // registra o clique no botão "Jogar novamente"
         overlayElemento.innerHTML = ` 
             <img src="src/images/logo/logoPreta.png" alt=""> 
@@ -625,21 +807,22 @@ function finalizarJogo() {
                 <button id="comecar-btn" type="button">JOGAR</button> 
             </form>
         `;
- 
+
         document.getElementById('comecar-btn').addEventListener('click', function (event) { // registra o clique no novo botão "JOGAR"
             event.preventDefault(); // previne comportamento padrão
             const inputNome = document.getElementById('nome-jogadora'); // obtém o novo campo de input
             nomeJogadora = inputNome.value.trim(); // armazena o novo nome digitado
- 
+
             if (nomeJogadora === '') { // se o nome estiver vazio...
                 alert('Digite seu nome para começar!'); // exibe alerta
                 inputNome.focus(); // foca no campo
                 return; // interrompe a função
             }
- 
+
             overlayElemento.style.display = 'none'; // esconde o overlay
             caixaDeDialogoElemento.style.display = 'flex'; // exibe a caixa de diálogo
             mostrarCena(cenaAtual); // reinicia o jogo a partir da cena 0
         });
     });
 }
+
