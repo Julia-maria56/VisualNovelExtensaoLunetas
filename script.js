@@ -15,7 +15,6 @@ const cenas = [
     },
     {
         id: "intro",
-        
         cenario: "src/images/cenarios/mariecurie/protagonistaempe.png",
         falante: "Marie Curie",
         dialogo: "Eu trabalho com radioatividade."
