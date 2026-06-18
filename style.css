@@ -100,6 +100,53 @@ main {
     margin-bottom: 5%;
 }
 
+#elementos-logo {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    display: flex;
+}
+
+#becker {
+    position: absolute;
+    width: 4%;
+    left: 66%;
+    bottom: 58%;
+    animation: flutuar 2s infinite ease-in-out;
+}
+
+#ampulheta {
+    position: absolute;
+    width: 2.5%;
+    right: 41%;
+    bottom: 61%;
+    animation: girarLeve 3s infinite ease-in-out;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes girarLeve {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(8deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 #cenario {
     position: absolute;
     inset: 0;
@@ -277,8 +324,22 @@ main {
     color: white;
     padding: 20px 30px;
     border-radius: 60px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
 
+    animation: pulsarBotao 2s infinite ease-in-out;
+
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+@keyframes pulsarBotao {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 #comecar-btn:hover,
