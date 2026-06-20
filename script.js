@@ -6,113 +6,191 @@
 // falante: personagem que fala
 // dialogo: texto exibido
 // tipo: indica cenas especiais
+
+//os ids só são importantes se você estiver usando a função irParaCena().
+// function irParaCena(id) {
+//     const indice = cenas.findIndex(cena => cena.id === id);
+//     if (indice === -1) {
+//         console.error(`Cena "${id}" não encontrada.`);
+//         return;
+//     }
+//     cenaAtual = indice;
+//     mostrarCena(cenaAtual);
+// }
+// Ela procura uma cena pelo valor do id e pula diretamente para ela.
+
+
+// No caso, nem todas as cenas precisam de id - nem de tipo. Então, você cria as cenas só com:
+// {
+//         cenario: ,
+//         falante: ,
+//         dialogo: 
+//     },
+
+
+
 const cenas = [
+    //Escola
     {
-        id: "intro",
-        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        cenario: "src/images/cenarios/escola/inicioEscola.png",
         falante: "Jogadora",
-        dialogo: "Eu acho que ciência não é para mim"
+        dialogo: "Odeio ciencias..."
+    },
+
+
+    //Corredor com portas
+    {
+        id: "corredorEscola",
+        cenario: "src/images/cenarios/escola/corredorEscola.png",
+    },
+
+    //Clarão
+    {
+        cenario: "src/images/transicao/clarao.png",
+        falante: "Jogadora",
+        dialogo: "O que está acontecendo?"
+    },
+
+
+    // Ada Lovelace
+
+    {
+        cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
+        falante: "Ada Lovelace",
+        dialogo: "Vamos começar o experimento."
     },
     {
-        id: "intro",
-        cenario: "src/images/cenarios/mariecurie/protagonistaempe.png",
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Jogadora",
+        dialogo: "Que massa."
+    },
+    {
+        cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
+        tipo: "experimentoAda"
+    },
+    {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Ada Lovelace",
+        dialogo: "EXPLICAÇÃO DEPOIS DO EXPERIMENTO"
+    },
+
+
+    //Amuleto- cena na época da Ada
+    {
+        cenario: "src/images/cenarios/adalovelace/amuleto.png",
+        falante: "Jogadora",
+        dialogo: "Mds, um amuleto."
+    },
+    {
+        cenario: "src/images/cenarios/adalovelace/amuletoECristal.png",
+        falante: "Jogadora",
+        dialogo: "Toma esse cristal"
+    },
+    {
+        id: "amuletoCompletoAda",
+        cenario: "src/images/cenarios/adalovelace/amuletoComCristal.png",
+    },
+
+
+    //Tela branca
+
+
+    // Marie Curie
+
+    {
+        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
         falante: "Marie Curie",
-        dialogo: "Eu trabalho com radioatividade."
+        dialogo: "Quando estiver pronta, pode começar."
     },
 
-    // Katherine
     {
-        id: "conversaKatherine",
-        cenario: "src/images/cenarios/katherinejohnson/experimento/computador.png",
-        falante: "Katherine Johnson",
-        dialogo: "Vamos observar três simulações e descobrir qual delas possui o maior alcance."
-    },
-    {
-        id: "conversaKatherine",
-        cenario: "src/images/cenarios/katherinejohnson/experimento/computador.png",
-        falante: "Katherine Johnson",
-        dialogo: " Vamos agora observar a trajetória de um foguete com o ângulo de lançamento de 30°."
-    },
-    {
-        id: "conversaKatherine",
-        cenario: "src/images/cenarios/katherinejohnson/experimento/computador30.png",
-        falante: "Katherine Johnson",
-        dialogo: "Esta é a trajetória de um foguete com o ângulo de lançamento de 30°. Vamos ver agora a trajetória de um foguete com o ângulo de lançamento de 45°. "
-    },
-    {
-        id: "conversaKatherine",
-        cenario: "src/images/cenarios/katherinejohnson/experimento/computador45.png",
-        falante: "Katherine Johnson",
-        dialogo: "Esta é a trajetória de um foguete com o ângulo de lançamento de 45°. Vamos ver agora a trajetória de um foguete com o ângulo de lançamento de 60°. "
-    },
-    {
-        id: "conversaKatherine",
-        cenario: "src/images/cenarios/katherinejohnson/experimento/computador60.png",
-        falante: "Katherine Johnson",
-        dialogo: "Esta é a trajetória de um foguete com o ângulo de lançamento de 60°."
-    },
-    {
-        id: "perguntaFinalKatherine",
-        cenario: "src/images/cenarios/katherinejohnson/experimento/computador.png",
-        tipo: "perguntaFinalKatherine"
+        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
+        tipo: "investigacaoMarie"
     },
 
-
-    // Experimento Rosalind
+    {
+        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
+        tipo: "perguntaFinalMarie"
+    },
 
     {
-        id: "experimentoRosalind",
+        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
+        tipo: "respostaErradaMarie"
+    },
+
+    {
+        id: "respostaCertaMarie",
+        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
+        falante: "Marie Curie",
+        dialogo: "Excelente observação! Logo, a Amostra B provavelmente contém urânio."
+    },
+    {
+        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
+        falante: "Marie Curie",
+        dialogo: "EXPLICAÇÃO DEPOIS DO EXPERIMENTO"
+    },
+
+    //Amuleto- cena na época da Marie
+    {
+        cenario: "src/images/cenarios/adalovelace/amuleto.png",
+        falante: "Jogadora",
+        dialogo: "Mds, um amuleto."
+    },
+    {
+        cenario: "src/images/cenarios/adalovelace/amuletoECristal.png",
+        falante: "Jogadora",
+        dialogo: "Toma esse cristal"
+    },
+    {
+        id: "amuletoCompletoMarie",
+        cenario: "src/images/cenarios/adalovelace/amuletoComCristal.png",
+    },
+
+    // Rosalind Franklin
+
+    {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Rosalind Franklin",
         dialogo: "Falando em DNA, queria te mostrar algo."
-
     },
 
     {
-        id: "DNARosalind",
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena1.png",
         falante: "Rosalind Franklin",
         dialogo: "Na bancada, temos um morango, uma solução de lise, um filtro, um álcool em gel e um recipiente. Precisaremos de tudo isso para o nosso experimento."
     },
     {
-        id: "DNARosalind",
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena1.png",
         falante: "Rosalind Franklin",
         dialogo: "Vamos tentar encontrar o DNA que está escondido dentro deste morango. Para isso, precisamos seguir algumas etapas."
     },
     {
-        id: "DNARosalind",
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena1.png",
         falante: "Rosalind Franklin",
         dialogo: "Pode começar amassando o morango e adicionando a solução de lise no recipiente."
     },
 
     {
-        id: "experimentoInicioRosalind",
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena2.png",
         tipo: "amassarRosalind"
     },
 
     {
-        id: "experimentoMisturarRosalind",
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena3.png",
         tipo: "misturarRosalind"
     },
 
     {
-        id: "experimentoFiltrarRosalind",
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena4.png",
         tipo: "filtrarRosalind"
     },
 
     {
-        id: "experimentoAdicionarRosalind",
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena5.png",
         tipo: "adicionarRosalind"
     },
 
     {
-        id: "perguntaDNARosalind",
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena6.png",
         tipo: "perguntaDNARosalind"
     },
@@ -123,39 +201,93 @@ const cenas = [
         falante: "Rosalind Franklin",
         dialogo: "Muito bem! Esse material esbranquiçado é o DNA. Eu trabalho estudando essa substância e tentando descobrir como ela é organizada."
     },
-
     {
-        id: "explicacaoMarie",
-        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
-        falante: "Marie Curie",
-        dialogo: "Quando estiver pronta, pode começar."
+        cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena6.png",
+        falante: "Rosalind Franklin",
+        dialogo: "EXPLICAÇÃO DPS DO EXPERIMENTO"
     },
 
+    //Amuleto- cena na época da Rosalind
     {
-        id: "investigacaoMarie",
-        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
-        tipo: "investigacaoMarie"
+        cenario: "src/images/cenarios/adalovelace/amuleto.png",
+        falante: "Jogadora",
+        dialogo: "Mds, um amuleto."
+    },
+    {
+        cenario: "src/images/cenarios/adalovelace/amuletoECristal.png",
+        falante: "Jogadora",
+        dialogo: "Toma esse cristal"
+    },
+    {
+        id: "amuletoCompletoRosalind",
+        cenario: "src/images/cenarios/adalovelace/amuletoComCristal.png",
     },
 
-    {
-        id: "perguntaFinalMarie",
-        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
-        tipo: "perguntaFinalMarie"
-    },
+    // Katherine Johnson
 
     {
-        id: "respostaErradaMarie",
-        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
-        tipo: "respostaErradaMarie"
+        cenario: "src/images/cenarios/katherinejohnson/experimento/computador.png",
+        falante: "Katherine Johnson",
+        dialogo: "Vamos observar três simulações e descobrir qual delas possui o maior alcance."
+    },
+    {
+        cenario: "src/images/cenarios/katherinejohnson/experimento/computador.png",
+        falante: "Katherine Johnson",
+        dialogo: "Vamos agora observar a trajetória de um foguete com o ângulo de lançamento de 30°."
+    },
+    {
+        cenario: "src/images/cenarios/katherinejohnson/experimento/computador30.png",
+        falante: "Katherine Johnson",
+        dialogo: "Esta é a trajetória de um foguete com o ângulo de lançamento de 30°. Vamos ver agora a trajetória de um foguete com o ângulo de lançamento de 45°."
+    },
+    {
+        cenario: "src/images/cenarios/katherinejohnson/experimento/computador45.png",
+        falante: "Katherine Johnson",
+        dialogo: "Esta é a trajetória de um foguete com o ângulo de lançamento de 45°. Vamos ver agora a trajetória de um foguete com o ângulo de lançamento de 60°."
+    },
+    {
+        cenario: "src/images/cenarios/katherinejohnson/experimento/computador60.png",
+        falante: "Katherine Johnson",
+        dialogo: "Esta é a trajetória de um foguete com o ângulo de lançamento de 60°."
+    },
+    {
+        cenario: "src/images/cenarios/katherinejohnson/experimento/computador.png",
+        tipo: "perguntaFinalKatherine"
+    },
+    {
+        cenario: "src/images/cenarios/katherinejohnson/experimento/computador.png",
+        falante: "Katherine Johnson",
+        dialogo: "EXPLICAÇÃO EXPERIMENTO"
     },
 
+
+    //Amuleto- cena na época da Katherine
     {
-        id: "respostaCertaMarie",
-        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
-        falante: "Marie Curie",
-        dialogo: "Excelente observação! Logo, a Amostra B provavelmente contém urânio."
-    }
+        cenario: "src/images/cenarios/adalovelace/amuleto.png",
+        falante: "Jogadora",
+        dialogo: "Mds, um amuleto."
+    },
+    {
+        cenario: "src/images/cenarios/adalovelace/amuletoECristal.png",
+        falante: "Jogadora",
+        dialogo: "Toma esse cristal"
+    },
+    {
+        id: "amuletoCompletoKatherine",
+        cenario: "src/images/cenarios/adalovelace/amuletoComCristal.png",
+    },
+    {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Jogadora",
+        dialogo: "Quer ser a sexta passageira?"
+    },
+
+
 ];
+
+
+
+
 
 // Relacionamos os elementos do HTML ao Javascript
 const cenarioElemento = document.getElementById('cenario');
@@ -165,7 +297,12 @@ const dialogoElemento = document.getElementById('dialogo');
 const overlayElemento = document.getElementById('overlay');
 const botoesCenaElemento = document.getElementById('botoes-cena');
 const comecarBotaoElemento = document.getElementById('comecar-btn');
+<<<<<<< Updated upstream
 const elementosLogo = document.getElementById('elementos-logo');
+=======
+const botaoFinalizarAda = document.getElementById("finalizar-ada");
+
+>>>>>>> Stashed changes
 
 
 // Variáveis de controle, elas armazenam o estado atual do jogo
@@ -174,6 +311,15 @@ let nomeJogadora = ""; // nome digitado pela jogadora, usado para personalizar o
 let amostraAMarieFoiAnalisada = false; // Indica se a Amostra A da Marie já foi observada
 let amostraBMarieFoiAnalisada = false; // Indica se a Amostra B da Marie já foi observada 
 let listenerDialogoAtual = null; // guarda referência do listener de clique atual no diálogo, para poder removê-lo depois
+let sequenciaCorretaAda = [
+    "triangulo",
+    "estrela",
+    "circulo",
+    "quadrado",
+    "triangulo"
+];
+let sequenciaJogadoraAda = [];
+let containerExperimentoAda = null;
 
 // ========== Funções auxiliares ==========
 
@@ -196,12 +342,17 @@ function trocarRostoPersonagem(falante) {
 
     if (falante === nomeJogadora || falante === 'Jogadora') {
         rostoImg.src = 'src/images/caixa-de-dialogo/protagonista.jpg';
+    } else if (falante === 'Ada Lovelace') {
+        rostoImg.src = 'src/images/caixa-de-dialogo/mariecurie.jpg';
     } else if (falante === 'Marie Curie') {
         rostoImg.src = 'src/images/caixa-de-dialogo/mariecurie.jpg';
     } else if (falante === 'Rosalind Franklin') {
         rostoImg.src = 'src/images/caixa-de-dialogo/mariecurie.jpg';
     }
     else if (falante === 'Katherine Johnson') {
+        rostoImg.src = 'src/images/caixa-de-dialogo/mariecurie.jpg';
+    }
+    else if (falante === 'Professora') {
         rostoImg.src = 'src/images/caixa-de-dialogo/mariecurie.jpg';
     }
 }
@@ -445,18 +596,18 @@ function mostrarBotoesDNA() {
         },
         function () {
             mostrarDialogo(
-    "Rosalind Franklin",
-    "Não tenho certeza se este é o correto. O DNA aparece como um material esbranquiçado após a adição do álcool."
-);
+                "Rosalind Franklin",
+                "Não tenho certeza se este é o correto. O DNA aparece como um material esbranquiçado após a adição do álcool."
+            );
 
-desabilitarBotoesDNA();
+            desabilitarBotoesDNA();
 
-aoClicarNoDialogo(function () {
+            aoClicarNoDialogo(function () {
 
-    habilitarBotoesDNA();
+                habilitarBotoesDNA();
 
-    esconderDialogo();
-});
+                esconderDialogo();
+            });
 
         }
     );
@@ -471,21 +622,21 @@ aoClicarNoDialogo(function () {
         },
         function () {
 
-    mostrarDialogo(
-        "Rosalind Franklin",
-        "Não tenho certeza se este é o correto. O DNA aparece como um material esbranquiçado após a adição do álcool."
-    );
+            mostrarDialogo(
+                "Rosalind Franklin",
+                "Não tenho certeza se este é o correto. O DNA aparece como um material esbranquiçado após a adição do álcool."
+            );
 
-    desabilitarBotoesDNA();
+            desabilitarBotoesDNA();
 
-    aoClicarNoDialogo(function () {
+            aoClicarNoDialogo(function () {
 
-        habilitarBotoesDNA();
+                habilitarBotoesDNA();
 
-        esconderDialogo();
-    });
+                esconderDialogo();
+            });
 
-}
+        }
     );
 
 
@@ -535,21 +686,74 @@ function mostrarCena(indice) {
 
     cenarioElemento.style.backgroundImage = `url(${cena.cenario})`; // atualiza a imagem de fundo conforme a cena
     limparBotoes(); // remove qualquer botão que estivesse na tela anteriormente
+    // Cenas de amuleto completo
+    if (cena.id === "corredorEscola") {
+
+        esconderDialogo();
+
+        criarBotao(
+            "Abrir porta",
+            {
+                bottom: "40%",
+                left: "75%"
+            },
+            function () {
+
+                cenaAtual++;
+                mostrarCena(cenaAtual);
+
+            }
+        );
+
+        return;
+    }
+    if (cena.id && cena.id.startsWith("amuletoCompleto")) {
+
+        esconderDialogo();
+
+        criarBotao(
+            "AVANÇAR",
+            {
+                bottom: "10%",
+                left: "50%",
+                transform: "translateX(-50%)"
+            },
+            function () {
+
+                cenaAtual++;
+
+                if (cenaAtual < cenas.length) {
+                    mostrarCena(cenaAtual);
+                } else {
+                    finalizarJogo();
+                }
+            }
+        );
+
+        return;
+    }
+
+    if (cena.tipo === "experimentoAda") {
+
+        iniciarExperimentoAda();
+
+        return;
+    }
 
     //Experimento Katherine
     if (cena.tipo === "perguntaFinalKatherine") {
 
-    mostrarDialogo(
-        "Katherine Johnson",
-        "Qual lançamento possui o maior alcance?"
-    );
+        mostrarDialogo(
+            "Katherine Johnson",
+            "Qual lançamento possui o maior alcance?"
+        );
 
-    aoClicarNoDialogo(function () {
-        mostrarBotoesKatherine();
-    });
+        aoClicarNoDialogo(function () {
+            mostrarBotoesKatherine();
+        });
 
-    return;
-}
+        return;
+    }
 
     // Experimento Rosalind DNA
 
@@ -605,24 +809,24 @@ function mostrarCena(indice) {
 
     if (cena.tipo === "perguntaDNARosalind") {
 
-    mostrarBotoesDNA(); // mostra os 3 botões imediatamente
+        mostrarBotoesDNA(); // mostra os 3 botões imediatamente
 
-    desabilitarBotoesDNA(); // deixa eles visíveis mas bloqueados
+        desabilitarBotoesDNA(); // deixa eles visíveis mas bloqueados
 
-    mostrarDialogo(
-        "Rosalind Franklin",
-        "Observe com atenção. Qual das partes você acha que é o DNA?"
-    );
+        mostrarDialogo(
+            "Rosalind Franklin",
+            "Observe com atenção. Qual das partes você acha que é o DNA?"
+        );
 
-    aoClicarNoDialogo(function () {
+        aoClicarNoDialogo(function () {
 
-        habilitarBotoesDNA(); // libera os cliques
+            habilitarBotoesDNA(); // libera os cliques
 
-        esconderDialogo();
-    });
+            esconderDialogo();
+        });
 
-    return;
-}
+        return;
+    }
 
     // Experimento Marie Curie Eletroscópio
 
@@ -762,8 +966,224 @@ function respostaCertaKatherine() {
     });
 }
 
+<<<<<<< Updated upstream
 // Função que inicia o jogo
 function iniciarJogo(event) {
+=======
+
+// ========== Função para Ada Lovelace =========
+function iniciarExperimentoAda() {
+
+    esconderDialogo();
+    limparBotoes();
+
+    sequenciaJogadoraAda = [];
+
+    criarAreaExperimentoAda();
+
+    criarFormasDisponiveisAda();
+
+}
+
+function criarAreaExperimentoAda() {
+
+    const experimento = document.createElement("div");
+
+    experimento.id = "experimento-ada";
+
+    experimento.innerHTML = `
+        <div id="area-montagem-ada"></div>
+        <div id="pecas-ada"></div>
+    `;
+
+    botoesCenaElemento.appendChild(experimento);
+
+    const areaMontagem =
+        document.getElementById("area-montagem-ada");
+
+    areaMontagem.addEventListener(
+        "dragover",
+        e => e.preventDefault()
+    );
+
+    areaMontagem.addEventListener(
+        "drop",
+        receberFormaAda
+    );
+}
+
+const pecasAda = [
+    "triangulo",
+    "triangulo",
+    "triangulo",
+
+    "estrela",
+    "estrela",
+    "estrela",
+
+    "circulo",
+    "circulo",
+    "circulo",
+
+    "quadrado",
+    "quadrado",
+    "quadrado"
+];
+
+
+function criarFormasDisponiveisAda() {
+
+    const container =
+        document.getElementById("pecas-ada");
+
+    const pecasEmbaralhadas =
+        [...pecasAda].sort(() => Math.random() - 0.5);
+
+    pecasEmbaralhadas.forEach(tipo => {
+
+        const img = document.createElement("img");
+
+        img.src =
+            `src/images/cenarios/adalovelace/experimento/${tipo}.png`;
+
+        img.draggable = true;
+
+        img.style.width = "65px";   // novo tamanho
+        img.style.height = "65px";
+        img.style.cursor = "grab";
+
+        configurarDragAda(img, tipo);
+
+        container.appendChild(img);
+    });
+}
+
+
+
+function configurarDragAda(img, tipo) {
+
+    img.addEventListener("dragstart", (e) => {
+
+        e.dataTransfer.setData("forma", tipo);
+
+        window.pecaArrastada = img;
+    });
+
+}
+
+function receberFormaAda(e) {
+
+    e.preventDefault();
+
+    const tipo = e.dataTransfer.getData("forma");
+
+    sequenciaJogadoraAda.push(tipo);
+
+    const peca = window.pecaArrastada;
+
+    if (peca) {
+        peca.style.width = "60px";
+        peca.style.height = "60px";
+        e.currentTarget.appendChild(peca);
+    }
+    if (sequenciaJogadoraAda.length === 5) {
+        criarBotaoFinalizarAda();
+    }
+}
+
+function verificarRespostaAda() {
+    if (botaoFinalizarAda) {
+        botaoFinalizarAda.remove();
+    }
+
+    const acertou =
+        JSON.stringify(sequenciaJogadoraAda) ===
+        JSON.stringify(sequenciaCorretaAda);
+
+    if (acertou) {
+
+        removerExperimentoAda();
+
+
+        cenarioElemento.style.backgroundImage =
+            "url(src/images/cenarios/adalovelace/escritorio-Protagonistamaior.png)";
+
+        mostrarDialogo(
+            "Ada Lovelace",
+            "Excelente! Você conseguiu identificar a sequência corretamente."
+        );
+
+        aoClicarNoDialogo(() => {
+            cenaAtual++;
+            mostrarCena(cenaAtual);
+        });
+
+    } else {
+
+        respostaErradaAda();
+
+    }
+}
+
+function respostaErradaAda() {
+
+    mostrarDialogo(
+        "Ada Lovelace",
+        "Essa não é a sequência correta. Vamos tentar novamente."
+    );
+
+    aoClicarNoDialogo(() => {
+
+        removerExperimentoAda();
+
+        iniciarExperimentoAda();
+    });
+}
+
+function removerExperimentoAda() {
+
+    const exp =
+        document.getElementById("experimento-ada");
+
+    if (exp) {
+        exp.remove();
+    }
+
+    sequenciaJogadoraAda = [];
+
+    document
+        .querySelectorAll("#pecas-ada img")
+        .forEach(img => img.remove());
+}
+
+
+function criarBotaoFinalizarAda() {
+
+    if (document.getElementById("finalizar-ada")) return;
+
+    const btn = document.createElement("button");
+
+    btn.id = "finalizar-ada";
+    btn.textContent = "FINALIZAR";
+    btn.classList.add("botao-cena");
+
+    btn.addEventListener(
+        "click",
+        verificarRespostaAda
+    );
+
+    document
+        .getElementById("experimento-ada")
+        .appendChild(btn);
+}
+
+
+
+
+
+
+// ========== Começar o jogo ==========
+>>>>>>> Stashed changes
 
     event.preventDefault(); // previne o comportamento padrão do formulário
 
