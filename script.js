@@ -297,12 +297,9 @@ const dialogoElemento = document.getElementById('dialogo');
 const overlayElemento = document.getElementById('overlay');
 const botoesCenaElemento = document.getElementById('botoes-cena');
 const comecarBotaoElemento = document.getElementById('comecar-btn');
-<<<<<<< Updated upstream
-const elementosLogo = document.getElementById('elementos-logo');
-=======
 const botaoFinalizarAda = document.getElementById("finalizar-ada");
+const elementosLogo = document.getElementById("elementos-logo");
 
->>>>>>> Stashed changes
 
 
 // Variáveis de controle, elas armazenam o estado atual do jogo
@@ -966,10 +963,6 @@ function respostaCertaKatherine() {
     });
 }
 
-<<<<<<< Updated upstream
-// Função que inicia o jogo
-function iniciarJogo(event) {
-=======
 
 // ========== Função para Ada Lovelace =========
 function iniciarExperimentoAda() {
@@ -1183,46 +1176,29 @@ function criarBotaoFinalizarAda() {
 
 
 // ========== Começar o jogo ==========
->>>>>>> Stashed changes
 
-    event.preventDefault(); // previne o comportamento padrão do formulário
+comecarBotaoElemento.addEventListener('click', function (event) { // registra o clique no botão "JOGAR"
+    event.preventDefault(); // previne o comportamento padrão (ex: envio de formulário)
+    elementosLogo.style.display = "none";
+    const inputNome = document.getElementById('nome-jogadora'); // obtém o campo de input do nome
+    nomeJogadora = inputNome.value.trim(); // armazena o nome digitado, removendo espaços extras
 
-    elementosLogo.style.display = "none"; // esconde bécker e ampulheta
-
-
-    const inputNome = document.getElementById('nome-jogadora'); // pega o campo de nome
-
-    nomeJogadora = inputNome.value.trim(); // salva o nome digitado
-
-
-    if (nomeJogadora === '') { // verifica se está vazio
-
-        alert('Digite seu nome para começar!');
-
-        inputNome.focus();
-
-        return;
-
+    if (nomeJogadora === '') { // se o nome estiver vazio...
+        alert('Digite seu nome para começar!'); // exibe um alerta pedindo o nome
+        inputNome.focus(); // coloca o foco de volta no campo de input
+        return; // interrompe a função, não inicia o jogo
     }
 
-
-    overlayElemento.style.display = 'none'; // esconde a tela inicial
-
-    caixaDeDialogoElemento.style.display = 'flex'; // mostra diálogo
-
-    mostrarCena(cenaAtual); // inicia a cena
-
-}
-
-// ========== Começar o jogo ==========
-
-comecarBotaoElemento.addEventListener('click', iniciarJogo);
+    overlayElemento.style.display = 'none'; // esconde a tela de overlay (tela inicial)
+    caixaDeDialogoElemento.style.display = 'flex'; // exibe a caixa de diálogo
+    mostrarCena(cenaAtual); // exibe a primeira cena do jogo (cenaAtual = 0)
+});
 
 // ========== Finalizar o jogo ==========
 
 function finalizarJogo() {
-    elementosLogo.style.display = "flex"; // mostra os elementos da tela inicial
     cenaAtual = 0; // reseta o índice da cena para o início
+    elementosLogo.style.display = "flex";
     amostraAMarieFoiAnalisada = false; // reseta o estado da Amostra A
     amostraBMarieFoiAnalisada = false; // reseta o estado da Amostra B
     cenarioElemento.style.backgroundImage = 'none'; // remove a imagem de fundo da cena
@@ -1238,7 +1214,6 @@ function finalizarJogo() {
     `;
 
     document.getElementById('reiniciar-btn').addEventListener('click', function () { // registra o clique no botão "Jogar novamente"
-
         overlayElemento.innerHTML = ` 
             <img src="src/images/logo/logoPreta.png" alt=""> 
             <form onsubmit="return false"> 
@@ -1248,13 +1223,10 @@ function finalizarJogo() {
             </form>
         `;
 
-        // faz o novo botão JOGAR funcionar
-        document.getElementById('comecar-btn')
-        .addEventListener('click', iniciarJogo);
-
-
         document.getElementById('comecar-btn').addEventListener('click', function (event) { // registra o clique no novo botão "JOGAR"
             event.preventDefault(); // previne comportamento padrão
+                elementosLogo.style.display = "none";
+
             const inputNome = document.getElementById('nome-jogadora'); // obtém o novo campo de input
             nomeJogadora = inputNome.value.trim(); // armazena o novo nome digitado
 
