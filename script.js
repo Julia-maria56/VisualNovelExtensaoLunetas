@@ -740,17 +740,22 @@ function mostrarCena(indice) {
     //Experimento Katherine
     if (cena.tipo === "perguntaFinalKatherine") {
 
-        mostrarDialogo(
-            "Katherine Johnson",
-            "Qual lançamento possui o maior alcance?"
-        );
+    mostrarCardsKatherineDesabilitados();
 
-        aoClicarNoDialogo(function () {
-            mostrarBotoesKatherine();
-        });
+    mostrarDialogo(
+        "Katherine Johnson",
+        "Qual lançamento possui o maior alcance?"
+    );
 
-        return;
-    }
+    aoClicarNoDialogo(function () {
+
+        limparBotoes(); // remove os cards desabilitados
+        mostrarBotoesKatherine(); // cria os clicáveis
+
+    });
+
+    return;
+}
 
     // Experimento Rosalind DNA
 
@@ -917,6 +922,52 @@ function mostrarBotoesKatherine() {
         { left: "55%", bottom: "60%" },
         respostaErradaKatherine
     );
+}
+
+function mostrarCardsKatherineDesabilitados() {
+
+    esconderDialogo();
+    limparBotoes();
+
+    criarCardKatherine(
+        "src/images/cenarios/katherinejohnson/experimento/card-30.png",
+        { left: "35%", bottom: "60%" },
+        () => {}
+    );
+
+    criarCardKatherine(
+        "src/images/cenarios/katherinejohnson/experimento/card-45.png",
+        { left: "45%", bottom: "60%" },
+        () => {}
+    );
+
+    criarCardKatherine(
+        "src/images/cenarios/katherinejohnson/experimento/card-60.png",
+        { left: "55%", bottom: "60%" },
+        () => {}
+    );
+
+    desabilitarCardsKatherine();
+}
+
+function desabilitarCardsKatherine() {
+
+    const cards = document.querySelectorAll(".card-katherine");
+
+    cards.forEach(card => {
+        card.style.pointerEvents = "none";
+        card.style.opacity = "0.7";
+    });
+}
+
+function habilitarCardsKatherine() {
+
+    const cards = document.querySelectorAll(".card-katherine");
+
+    cards.forEach(card => {
+        card.style.pointerEvents = "all";
+        card.style.opacity = "1";
+    });
 }
 
 function respostaErradaKatherine() {
