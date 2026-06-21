@@ -34,9 +34,14 @@ const cenas = [
     {
         cenario: "src/images/cenarios/escola/inicioEscola.png",
         falante: "Jogadora",
-        dialogo: "Odeio ciencias..."
+        dialogo: "Eu nunca vou entender isso… Ciência definitivamente não é para mim. É apenas decorar fórmulas e fazer contasdifíceis."
     },
 
+        {
+        cenario: "src/images/cenarios/escola/inicioEscola.png",
+        falante: "Jogadora",
+        dialogo: "Finalmente acabou! Agora, posso trocar de sala."
+    },
 
     //Corredor com portas
     {
