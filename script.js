@@ -51,14 +51,14 @@ const cenas = [
 
  {
         cenario: "src/images/cenarios/escola/inicioEscola.png",
-        falante: "´Jogadora",
+        falante: "Jogadora",
         dialogo: "Do que ela está falando? Parece que essa aula nunca acaba…"
     },
 
     {
         cenario: "src/images/cenarios/escola/inicioEscola.png",
         falante: "Jogadora",
-        dialogo: "Eu nunca vou entender isso… Ciência definitivamente não é para mim. É apenas decorar fórmulas e fazer contasdifíceis."
+        dialogo: "Eu nunca vou entender isso… Ciência definitivamente não é para mim. É apenas decorar fórmulas e fazer contas difíceis."
     },
 
         {
@@ -288,11 +288,6 @@ const cenas = [
     },
 
     {
-        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
-        falante: "Jogadora",
-        dialogo: "Que massa."
-    },
-    {
         cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
         tipo: "experimentoAda"
     },
@@ -300,12 +295,6 @@ const cenas = [
 
 
 // resposta correta para o experimento da Ada
-     {
-        id: "respostaCertaAda",
-        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
-        falante: "Marie Curie",
-        dialogo: "Excelente! Você observou o padrão e seguiu as instruções corretamente."
-    },
 
   {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
@@ -1442,7 +1431,7 @@ function verificarRespostaAda() {
 
         mostrarDialogo(
             "Ada Lovelace",
-            "Excelente! Você conseguiu identificar a sequência corretamente."
+            "Excelente! Você observou o padrão e seguiu as instruções corretamente."
         );
 
         aoClicarNoDialogo(() => {
