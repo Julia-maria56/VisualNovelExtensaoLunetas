@@ -33,6 +33,30 @@ const cenas = [
     //Escola
     {
         cenario: "src/images/cenarios/escola/inicioEscola.png",
+        falante: "Professora",
+        dialogo: "Desde muito tempo, homens e mulheres dedicam suas vidas à ciência para entender o mundo e criar coisas que antes pareciam impossíveis."
+    },
+
+ {
+        cenario: "src/images/cenarios/escola/inicioEscola.png",
+        falante: "Professora",
+        dialogo: "Porém, desde que eu iniciei minha carreira, sempre percebi como as conquistas das cientistas mulheres possuem pouco reconhecimento pelas pessoas."
+    },
+
+ {
+        cenario: "src/images/cenarios/escola/inicioEscola.png",
+        falante: "Professora",
+        dialogo: "Muitas mulheres fizeram descobertas que mudaram o mundo, mas seus nomes nem sempre aparecem nos livros com o destaque que merecem."
+    },
+
+ {
+        cenario: "src/images/cenarios/escola/inicioEscola.png",
+        falante: "´Jogadora",
+        dialogo: "Do que ela está falando? Parece que essa aula nunca acaba…"
+    },
+
+    {
+        cenario: "src/images/cenarios/escola/inicioEscola.png",
         falante: "Jogadora",
         dialogo: "Eu nunca vou entender isso… Ciência definitivamente não é para mim. É apenas decorar fórmulas e fazer contasdifíceis."
     },
@@ -58,12 +82,211 @@ const cenas = [
 
 
     // Ada Lovelace
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Jogadora",
+        dialogo: "Talvez ela saiba o que está acontecendo."
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Ada Lovelace",
+        dialogo: "Finalmente você chegou."
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Jogadora",
+        dialogo: "Cheguei?"
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Ada Lovelace",
+        dialogo: "Sim. Eu estava aguardando a sua chegada."
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Jogadora",
+        dialogo: "Aguardando? Mas nós nem nos conhecemos!"
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Ada Lovelace",
+        dialogo: "Talvez não da forma como imagina. Não se preocupe, tudo a seu tempo."
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Jogadora",
+        dialogo: "Você sabe me dizer onde estou?"
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Jogadora",
+        dialogo: "E por que tudo aqui parece tão antigo?"
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Ada Lovelace",
+        dialogo: "Porque este lugar pertence a outra época."
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Jogadora",
+        dialogo: "Outra época?"
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Ada Lovelace",
+        dialogo: "Sim. Você não está apenas em outro lugar. Você está no passado."
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Jogadora",
+        dialogo: "No passado?! Isso é impossível!"
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Ada Lovelace",
+        dialogo: "Imagino que pareça impossível para você. Mas, neste momento, você está em meu escritório."
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Jogadora",
+        dialogo: "Seu escritório? Então quem é você?"
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Ada Lovelace",
+        dialogo: "Sou a matemática e escritora Ada Lovelace."
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Ada Lovelace",
+        dialogo: "Estou estudando uma máquina capaz de realizar cálculos automaticamente. Mas eu acredito que ela pode fazer muito mais do que apenas resolver contas."
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Ada Lovelace",
+        dialogo: "Para isso, escrevo sequências de instruções que dizem à máquina exatamente o que ela deve fazer, passo a passo."
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Ada Lovelace",
+        dialogo: "Essas sequências são chamadas de algoritmos."
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Jogadora",
+        dialogo: "Você é tão importante, por que é tão pouco conhecida?"
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Ada Lovelace",
+        dialogo: "Houve diversas mulheres importantes na história do campo das exatas."
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Ada Lovelace",
+        dialogo: "Porém, devido ao preconceito, muitas de nós não temos o devido reconhecimento."
+    },
+
+{
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Jogadora",
+        dialogo: "A minha professora fez a mesma observação, mulheres nas áreas das ciências não são muito reconhecidas."
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Ada Lovelace",
+        dialogo: "Diga-me... Você acredita que uma máquina pode criar algo bonito?"
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Jogadora",
+        dialogo: "Uma máquina? Acho que não."
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Ada Lovelace",
+        dialogo: "Muitas pessoas pensariam o mesmo. Mas nem sempre as máquinas servem apenas para calcular."
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Jogadora",
+        dialogo: "Então para que servem?"
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Ada Lovelace",
+        dialogo: "Que tal descobrir por conta própria?"
+    },
+
+// Experimento Ada
 
     {
         cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
         falante: "Ada Lovelace",
         dialogo: "Vamos começar o experimento."
     },
+    {
+        cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
+        falante: "Ada Lovelace",
+        dialogo: "Observe o padrão apresentado. Para reproduzi-lo, organize as quatro próximas peças na ordem correta."
+    },
+
+  {
+        cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
+        falante: "Jogadora",
+        dialogo: "E como vou saber qual é a ordem?"
+    },
+
+  {
+        cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
+        falante: "Ada Lovelace",
+        dialogo: "Comece pela primeira forma e observe a sequência. Não tente adivinhar o resultado."
+    },
+
+  {
+        cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
+        falante: "Jogadora",
+        dialogo: "Então preciso apenas repetir o padrão?"
+    },
+
+  {
+        cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
+        falante: "Ada Lovelace",
+        dialogo: "Exatamente. Quando seguimos as instruções corretas, o resultado aparece naturalmente."
+    },
+
+  {
+        cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
+        falante: "Ada Lovelace",
+        dialogo: "Agora tente."
+    },
+
     {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Jogadora",
@@ -73,27 +296,87 @@ const cenas = [
         cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
         tipo: "experimentoAda"
     },
-    {
+
+
+
+// resposta correta para o experimento da Ada
+     {
+        id: "respostaCertaAda",
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Marie Curie",
+        dialogo: "Excelente! Você observou o padrão e seguiu as instruções corretamente."
+    },
+
+  {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Jogadora",
+        dialogo: "Então era só prestar atenção na ordem."
+    },
+  {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
-        dialogo: "EXPLICAÇÃO DEPOIS DO EXPERIMENTO"
+        dialogo: "Precisamente."
+    },
+
+  {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Ada Lovelace",
+        dialogo: "As máquinas funcionam da mesma forma, apenas seguem as instruções que recebem."
+    },
+
+  {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Ada Lovelace",
+        dialogo: "Você aprendeu algo muito importante hoje: algoritmos são conjuntos de instruções criados para orientar a execução de uma tarefa."
+    },
+
+  {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Ada Lovelace",
+        dialogo: "Máquinas também funcionam dessa maneira: executando instruções passo a passo para alcançar um objetivo."
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Jogadora",
+        dialogo: "Interessante... Eu sempre achei que programação fosse algo muito complicado, mas percebi que começa com algo simples como saber organizar os passos de uma tarefa."
+    },
+
+ {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Ada Lovelace",
+        dialogo: "Exatamente. Infelizmente, nosso tempo está acabando."
     },
 
 
+
     //Amuleto- cena na época da Ada
+     {
+        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+        falante: "Ada Lovelace",
+        dialogo: "Antes de você partir, pegue uma coisa no seu bolso."
+    },
+
     {
         cenario: "src/images/cenarios/adalovelace/amuleto.png",
         falante: "Jogadora",
-        dialogo: "Mds, um amuleto."
+        dialogo: "O que é isso?"
     },
     {
         cenario: "src/images/cenarios/adalovelace/amuletoECristal.png",
         falante: "Jogadora",
-        dialogo: "Toma esse cristal"
+        dialogo: "Você vai descobrir. Agora, vou lhe dar um objeto muito importante."
+    },
+    {
+        cenario: "src/images/cenarios/adalovelace/amuletoECristal.png",
+        falante: "Jogadora",
+        dialogo: "Tome cuidado com ele, pois será útil em sua jornada."
     },
     {
         id: "amuletoCompletoAda",
         cenario: "src/images/cenarios/adalovelace/amuletoComCristal.png",
+        falante: "Ada Lovelace",
+        dialogo: "Protagonista, encaixe este cristal no seu amuleto. Boa viagem!"
     },
 
 
