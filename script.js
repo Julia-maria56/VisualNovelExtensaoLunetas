@@ -121,13 +121,7 @@ const cenas = [
  {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Jogadora",
-        dialogo: "Você sabe me dizer onde estou?"
-    },
-
- {
-        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
-        falante: "Jogadora",
-        dialogo: "E por que tudo aqui parece tão antigo?"
+        dialogo: "Você sabe me dizer onde estou? E por que tudo aqui parece tão antigo?"
     },
 
  {
@@ -177,11 +171,11 @@ const cenas = [
         falante: "Ada Lovelace",
         dialogo: "Estou estudando uma máquina capaz de realizar cálculos automaticamente. Mas eu acredito que ela pode fazer muito mais do que apenas resolver contas."
     },
-
+//Talvez, pudéssemos juntar essas duas falas: "Para isso, escrevo sequências de instruções que dizem à máquina exatamente o que ela deve fazer, passo a passo." e "Essas sequências são chamadas de algoritmos."
  {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
-        dialogo: "Para isso, escrevo sequências de instruções que dizem à máquina exatamente o que ela deve fazer, passo a passo."
+        dialogo: "Para isso, escrevo sequências de instruções que dizem à máquina exatamente o que ela deve fazer, passo a passo." 
     },
 
  {
@@ -196,6 +190,7 @@ const cenas = [
         dialogo: "Você é tão importante, por que é tão pouco conhecida?"
     },
 
+//Talvez, pudéssemos juntar essas duas falas: "Houve diversas mulheres importantes na história do campo das exatas." e  "Porém, devido ao preconceito, muitas de nós não temos o devido reconhecimento."
  {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
@@ -254,7 +249,7 @@ const cenas = [
     {
         cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
         falante: "Ada Lovelace",
-        dialogo: "Observe o padrão apresentado. Para reproduzi-lo, organize as quatro próximas peças na ordem correta."
+        dialogo: "Observe o padrão apresentado. Para reproduzi-lo, organize as cinco próximas peças na ordem correta."
     },
 
   {
@@ -301,6 +296,7 @@ const cenas = [
         falante: "Jogadora",
         dialogo: "Então era só prestar atenção na ordem."
     },
+    //Juntar as próximas duas falas
   {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
