@@ -525,14 +525,19 @@ const cenas = [
         dialogo: "Esta é a trajetória de um foguete com o ângulo de lançamento de 45°. Vamos ver agora a trajetória de um foguete com o ângulo de lançamento de 60°."
     },
     {
-        cenario: "src/images/cenarios/katherinejohnson/experimento/computador60.png",
-        falante: "Katherine Johnson",
-        dialogo: "Esta é a trajetória de um foguete com o ângulo de lançamento de 60°."
-    },
-    {
+    tipo: "trajetoria60Katherine",
+    cenario: "src/images/cenarios/katherinejohnson/experimento/computador60.png",
+    falante: "Katherine Johnson",
+    dialogo: "Esta é a trajetória de um foguete com o ângulo de lançamento de 60°."
+},
+{
         cenario: "src/images/cenarios/katherinejohnson/experimento/computador.png",
         tipo: "perguntaFinalKatherine"
     },
+
+    //Pergunta Katherine
+
+    
     {
         cenario: "src/images/cenarios/katherinejohnson/experimento/computador.png",
         falante: "Katherine Johnson",
@@ -965,6 +970,28 @@ function mostrarCena(indice) {
 
     cenarioElemento.style.backgroundImage = `url(${cena.cenario})`; // atualiza a imagem de fundo conforme a cena
     limparBotoes(); // remove qualquer botão que estivesse na tela anteriormente
+
+    if (cena.tipo === "trajetoria60Katherine") {
+
+    mostrarDialogo(
+        cena.falante,
+        cena.dialogo
+    );
+
+    aoClicarNoDialogo(function () {
+
+        const indicePergunta = cenas.findIndex(
+            cena => cena.tipo === "perguntaFinalKatherine"
+        );
+
+        cenaAtual = indicePergunta;
+
+        mostrarCena(cenaAtual);
+    });
+
+    return;
+}
+
     // Cenas de amuleto completo
     if (cena.id === "corredorEscola") {
 
@@ -1022,22 +1049,25 @@ function mostrarCena(indice) {
     //Experimento Katherine
     if (cena.tipo === "perguntaFinalKatherine") {
 
-        mostrarCardsKatherineDesabilitados();
+    mostrarCardsKatherineDesabilitados();
 
-        mostrarDialogo(
-            "Katherine Johnson",
-            "Qual lançamento possui o maior alcance?"
-        );
+    mostrarDialogo(
+        "Katherine Johnson",
+        "Qual lançamento possui o maior alcance?"
+    );
 
-        aoClicarNoDialogo(function () {
+    aoClicarNoDialogo(function () {
 
-            limparBotoes(); // remove os cards desabilitados
-            mostrarBotoesKatherine(); // cria os clicáveis
+        limparBotoes();
 
-        });
+        mostrarBotoesKatherine();
 
-        return;
-    }
+        mostrarBotaoRelembrarKatherine();
+
+    });
+
+    return;
+}
 
     // Experimento Rosalind DNA
 
@@ -1157,6 +1187,29 @@ dialogoElemento.addEventListener('click', function () { // registra um listener 
 });
 
 // FUnções para Katherine
+function mostrarBotaoRelembrarKatherine() {
+
+    criarBotao(
+        "Relembrar alcances",
+        {
+            bottom: "43%",
+            right: "40%"
+        },
+        function () {
+
+            limparBotoes();
+
+            // volta para a cena do foguete 30°
+            cenaAtual = cenas.findIndex(
+                cena =>
+                    cena.cenario === "src/images/cenarios/katherinejohnson/experimento/computador30.png"
+            );
+
+            mostrarCena(cenaAtual);
+
+        }
+    );
+}
 
 function criarCardKatherine(imagem, posicao, onClick) {
 
@@ -1274,6 +1327,7 @@ function respostaErradaKatherine() {
         });
 
         esconderDialogo();
+        mostrarBotaoRelembrarKatherine();
     });
 }
 
