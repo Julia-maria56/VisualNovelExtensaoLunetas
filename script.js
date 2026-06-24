@@ -31,25 +31,26 @@
 
 const cenas = [
     //Escola
+
     {
         cenario: "src/images/cenarios/escola/inicioEscola.png",
         falante: "Professora",
         dialogo: "Desde muito tempo, homens e mulheres dedicam suas vidas à ciência para entender o mundo e criar coisas que antes pareciam impossíveis."
     },
 
- {
+    {
         cenario: "src/images/cenarios/escola/inicioEscola.png",
         falante: "Professora",
         dialogo: "Porém, desde que eu iniciei minha carreira, sempre percebi como as conquistas das cientistas mulheres possuem pouco reconhecimento pelas pessoas."
     },
 
- {
+    {
         cenario: "src/images/cenarios/escola/inicioEscola.png",
         falante: "Professora",
         dialogo: "Muitas mulheres fizeram descobertas que mudaram o mundo, mas seus nomes nem sempre aparecem nos livros com o destaque que merecem."
     },
 
- {
+    {
         cenario: "src/images/cenarios/escola/inicioEscola.png",
         falante: "Jogadora",
         dialogo: "Do que ela está falando? Parece que essa aula nunca acaba…"
@@ -61,7 +62,7 @@ const cenas = [
         dialogo: "Eu nunca vou entender isso… Ciência definitivamente não é para mim. É apenas decorar fórmulas e fazer contas difíceis."
     },
 
-        {
+    {
         cenario: "src/images/cenarios/escola/inicioEscola.png",
         falante: "Jogadora",
         dialogo: "Finalmente acabou! Agora, posso trocar de sala."
@@ -82,206 +83,210 @@ const cenas = [
 
 
     // Ada Lovelace
- {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Jogadora",
         dialogo: "Talvez ela saiba o que está acontecendo."
     },
 
- {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
         dialogo: "Finalmente você chegou."
     },
 
- {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Jogadora",
         dialogo: "Cheguei?"
     },
 
- {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
         dialogo: "Sim. Eu estava aguardando a sua chegada."
     },
 
- {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Jogadora",
         dialogo: "Aguardando? Mas nós nem nos conhecemos!"
     },
 
- {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
         dialogo: "Talvez não da forma como imagina. Não se preocupe, tudo a seu tempo."
     },
 
- {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Jogadora",
         dialogo: "Você sabe me dizer onde estou? E por que tudo aqui parece tão antigo?"
     },
 
- {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
-        dialogo: "Porque este lugar pertence a outra época."
+        dialogo: "Porque este lugar pertence a outra época. Você não está apenas em outro lugar. Você está no passado."
     },
 
- {
-        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
-        falante: "Jogadora",
-        dialogo: "Outra época?"
-    },
+    //  {
+    //         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+    //         falante: "Jogadora",
+    //         dialogo: "Outra época?"
+    //     },
 
- {
-        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
-        falante: "Ada Lovelace",
-        dialogo: "Sim. Você não está apenas em outro lugar. Você está no passado."
-    },
+    //  {
+    //         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+    //         falante: "Ada Lovelace",
+    //         dialogo: "Sim. Você não está apenas em outro lugar. Você está no passado."
+    //     },
 
- {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Jogadora",
         dialogo: "No passado?! Isso é impossível!"
     },
 
- {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
         dialogo: "Imagino que pareça impossível para você. Mas, neste momento, você está em meu escritório."
     },
 
- {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Jogadora",
         dialogo: "Seu escritório? Então quem é você?"
     },
 
- {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
         dialogo: "Sou a matemática e escritora Ada Lovelace."
     },
 
- {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
         dialogo: "Estou estudando uma máquina capaz de realizar cálculos automaticamente. Mas eu acredito que ela pode fazer muito mais do que apenas resolver contas."
     },
-//Talvez, pudéssemos juntar essas duas falas: "Para isso, escrevo sequências de instruções que dizem à máquina exatamente o que ela deve fazer, passo a passo." e "Essas sequências são chamadas de algoritmos."
- {
+    //Talvez, pudéssemos juntar essas duas falas: "Para isso, escrevo sequências de instruções que dizem à máquina exatamente o que ela deve fazer, passo a passo." e "Essas sequências são chamadas de algoritmos."
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
-        dialogo: "Para isso, escrevo sequências de instruções que dizem à máquina exatamente o que ela deve fazer, passo a passo." 
+        dialogo: "Para isso, escrevo sequências de instruções que dizem à máquina exatamente o que ela deve fazer, passo a passo. Essas sequências são chamadas de algoritmos."
     },
 
- {
-        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
-        falante: "Ada Lovelace",
-        dialogo: "Essas sequências são chamadas de algoritmos."
-    },
+    //  {
+    //         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+    //         falante: "Ada Lovelace",
+    //         dialogo: "Essas sequências são chamadas de algoritmos."
+    //     },
 
- {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Jogadora",
         dialogo: "Você é tão importante, por que é tão pouco conhecida?"
     },
 
-//Talvez, pudéssemos juntar essas duas falas: "Houve diversas mulheres importantes na história do campo das exatas." e  "Porém, devido ao preconceito, muitas de nós não temos o devido reconhecimento."
- {
+    //Talvez, pudéssemos juntar essas duas falas: "Houve diversas mulheres importantes na história do campo das exatas." e  "Porém, devido ao preconceito, muitas de nós não temos o devido reconhecimento."
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
-        dialogo: "Houve diversas mulheres importantes na história do campo das exatas."
+        dialogo: "Houve diversas mulheres importantes na história do campo das exatas. Porém, devido ao preconceito, muitas de nós não temos o devido reconhecimento."
     },
 
- {
-        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
-        falante: "Ada Lovelace",
-        dialogo: "Porém, devido ao preconceito, muitas de nós não temos o devido reconhecimento."
-    },
+    //  {
+    //         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+    //         falante: "Ada Lovelace",
+    //         dialogo: "Porém, devido ao preconceito, muitas de nós não temos o devido reconhecimento."
+    //     },
 
-{
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Jogadora",
         dialogo: "A minha professora fez a mesma observação, mulheres nas áreas das ciências não são muito reconhecidas."
     },
 
- {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
-        dialogo: "Diga-me... Você acredita que uma máquina pode criar algo bonito?"
+        dialogo: "Diga-me... Você acredita que a ordem das coisas realmente importa?"
     },
 
- {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Jogadora",
-        dialogo: "Uma máquina? Acho que não."
+        dialogo: "Depende da situação, eu acho."
     },
 
- {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
-        dialogo: "Muitas pessoas pensariam o mesmo. Mas nem sempre as máquinas servem apenas para calcular."
+        dialogo: "Às vezes, uma pequena mudança na sequência pode alterar completamente o resultado."
     },
 
- {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Jogadora",
-        dialogo: "Então para que servem?"
+        dialogo: "Então a ordem é mais importante do que parece?"
     },
 
- {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
-        dialogo: "Que tal descobrir por conta própria?"
+        dialogo: "Exatamente. Que tal testar isso por conta própria?"
     },
 
-// Experimento Ada
+    // Experimento Ada
 
+    // {
+    //     cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
+    //     falante: "Ada Lovelace",
+    //     dialogo: "Vamos começar o experimento. Você deve começá-lo após a minha autorização."
+    // },
     {
         cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
         falante: "Ada Lovelace",
-        dialogo: "Vamos começar o experimento."
+        dialogo: "Vou lhe explicar o experimento. Você deve começá-lo após a minha autorização."
     },
     {
         cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
         falante: "Ada Lovelace",
-        dialogo: "Observe o padrão apresentado. Para reproduzi-lo, organize as cinco próximas peças na ordem correta."
+        dialogo: "Observe o padrão apresentado. Você deverá reproduzi-lo. Para isso, você deverá organizar as oito próximas peças na ordem correta."
     },
 
-  {
+    {
         cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
         falante: "Jogadora",
         dialogo: "E como vou saber qual é a ordem?"
     },
 
-  {
+    {
         cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
         falante: "Ada Lovelace",
         dialogo: "Comece pela primeira forma e observe a sequência. Não tente adivinhar o resultado."
     },
 
-  {
+    {
         cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
         falante: "Jogadora",
         dialogo: "Então preciso apenas repetir o padrão?"
     },
 
-  {
+    {
         cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
         falante: "Ada Lovelace",
         dialogo: "Exatamente. Quando seguimos as instruções corretas, o resultado aparece naturalmente."
     },
 
-  {
+    {
         cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
         falante: "Ada Lovelace",
-        dialogo: "Agora tente."
+        dialogo: "Você deverá arrastar os elementos ao lado da caixa para dentro dela. Caso perceba que errou, você pode retirá-los da caixa. Agora tente."
     },
-
     {
         cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
         tipo: "experimentoAda"
@@ -289,45 +294,46 @@ const cenas = [
 
 
 
-// resposta correta para o experimento da Ada
 
-  {
+    // resposta correta para o experimento da Ada
+
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Jogadora",
         dialogo: "Então era só prestar atenção na ordem."
     },
     //Juntar as próximas duas falas
-  {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
         dialogo: "Precisamente."
     },
 
-  {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
         dialogo: "As máquinas funcionam da mesma forma, apenas seguem as instruções que recebem."
     },
 
-  {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
         dialogo: "Você aprendeu algo muito importante hoje: algoritmos são conjuntos de instruções criados para orientar a execução de uma tarefa."
     },
 
-  {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
         dialogo: "Máquinas também funcionam dessa maneira: executando instruções passo a passo para alcançar um objetivo."
     },
 
- {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Jogadora",
         dialogo: "Interessante... Eu sempre achei que programação fosse algo muito complicado, mas percebi que começa com algo simples como saber organizar os passos de uma tarefa."
     },
 
- {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
         dialogo: "Exatamente. Infelizmente, nosso tempo está acabando."
@@ -336,7 +342,7 @@ const cenas = [
 
 
     //Amuleto- cena na época da Ada
-     {
+    {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
         dialogo: "Antes de você partir, pegue uma coisa no seu bolso."
@@ -350,13 +356,13 @@ const cenas = [
     {
         cenario: "src/images/cenarios/adalovelace/amuletoECristal.png",
         falante: "Jogadora",
-        dialogo: "Você vai descobrir. Agora, vou lhe dar um objeto muito importante."
+        dialogo: "Você vai descobrir. Agora, vou lhe dar um objeto muito importante. Tome cuidado com ele, pois será útil em sua jornada."
     },
-    {
-        cenario: "src/images/cenarios/adalovelace/amuletoECristal.png",
-        falante: "Jogadora",
-        dialogo: "Tome cuidado com ele, pois será útil em sua jornada."
-    },
+    // {
+    //     cenario: "src/images/cenarios/adalovelace/amuletoECristal.png",
+    //     falante: "Jogadora",
+    //     dialogo: "Tome cuidado com ele, pois será útil em sua jornada."
+    // },
     {
         id: "amuletoCompletoAda",
         cenario: "src/images/cenarios/adalovelace/amuletoComCristal.png",
@@ -586,7 +592,10 @@ let sequenciaCorretaAda = [
     "estrela",
     "circulo",
     "quadrado",
-    "triangulo"
+    "triangulo",
+    "estrela",
+    "circulo",
+    "quadrado"
 ];
 let sequenciaJogadoraAda = [];
 let containerExperimentoAda = null;
@@ -1013,22 +1022,22 @@ function mostrarCena(indice) {
     //Experimento Katherine
     if (cena.tipo === "perguntaFinalKatherine") {
 
-    mostrarCardsKatherineDesabilitados();
+        mostrarCardsKatherineDesabilitados();
 
-    mostrarDialogo(
-        "Katherine Johnson",
-        "Qual lançamento possui o maior alcance?"
-    );
+        mostrarDialogo(
+            "Katherine Johnson",
+            "Qual lançamento possui o maior alcance?"
+        );
 
-    aoClicarNoDialogo(function () {
+        aoClicarNoDialogo(function () {
 
-        limparBotoes(); // remove os cards desabilitados
-        mostrarBotoesKatherine(); // cria os clicáveis
+            limparBotoes(); // remove os cards desabilitados
+            mostrarBotoesKatherine(); // cria os clicáveis
 
-    });
+        });
 
-    return;
-}
+        return;
+    }
 
     // Experimento Rosalind DNA
 
@@ -1205,19 +1214,19 @@ function mostrarCardsKatherineDesabilitados() {
     criarCardKatherine(
         "src/images/cenarios/katherinejohnson/experimento/card-30.png",
         { left: "35%", bottom: "60%" },
-        () => {}
+        () => { }
     );
 
     criarCardKatherine(
         "src/images/cenarios/katherinejohnson/experimento/card-45.png",
         { left: "45%", bottom: "60%" },
-        () => {}
+        () => { }
     );
 
     criarCardKatherine(
         "src/images/cenarios/katherinejohnson/experimento/card-60.png",
         { left: "55%", bottom: "60%" },
-        () => {}
+        () => { }
     );
 
     desabilitarCardsKatherine();
@@ -1318,6 +1327,9 @@ function criarAreaExperimentoAda() {
     const areaMontagem =
         document.getElementById("area-montagem-ada");
 
+    const areaPecas =
+        document.getElementById("pecas-ada");
+
     areaMontagem.addEventListener(
         "dragover",
         e => e.preventDefault()
@@ -1326,6 +1338,16 @@ function criarAreaExperimentoAda() {
     areaMontagem.addEventListener(
         "drop",
         receberFormaAda
+    );
+
+    areaPecas.addEventListener(
+        "dragover",
+        e => e.preventDefault()
+    );
+
+    areaPecas.addEventListener(
+        "drop",
+        devolverFormaAda
     );
 }
 
@@ -1356,18 +1378,17 @@ function criarFormasDisponiveisAda() {
     const pecasEmbaralhadas =
         [...pecasAda].sort(() => Math.random() - 0.5);
 
-    pecasEmbaralhadas.forEach(tipo => {
+    pecasEmbaralhadas.forEach((tipo, indice) => {
 
         const img = document.createElement("img");
 
         img.src =
             `src/images/cenarios/adalovelace/experimento/${tipo}.png`;
 
-        img.draggable = true;
+        img.dataset.tipo = tipo;
+        img.dataset.id = indice;
 
-        img.style.width = "65px";   // novo tamanho
-        img.style.height = "65px";
-        img.style.cursor = "grab";
+        img.draggable = true;
 
         configurarDragAda(img, tipo);
 
@@ -1388,24 +1409,52 @@ function configurarDragAda(img, tipo) {
 
 }
 
+function devolverFormaAda(e) {
+
+    e.preventDefault();
+
+    const peca = window.pecaArrastada;
+
+    if (!peca) return;
+
+    document.getElementById("pecas-ada").appendChild(peca);
+
+    atualizarSequenciaAda();
+
+    window.pecaArrastada = null;
+
+    if (sequenciaJogadoraAda.length < 8) {
+        document.getElementById("finalizar-ada")?.remove();
+    }
+}
+
 function receberFormaAda(e) {
 
     e.preventDefault();
 
-    const tipo = e.dataTransfer.getData("forma");
-
-    sequenciaJogadoraAda.push(tipo);
-
     const peca = window.pecaArrastada;
 
-    if (peca) {
-        peca.style.width = "60px";
-        peca.style.height = "60px";
-        e.currentTarget.appendChild(peca);
-    }
-    if (sequenciaJogadoraAda.length === 5) {
+    if (!peca) return;
+
+    e.currentTarget.appendChild(peca);
+
+    atualizarSequenciaAda();
+
+    window.pecaArrastada = null;
+
+    if (sequenciaJogadoraAda.length === 8) {
         criarBotaoFinalizarAda();
     }
+}
+
+function atualizarSequenciaAda() {
+
+    const areaMontagem =
+        document.getElementById("area-montagem-ada");
+
+    sequenciaJogadoraAda = Array.from(
+        areaMontagem.querySelectorAll("img")
+    ).map(img => img.dataset.tipo);
 }
 
 function verificarRespostaAda() {
@@ -1549,7 +1598,7 @@ function finalizarJogo() {
 
         document.getElementById('comecar-btn').addEventListener('click', function (event) { // registra o clique no novo botão "JOGAR"
             event.preventDefault(); // previne comportamento padrão
-                elementosLogo.style.display = "none";
+            elementosLogo.style.display = "none";
 
             const inputNome = document.getElementById('nome-jogadora'); // obtém o novo campo de input
             nomeJogadora = inputNome.value.trim(); // armazena o novo nome digitado

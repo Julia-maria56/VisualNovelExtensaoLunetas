@@ -366,8 +366,9 @@ display: flex;
 }
 
 #pecas-ada{
+    padding:10px 5px 15px 5px;
     position:absolute;
-
+    /* background-color: red; */
     right:10%;
     top:30%;
 
@@ -383,9 +384,13 @@ display: flex;
     right:5%;
 }
 
-#pecas-ada img{
-    width:80px;
-    cursor: grab;
+#pecas-ada img {
+    width: 60px;
+}
+
+#area-montagem-ada img {
+    width: 60px;
+    flex-shrink: 0;
 }
 
 #pecas-ada img:active{
