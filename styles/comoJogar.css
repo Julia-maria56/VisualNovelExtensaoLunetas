@@ -1,0 +1,116 @@
+.main {
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px 10px;
+    width: 70%;
+    height: auto;
+    gap: 100px;
+}
+
+.container-card-esquerda {
+    width: 95%;
+     position: relative;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-branco-esquerda {
+    background-color: #FEF5E6;
+    width: 90%;
+    min-height: 300px;
+    height: auto;
+    position: absolute;
+    top: 40px;
+    /* desce o card branco */
+    left: 0;
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: -4px 0px 4px rgba(0, 0, 0, 0.25);
+
+    border: 1px #000000;
+
+}
+
+.card-roxo-direita {
+    border-radius: 10px;
+    background-color: #342d59;
+    color: white;
+    width: 90%;
+    min-height: 300px;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    box-shadow: -4px 0px 4px rgba(0, 0, 0, 0.25);
+    padding: 25px 30px;
+    
+}
+
+.card-roxo-direita h3, .card-roxo-esquerda h3 {
+    font-family: "Sora";
+    font-size: 25px;
+}
+
+.card-roxo-direita p, .card-roxo-esquerda p {
+    font-family: "Nunito";
+    font-size: 18px;
+    text-align: left;
+}
+
+.container-card-direita{
+    width: 95%;
+    position: relative;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+.card-branco-direita{
+    background-color: #FEF5E6;
+    width: 90%;
+    min-height: 300px;
+    height: auto;
+    position: absolute;
+    top: 40px;
+    /* desce o card branco */
+    right: 0;
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
+    border: 1px #000000;
+}
+
+.card-roxo-esquerda{
+     border-radius: 10px;
+    background-color: #342d59;
+    color: white;
+    width: 90%;
+    min-height: 300px;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
+    padding: 25px 30px;
+}
+
+.card-roxo-esquerda h3{
+    text-align: right;
+}
+
+.card-roxo-direita ul {
+    padding-left: 30px;
+}
+
+.card-roxo-direita ul li{
+    font-size:17px;
+}

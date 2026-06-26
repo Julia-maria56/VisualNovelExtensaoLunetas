@@ -37,9 +37,10 @@ main{
 }
 
 .container-texto h2{
-    font-size: 35px;
+    font-size: 33px;
     padding-bottom:15px;
-    font-weight: 700;
+    font-weight: 600;
+    font-family: "Sora";
 }
 
 .container-texto p{
