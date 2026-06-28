@@ -308,13 +308,7 @@ const cenas = [
     {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
-        dialogo: "Precisamente."
-    },
-
-    {
-        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
-        falante: "Ada Lovelace",
-        dialogo: "As máquinas funcionam da mesma forma, apenas seguem as instruções que recebem."
+        dialogo: "Precisamente. As máquinas funcionam da mesma forma, apenas seguem as instruções que recebem."
     },
 
     {
@@ -409,13 +403,7 @@ const cenas = [
     {
         cenario: "src/images/cenarios/mariecurie/marieempe.png",
         falante: "Marie Curie",
-        dialogo: "Bom saber que meu legado seguiu."
-    },
-
-    {
-        cenario: "src/images/cenarios/mariecurie/marieempe.png",
-        falante: "Marie Curie",
-        dialogo: "Eu sou a cientista Marie Curie."
+        dialogo: "É muito bom saber que meu legado seguiu. Eu sou a cientista Marie Curie."
     },
 
     {
@@ -442,7 +430,7 @@ const cenas = [
         dialogo: "Essa descoberta está transformando a forma como compreendemos a matéria e a energia."
     },
 
-   {
+    {
         cenario: "src/images/cenarios/mariecurie/marieempe.png",
         falante: "Jogadora",
         dialogo: "Caramba! Isso parece muito importante."
@@ -472,187 +460,192 @@ const cenas = [
         dialogo: "Esses equipamentos são usados quando estamos no laboratório para garantir a nossa integridade..."
     },
 
-{
+    {
         cenario: "src/images/cenarios/mariecurie/marieempe.png",
         falante: "Jogadora",
-        dialogo: "Hum... faz sentido, até."
+        dialogo: "Hum... faz sentido."
     },
 
-{
+    {
         cenario: "src/images/cenarios/mariecurie/marieempe.png",
         falante: "Marie Curie",
         dialogo: "Ótimo. Agora que está pronta, quero lhe mostrar algo que tem chamado minha atenção."
     },
 
-{
+    {
         cenario: "src/images/cenarios/mariecurie/marieempe.png",
         falante: "Jogadora",
         dialogo: "Mostrar o quê?"
     },
 
-// experimento Marie Curie
-  //  {
-   //     tipo: "experimentoMarie",
+    // experimento Marie Curie
+    //  {
+    //     tipo: "experimentoMarie",
     //    cenario: "src/images/cenarios/mariecurie/marieempe.png",
     //    falante: "Marie Curie",
-   //     dialogo: "Quando estiver pronta, pode começar."
-   // },
+    //     dialogo: "Quando estiver pronta, pode começar."
+    // },
 
-//       {
-//      cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
-//        tipo: "investigacaoMarie"
-//   },
-{
+    //       {
+    //      cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
+    //        tipo: "investigacaoMarie"
+    //   },
+
+
+
+    {
         cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
         falante: "Marie Curie",
-        dialogo: "Observe a bancada."
+        dialogo: "Na bancada, observe atentamente o eletroscópio. Este aparelho é capaz de detectar pequenas interações elétricas no ambiente."
     },
 
-{
-        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
-        tipo: "investigacaoMarie",
-        falante: "Marie Curie",
-        dialogo: "Suspeito que uma dessas amostras contenha um elemento radioativo chamado urânio. Mas não se preocupe. Essas doses estão controladas.."
-   
-    },
-
-{
-        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
-        falante: "Marie Curie",
-        dialogo: "Observe atentamente o eletroscópio. Este aparelho é capaz de detectar pequenas interações elétricas no ambiente."
-    },
-
-{
+    {
         cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
         falante: "Marie Curie",
         dialogo: "Quando materiais radioativos estão por perto, eles podem modificar o comportamento do ar ao seu redor."
     },
 
-{
+    {
         cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
         falante: "Marie Curie",
         dialogo: "Quando ele recebe carga elétrica, as duas folhas ficam com cargas iguais e se repelem, afastando-se uma da outra."
     },
+    {
+        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
+        falante: "Marie Curie",
+        dialogo: "Suspeito que uma dessas amostras contenha um elemento radioativo chamado urânio. Mas não se preocupe. Essas doses estão controladas.."
 
-{
+    }, {
+        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
+        falante: "Marie Curie",
+        dialogo: "Vamos testá-las?"
+
+    },
+    {
+        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
+        tipo: "investigacaoMarie"
+    },
+
+    {
         cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
         falante: "Marie Curie",
         dialogo: "Interessante. Parece que esta amostra não afetou o instrumento."
     },
 
-{
+    {
         cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena02.png",
         falante: "Marie Curie",
         dialogo: "Muito interessante. Esta amostra produziu um resultado diferente."
     },
 
-{
+    {
         cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
         falante: "Marie Curie",
         dialogo: "Qual das amostras provavelmente contém urânio?"
     },
 
-// resposta incorreta para o experimento da Marie
-//    {
-//        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
-//        tipo: "respostaErradaMarie"
-//    },
+    // resposta incorreta para o experimento da Marie
+    //    {
+    //        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
+    //        tipo: "respostaErradaMarie"
+    //    },
 
-{
+
+    {
         cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
         tipo: "respostaErradaMarie",
         falante: "Marie Curie",
         dialogo: "Observe os resultados novamente."
     },
 
-  //  {
-  //      cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
-  //      tipo: "perguntaFinalMarie"
-  //  },
-  
-{
+    //  {
+    //      cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
+    //      tipo: "perguntaFinalMarie"
+    //  },
+
+    {
         cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
         falante: "Marie Curie",
         dialogo: "Qual das amostras provocou uma alteração no eletroscópio?"
     },
-// resposta correta para o experimento da Marie
-//    {
-//        id: "respostaCertaMarie",
-//        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
-//        falante: "Marie Curie",
-//        dialogo: "Excelente observação! Logo, a Amostra B provavelmente contém urânio."
-//    },
-{
+    // resposta correta para o experimento da Marie
+    //    {
+    //        id: "respostaCertaMarie",
+    //        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
+    //        falante: "Marie Curie",
+    //        dialogo: "Excelente observação! Logo, a Amostra B provavelmente contém urânio."
+    //    },
+    {
         cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena02.png",
         id: "respostaCertaMarie",
         falante: "Marie Curie",
         dialogo: "Excelente observação!"
     },
 
-{
+    {
         cenario: "src/images/cenarios/mariecurie/marieempe.png",
         falante: "Marie Curie",
         dialogo: "A radiação emitida pelo urânio alterou o ar ao redor do eletroscópio, fazendo suas folhas se moverem."
     },
 
-// explicação depois do experimento da Marie
+    // explicação depois do experimento da Marie
 
-{
+    {
         cenario: "src/images/cenarios/mariecurie/marieempe.png",
         falante: "Marie Curie",
         dialogo: "Foi estudando esse tipo de efeito que descobri que alguns elementos liberam energia naturalmente, um fenômeno que chamamos de radioatividade."
     },
 
-{
+    {
         cenario: "src/images/cenarios/mariecurie/marieempe.png",
         falante: "Jogadora",
         dialogo: "Como uma mulher tão importante para a humanidade não tem seu devido reconhecimento?"
     },
 
-{
+    {
         cenario: "src/images/cenarios/mariecurie/marieempe.png",
         falante: "Marie Curie",
         dialogo: "Jogadora, não é fácil para as mulheres serem ouvidas na ciência."
     },
 
-{
+    {
         cenario: "src/images/cenarios/mariecurie/marieempe.png",
         falante: "Marie Curie",
         dialogo: "Muitas precisam trabalhar dobrado para que suas descobertas sejam levadas a sério."
     },
 
-{
+    {
         cenario: "src/images/cenarios/mariecurie/marieempe.png",
         falante: "Marie Curie",
         dialogo: "Você deve sempre lembrar que observar, pensar, questionar e raciocinar tudo ao nosso redor é a base para o conhecimento científico."
     },
 
-{
+    {
         cenario: "src/images/cenarios/mariecurie/marieempe.png",
         falante: "Marie Curie",
         dialogo: "E também... eu gostaria que ficasse com isto."
     },
 
-{
+    {
         cenario: "src/images/cenarios/mariecurie/amuletoECristal.png",
         falante: "Jogadora",
         dialogo: "Outro cristal?"
     },
 
-{
+    {
         cenario: "src/images/cenarios/mariecurie/amuletoECristal.png",
         falante: "Marie Curie",
         dialogo: "Sim. Agora, coloque-o em seu amuleto. Boa viagem!"
     },
 
-{
+    {
         cenario: "src/images/cenarios/mariecurie/amuletoComCristal.png",
         id: "amuletoCompletoMarie",
         falante: "Jogadora",
         dialogo: "Obrigada, Marie."
     },
 
-     // Tela branca
+    // Tela branca
     {
         cenario: "src/images/transicao/clarao.png",
         falante: "Jogadora",
@@ -670,7 +663,7 @@ const cenas = [
         falante: "Jogadora",
         dialogo: "Outro laboratório..."
     },
-        {
+    {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Jogadora",
         dialogo: "Então você deve ser a próxima cientista."
@@ -687,7 +680,7 @@ const cenas = [
         falante: "Jogadora",
         dialogo: "Na verdade, seria estranho se eu estivesse. Essa já é a terceira vez que sou teletransportada para conhecer uma cientista."
     },
-   
+
     {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Jogadora",
@@ -706,17 +699,17 @@ const cenas = [
         dialogo: "Confesso que esse nome não me parece familiar."
     },
 
-        {
+    {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Rosalind Franklin",
         dialogo: "Não se preocupe. Você não é a primeira pessoa a dizer isso."
     },
-        {
+    {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Jogadora",
         dialogo: "E o que você faz?"
     },
-        {
+    {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Rosalind Franklin",
         dialogo: "Sou uma cientista da área da biologia. Dedico minha vida a estudar o DNA utilizando uma técnica chamada difração de raios X."
@@ -734,54 +727,54 @@ const cenas = [
         dialogo: "Espera... você ajudou a descobrir a estrutura do DNA?"
     },
 
-        {
+    {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Rosalind Franklin",
         dialogo: "Sim. Essa descoberta está revolucionando a biologia e ajudando os cientistas a compreender melhor como as informações genéticas dos seres vivos são armazenadas e transmitidas."
     },
 
-        {
+    {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Jogadora",
         dialogo: "Então seu nome deve estar em todos os livros de ciências!"
     },
 
-        {
+    {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Rosalind Franklin",
         dialogo: "Gostaria que fosse tão simples."
     },
 
-        {
+    {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Rosalind Franklin",
         dialogo: "Uma parte do meu trabalho é compartilhada sem minha autorização e ajuda outros cientistas a desenvolver o modelo do DNA.,"
-        },
+    },
 
-        {
+    {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Rosalind Franklin",
         dialogo: "Infelizmente, não recebo tanto reconhecimento pela minha contribuição."
     },
 
-        {
+    {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Jogadora",
         dialogo: "Isso é um absurdo! Primeiro a Ada Lovelace, depois a Marie Curie... e agora você."
     },
 
-        {
+    {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Jogadora",
         dialogo: "Por que tantas mulheres importantes parecem ter sido esquecidas?"
     },
 
-            {
+    {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Rosalind Franklin",
         dialogo: "Nem todas receberam o mesmo reconhecimento ao longo da história. Mas o conhecimento permanece, e isso é o mais importante."
     },
- //experimento Rosalind Franklin
+    //experimento Rosalind Franklin
     {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Rosalind Franklin",
@@ -813,23 +806,23 @@ const cenas = [
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena3.png",
         tipo: "misturarRosalind",
         falante: "Rosalind Franklin",
-        dialogo:"A lise dissolve as membranas celulares, liberando o material que existe dentro delas, incluindo o DNA."
+        dialogo: "A lise dissolve as membranas celulares, liberando o material que existe dentro delas, incluindo o DNA."
     },
 
     {
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena3.png",
         tipo: "misturarRosalind",
         falante: "Rosalind Franklin",
-        dialogo:"O próximo passo é remover os pedaços maiores que podem atrapalhar nossa observação."
+        dialogo: "O próximo passo é remover os pedaços maiores que podem atrapalhar nossa observação."
     },
 
     {
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena4.png",
         tipo: "filtrarRosalind",
         falante: "Rosalind Franklin",
-        dialogo:"Por fim, adicione o álcool gelado."
+        dialogo: "Por fim, adicione o álcool gelado."
     },
-       
+
     {
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena5.png",
         tipo: "adicionarRosalind"
@@ -839,14 +832,14 @@ const cenas = [
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena6.png",
         tipo: "perguntaDNARosalind",
         falante: "Rosalind Franklin",
-        dialogo:"Observe com atenção. Qual dessas partes você acha que é o DNA?"
+        dialogo: "Observe com atenção. Qual dessas partes você acha que é o DNA?"
     },
 
     {
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena6.png",
         tipo: "respostaErradaRosalind",
         falante: "Rosalind Franklin",
-        dialogo:"Não tenho certeza se este é o correto. O DNA aparece como um material esbranquiçado após a adição do álcool."
+        dialogo: "Não tenho certeza se este é o correto. O DNA aparece como um material esbranquiçado após a adição do álcool."
     },
     {
         id: "finalDNARosalind",
@@ -862,13 +855,13 @@ const cenas = [
         dialogo: "Então eu realmente consegui ver o DNA?"
     },
 
-        {
+    {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Rosalind Franklin",
         dialogo: "Conseguiu sim. Normalmente ele fica protegido dentro das células e não pode ser visto a olho nu."
     },
 
-            {
+    {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Rosalind Franklin",
         dialogo: "Depois, a solução de lise ajudou a liberar o material que estava guardado dentro delas."
@@ -952,19 +945,19 @@ const cenas = [
         dialogo: "Eu vou guardar isso com cuidado. Tchau!"
     },
 
-    {  
+    {
         id: "amuletoCompletoRosalind",
         cenario: "src/images/cenarios/rosalindfrankiln/amuletoComCristal.png",
         falante: "Rosalind Franklin",
         dialogo: "Tenho certeza de que vai. Boa viagem, Protagonista."
     },
 
-  //  {
-  //      id: "amuletoCompletoRosalind",
-  //      cenario: "src/images/cenarios/adalovelace/amuletoComCristal.png",
-  //  },
+    //  {
+    //      id: "amuletoCompletoRosalind",
+    //      cenario: "src/images/cenarios/adalovelace/amuletoComCristal.png",
+    //  },
 
-  // Tela branca
+    // Tela branca
     {
         cenario: "src/images/transicao/clarao.png",
         falante: "Jogadora",
@@ -984,198 +977,198 @@ const cenas = [
         dialogo: "Uau..."
     },
 
-        {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Jogadora",
         dialogo: "Esse lugar é realmente diferente dos outros laboratórios. Tem alguma coisa relacionada ao espaço aqui."
     },
 
 
-        {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Você tem um bom olhar para os detalhes."
     },
 
 
-        {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Jogadora",
         dialogo: "E eu nem estou usando jaleco desta vez."
     },
 
 
-        {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Nem todo laboratório exige os mesmos equipamentos."
     },
 
-      {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Olá, Protagonista! Seja bem-vinda ao meu laboratório, querida! Meu nome é Katherine Johnson."
     },
 
 
-      {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Jogadora",
         dialogo: "Então você é a próxima cientista?"
     },
 
 
-      {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Sou sim!"
     },
 
 
-      {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Sou matemática e trabalho para a NASA."
     },
 
-          {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Estamos em uma época em que os computadores não conseguem realizar muitos dos cálculos necessários para as missões espaciais."
     },
 
 
-          {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Meu trabalho é usar a matemática para prever trajetórias, calcular rotas e verificar se os astronautas irão conseguir viajar e retornar à Terra com segurança."
     },
 
 
-          {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Participo de projetos importantes do programa espacial americano, incluindo missões que levam seres humanos à órbita da Terra."
     },
 
 
-          {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Muitos astronautas confiam mais nos meus cálculos do que nos computadores da NASA."
     },
 
 
-          {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Jogadora",
         dialogo: "Você ajudou pessoas a chegarem ao espaço?"
     },
 
 
-          {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Ajudo a calcular o caminho para que isso seja possível."
     },
 
-              {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Jogadora",
         dialogo: "Isso é incrível!"
     },
 
-              {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Cada número precisa estar correto. Um pequeno erro pode fazer uma nave sair da rota."
     },
 
-              {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Jogadora",
         dialogo: "Agora entendi por que seu trabalho é tão importante."
     },
 
-              {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "E hoje você vai me ajudar em uma tarefa parecida."
     },
 
-              {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Jogadora",
         dialogo: "Eu?"
     },
 
-                  {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Não se preocupe!"
     },
 
-                  {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Estou analisando três possíveis trajetórias para um mesmo foguete em uma simulação de lançamento."
     },
 
-                  {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "É um teste simples, mas baseado no mesmo tipo de raciocínio matemático que usamos para prever o caminho de foguetes reais."
     },
 
-                  {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Todos possuem a mesma velocidade. A única diferença é o ângulo de lançamento."
     },
 
-                  {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Mas por que mudar o ângulo faz diferença?"
     },
 
-                  {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Porque o ângulo influencia a trajetória do foguete."
     },
 
-                  {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Se ele for lançado muito para frente, não ficará muito tempo no ar. Se for lançado muito para cima, ganhará altura, mas não avançará tanto."
     },
 
-                  {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Jogadora",
         dialogo: "Então precisamos encontrar um equilíbrio?"
     },
 
-                  {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Exatamente. Na engenharia, usamos uma medida chamada alcance."
     },
 
-                  {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "O alcance é a distância que o foguete percorre no chão, desde o ponto onde foi lançado até o ponto onde ele cai.?"
     },
 
-                      {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Meu trabalho é justamente prever trajetórias como essa usando matemática, antes mesmo de qualquer lançamento acontecer."
     },
 
-        //experimento Katherine
+    //experimento Katherine
 
     {
         cenario: "src/images/cenarios/katherinejohnson/experimento/computador.png",
@@ -1198,165 +1191,165 @@ const cenas = [
         dialogo: "Esta é a trajetória de um foguete com o ângulo de lançamento de 45°. Vamos ver agora a trajetória de um foguete com o ângulo de lançamento de 60°."
     },
     {
-    tipo: "trajetoria60Katherine",
-    cenario: "src/images/cenarios/katherinejohnson/experimento/computador60.png",
-    falante: "Katherine Johnson",
-    dialogo: "Esta é a trajetória de um foguete com o ângulo de lançamento de 60°."
-},
-{
+        tipo: "trajetoria60Katherine",
+        cenario: "src/images/cenarios/katherinejohnson/experimento/computador60.png",
+        falante: "Katherine Johnson",
+        dialogo: "Esta é a trajetória de um foguete com o ângulo de lançamento de 60°."
+    },
+    {
         cenario: "src/images/cenarios/katherinejohnson/experimento/computador.png",
-        tipo: "perguntaFinalKatherine"
+        tipo: "perguntaFinalKatherine",
         falante: "Katherine Johnson",
         dialogo: "Qual lançamento percorreu a maior distância?"
     },
 
     //explicação Katherine
 
-    
+
     {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Excelente!"
     },
 
-        {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "O lançamento de 45° possui o maior alcance horizontal"
     },
 
-        {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Jogadora",
         dialogo: "Mas por que justamente 45°?"
     },
 
-        {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Vamos analisar cada trajetória."
     },
 
-        {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "No lançamento de 30°, o foguete avança bastante para frente, mas não ganha muita altura."
     },
 
-        {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Como ele permanece menos tempo no ar, acaba percorrendo uma distância menor do que poderia."
     },
 
-            {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Já no lançamento de 60°, acontece o contrário."
     },
 
-            {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "O foguete sobe muito mais alto, mas grande parte de sua velocidade é utilizada para ganhar altitude."
     },
 
-            {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Por isso, ele avança menos para frente."
     },
 
-            {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "O ângulo de 45° cria um equilíbrio entre altura e distância."
     },
 
-            {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "O foguete sobe o suficiente para permanecer mais tempo no ar e, ao mesmo tempo, continua avançando para frente."
     },
 
-            {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Em condições ideais, esse equilíbrio produz o maior alcance horizontal possível."
     },
 
-            {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Jogadora",
         dialogo: "Então não basta lançar o foguete o mais alto possível?"
     },
 
-                {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Exatamente."
     },
 
 
-                {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Na matemática e na engenharia, muitas vezes a melhor solução está no equilíbrio entre diferentes fatores."
     },
 
 
-                {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Jogadora",
         dialogo: "Agora entendo por que os seus cálculos são tão importantes."
     },
 
 
-                {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Antes que qualquer foguete deixe a Terra, é preciso prever sua trajetória com precisão."
     },
 
 
-                {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "É usando matemática que conseguimos transformar viagens espaciais em realidade."
     },
 
 
-                {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Jogadora",
         dialogo: "Nossa, como mulheres fazem tantas descobertas e mal sabemos dessas informações? Isso é muito injusto!"
     },
 
-                    {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Jogadora",
         dialogo: "Fico pensando... se as histórias de vocês fossem mais conhecidas, poderiam ter influenciado várias outras meninas a ingressarem nas ciências."
     },
 
-                    {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Jogadora",
         dialogo: "Quem sabe, até eu…"
     },
 
-                    {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Minha querida, a ciência pertence a todos que têm curiosidade para descobrir como o mundo funciona."
     },
 
-                    {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "E eu acredito que você ainda vai descobrir muitas coisas pelo seu caminho."
     },
 
-                    {
+    {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
         dialogo: "Mas, antes de partir, gostaria que levasse isto com você."
@@ -1371,7 +1364,7 @@ const cenas = [
         dialogo: "O último cristal…"
     },
 
-        {
+    {
         cenario: "src/images/cenarios/adalovelace/amuleto.png",
         falante: "Jogadora",
         dialogo: "Cada um deles guarda uma parte da sua jornada: a curiosidade de aprender, a coragem de tentar e a determinação de continuar."
@@ -1392,13 +1385,13 @@ const cenas = [
         falante: "Jogadora",
         dialogo: "Obrigada, Katherine."
     },
-        {
+    {
         cenario: "src/images/cenarios/adalovelace/amuletoComCristal.png",
         falante: "Katherine Johnson",
         dialogo: "Boa viagem, querida. E nunca deixe que alguém diga que seus sonhos são grandes demais."
     },
 
-      // Tela branca
+    // Tela branca
     {
         cenario: "src/images/transicao/clarao.png",
         falante: "Jogadora",
@@ -1817,24 +1810,24 @@ function mostrarCena(indice) {
 
     if (cena.tipo === "trajetoria60Katherine") {
 
-    mostrarDialogo(
-        cena.falante,
-        cena.dialogo
-    );
-
-    aoClicarNoDialogo(function () {
-
-        const indicePergunta = cenas.findIndex(
-            cena => cena.tipo === "perguntaFinalKatherine"
+        mostrarDialogo(
+            cena.falante,
+            cena.dialogo
         );
 
-        cenaAtual = indicePergunta;
+        aoClicarNoDialogo(function () {
 
-        mostrarCena(cenaAtual);
-    });
+            const indicePergunta = cenas.findIndex(
+                cena => cena.tipo === "perguntaFinalKatherine"
+            );
 
-    return;
-}
+            cenaAtual = indicePergunta;
+
+            mostrarCena(cenaAtual);
+        });
+
+        return;
+    }
 
     // Cenas de amuleto completo
     if (cena.id === "corredorEscola") {
@@ -1893,25 +1886,25 @@ function mostrarCena(indice) {
     //Experimento Katherine
     if (cena.tipo === "perguntaFinalKatherine") {
 
-    mostrarCardsKatherineDesabilitados();
+        mostrarCardsKatherineDesabilitados();
 
-    mostrarDialogo(
-        "Katherine Johnson",
-        "Qual lançamento possui o maior alcance?"
-    );
+        mostrarDialogo(
+            "Katherine Johnson",
+            "Qual lançamento possui o maior alcance?"
+        );
 
-    aoClicarNoDialogo(function () {
+        aoClicarNoDialogo(function () {
 
-        limparBotoes();
+            limparBotoes();
 
-        mostrarBotoesKatherine();
+            mostrarBotoesKatherine();
 
-        mostrarBotaoRelembrarKatherine();
+            mostrarBotaoRelembrarKatherine();
 
-    });
+        });
 
-    return;
-}
+        return;
+    }
 
     // Experimento Rosalind DNA
 
