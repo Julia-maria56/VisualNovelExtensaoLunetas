@@ -551,11 +551,13 @@ const cenas = [
         falante: "Marie Curie",
         dialogo: "Qual das amostras provavelmente contém urânio?"
     },
+
 // resposta incorreta para o experimento da Marie
 //    {
 //        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
 //        tipo: "respostaErradaMarie"
 //    },
+
 {
         cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
         tipo: "respostaErradaMarie",
@@ -650,8 +652,136 @@ const cenas = [
         dialogo: "Obrigada, Marie."
     },
 
-    // Rosalind Franklin
+     // Tela branca
+    {
+        cenario: "src/images/transicao/clarao.png",
+        falante: "Jogadora",
+        dialogo: "Agora tudo está começando a fazer sentido."
+    },
 
+    {
+        cenario: "src/images/transicao/clarao.png",
+        falante: "Jogadora",
+        dialogo: "Eu preciso reunir todas essas pedras para descobrir o verdadeiro propósito dessa jornada."
+    },
+    // Rosalind Franklin
+    {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Jogadora",
+        dialogo: "Outro laboratório..."
+    },
+        {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Jogadora",
+        dialogo: "Então você deve ser a próxima cientista."
+    },
+
+    {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Rosalind Franklin",
+        dialogo: "Você não parece surpresa por estar aqui, protagonista."
+    },
+
+    {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Jogadora",
+        dialogo: "Na verdade, seria estranho se eu estivesse. Essa já é a terceira vez que sou teletransportada para conhecer uma cientista."
+    },
+   
+    {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Jogadora",
+        dialogo: "Primeiro, conheci Ada Lovelace, depois, Marie Curie. Então imagine minha curiosidade para descobrir quem vem agora."
+    },
+
+    {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Rosalind Franklin",
+        dialogo: "Nesse caso, vou me apresentar. Sou Rosalind Franklin."
+    },
+
+    {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Jogadora",
+        dialogo: "Confesso que esse nome não me parece familiar."
+    },
+
+        {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Rosalind Franklin",
+        dialogo: "Não se preocupe. Você não é a primeira pessoa a dizer isso."
+    },
+        {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Jogadora",
+        dialogo: "E o que você faz?"
+    },
+        {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Rosalind Franklin",
+        dialogo: "Sou uma cientista da área da biologia. Dedico minha vida a estudar o DNA utilizando uma técnica chamada difração de raios X."
+    },
+
+    {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Rosalind Franklin",
+        dialogo: "Uma das imagens que produzo, conhecida como Fotografia 51, traz evidências fundamentais para compreender a estrutura do DNA."
+    },
+
+    {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Jogadora",
+        dialogo: "Espera... você ajudou a descobrir a estrutura do DNA?"
+    },
+
+        {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Rosalind Franklin",
+        dialogo: "Sim. Essa descoberta está revolucionando a biologia e ajudando os cientistas a compreender melhor como as informações genéticas dos seres vivos são armazenadas e transmitidas."
+    },
+
+        {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Jogadora",
+        dialogo: "Então seu nome deve estar em todos os livros de ciências!"
+    },
+
+        {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Rosalind Franklin",
+        dialogo: "Gostaria que fosse tão simples."
+    },
+
+        {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Rosalind Franklin",
+        dialogo: "Uma parte do meu trabalho é compartilhada sem minha autorização e ajuda outros cientistas a desenvolver o modelo do DNA.,"
+        },
+
+        {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Rosalind Franklin",
+        dialogo: "Infelizmente, não recebo tanto reconhecimento pela minha contribuição."
+    },
+
+        {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Jogadora",
+        dialogo: "Isso é um absurdo! Primeiro a Ada Lovelace, depois a Marie Curie... e agora você."
+    },
+
+        {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Jogadora",
+        dialogo: "Por que tantas mulheres importantes parecem ter sido esquecidas?"
+    },
+
+            {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Rosalind Franklin",
+        dialogo: "Nem todas receberam o mesmo reconhecimento ao longo da história. Mas o conhecimento permanece, e isso é o mais importante."
+    },
+ //experimento Rosalind Franklin
     {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Rosalind Franklin",
@@ -681,14 +811,25 @@ const cenas = [
 
     {
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena3.png",
-        tipo: "misturarRosalind"
+        tipo: "misturarRosalind",
+        falante: "Rosalind Franklin",
+        dialogo:"A lise dissolve as membranas celulares, liberando o material que existe dentro delas, incluindo o DNA."
+    },
+
+    {
+        cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena3.png",
+        falante: "Rosalind Franklin",
+        tipo: "misturarRosalind",
+        dialogo:"O próximo passo é remover os pedaços maiores que podem atrapalhar nossa observação."
     },
 
     {
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena4.png",
-        tipo: "filtrarRosalind"
+        tipo: "filtrarRosalind",
+        falante: "Rosalind Franklin",
+        dialogo:"Por fim, adicione o álcool gelado."
     },
-
+       
     {
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena5.png",
         tipo: "adicionarRosalind"
@@ -696,36 +837,132 @@ const cenas = [
 
     {
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena6.png",
-        tipo: "perguntaDNARosalind"
+        tipo: "perguntaDNARosalind",
+        falante: "Rosalind Franklin",
+        dialogo:"Observe com atenção. Qual dessas partes você acha que é o DNA?"
     },
 
+    {
+        cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena6.png",
+        tipo: "respostaErradaRosalind",
+        falante: "Rosalind Franklin",
+        dialogo:"Não tenho certeza se este é o correto. O DNA aparece como um material esbranquiçado após a adição do álcool."
+    },
     {
         id: "finalDNARosalind",
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena6.png",
         falante: "Rosalind Franklin",
         dialogo: "Muito bem! Esse material esbranquiçado é o DNA. Eu trabalho estudando essa substância e tentando descobrir como ela é organizada."
     },
+
+    // explicação depois do experimento da Rosalind
     {
-        cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena6.png",
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Jogadora",
+        dialogo: "Então eu realmente consegui ver o DNA?"
+    },
+
+        {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Rosalind Franklin",
-        dialogo: "EXPLICAÇÃO DPS DO EXPERIMENTO"
+        dialogo: "Conseguiu sim. Normalmente ele fica protegido dentro das células e não pode ser visto a olho nu."
+    },
+
+            {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Rosalind Franklin",
+        dialogo: "Depois, a solução de lise ajudou a liberar o material que estava guardado dentro delas."
+    },
+
+    {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Rosalind Franklin",
+        dialogo: "Em seguida, o filtro removeu os pedaços maiores da fruta. Por fim, o álcool fez com que o DNA se agrupasse e se separasse do restante da mistura."
+    },
+
+    {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Rosalind Franklin",
+        dialogo: "É por isso que conseguimos enxergar essa nuvem branca."
+    },
+
+    {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Jogadora",
+        dialogo: "Então isso tudo é DNA?"
+    },
+
+    {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Rosalind Franklin",
+        dialogo: "Exatamente. O DNA é como um conjunto de instruções presente em todos os seres vivos."
+    },
+
+    {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Rosalind Franklin",
+        dialogo: "Ele guarda informações sobre nossas características, como cor do cabelo, pele, olhos… E ajuda as células a saberem como devem funcionar."
+    },
+
+    {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Rosalind Franklin",
+        dialogo: "É graças a ele que os nossos traços podem ser transmitidos de uma geração para outra."
+    },
+
+    {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Rosalind Franklin",
+        dialogo: "Incrível... Eu nunca imaginei que algo tão importante estivesse escondido dentro de um simples morango."
+    },
+
+    {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Rosalind Franklin",
+        dialogo: "A ciência costuma ser assim. Muitas das coisas mais importantes do mundo não podem ser vistas à primeira vista."
+    },
+
+    {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Rosalind Franklin",
+        dialogo: "Descobertas científicas são como uma herança. Uma pessoa aprende algo, compartilha com outras e esse conhecimento continua avançando através do tempo."
+    },
+
+    {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Rosalind Franklin",
+        dialogo: "E é por isso que gostaria que você ficasse com isto."
     },
 
     //Amuleto- cena na época da Rosalind
     {
-        cenario: "src/images/cenarios/adalovelace/amuleto.png",
-        falante: "Jogadora",
-        dialogo: "Mds, um amuleto."
+        cenario: "src/images/cenarios/rosalindfrankiln/amuletoECristal.png",
+        falante: "Rosalind Franklin",
+        dialogo: "Assim como o DNA guarda informações essenciais para a vida, este cristal guardará uma parte do conhecimento que você adquiriu aqui."
     },
     {
         cenario: "src/images/cenarios/adalovelace/amuletoECristal.png",
-        falante: "Jogadora",
-        dialogo: "Toma esse cristal"
+        falante: "Rosalind Franklin",
+        dialogo: "Agora coloque-o em seu amuleto e continue sua jornada."
     },
+
     {
-        id: "amuletoCompletoRosalind",
-        cenario: "src/images/cenarios/adalovelace/amuletoComCristal.png",
+        cenario: "src/images/cenarios/rosalindfrankiln/amuletoComCristal.png",
+        falante: "Jogadora",
+        dialogo: "Eu vou guardar isso com cuidado. Tchau!"
     },
+
+    {  
+        id: "amuletoCompletoRosalind",
+        cenario: "src/images/cenarios/rosalindfrankiln/amuletoComCristal.png",
+        falante: "Rosalind Franklin",
+        dialogo: "Tenho certeza de que vai. Boa viagem, Protagonista."
+    },
+
+  //  {
+  //      id: "amuletoCompletoRosalind",
+  //      cenario: "src/images/cenarios/adalovelace/amuletoComCristal.png",
+  //  },
 
     // Katherine Johnson
 
