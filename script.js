@@ -247,6 +247,7 @@ const cenas = [
     //     falante: "Ada Lovelace",
     //     dialogo: "Vamos começar o experimento. Você deve começá-lo após a minha autorização."
     // },
+
     {
         cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
         falante: "Ada Lovelace",
@@ -302,6 +303,7 @@ const cenas = [
         falante: "Jogadora",
         dialogo: "Então era só prestar atenção na ordem."
     },
+
     //Juntar as próximas duas falas
     {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
@@ -342,6 +344,7 @@ const cenas = [
 
 
     //Amuleto- cena na época da Ada
+
     {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Ada Lovelace",
@@ -370,59 +373,281 @@ const cenas = [
         dialogo: "Protagonista, encaixe este cristal no seu amuleto. Boa viagem!"
     },
 
-
-    //Tela branca
-
+    // Tela branca
+    {
+        cenario: "src/images/transicao/clarao.png",
+        falante: "Jogadora",
+        dialogo: "Meu Deus! Não acredito que isso está acontecendo de novo!"
+    },
 
     // Marie Curie
 
     {
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Jogadora",
+        dialogo: "Quem será essa?"
+    },
+
+    {
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Jogadora",
+        dialogo: "Com licença…"
+    },
+
+    {
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Marie Curie",
+        dialogo: "Olá, Jogadora. Você já deve estar familiarizada com a situação e deve me conhecer também."
+    },
+
+    {
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Jogadora",
+        dialogo: "Acho que já vi o seu rosto em um dos meus livros de química."
+    },
+
+    {
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Marie Curie",
+        dialogo: "Bom saber que meu legado seguiu."
+    },
+
+    {
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Marie Curie",
+        dialogo: "Eu sou a cientista Marie Curie."
+    },
+
+    {
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Marie Curie",
+        dialogo: "Dedico minha vida ao estudo da radioatividade e, durante minhas pesquisas, descobri dois novos elementos químicos: o polônio e o rádio."
+    },
+
+    {
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Marie Curie",
+        dialogo: "Meus estudos mostram que alguns átomos podem liberar energia espontaneamente."
+    },
+
+    {
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Marie Curie",
+        dialogo: "Chamamos esse fenômeno de radioatividade."
+    },
+
+    {
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Marie Curie",
+        dialogo: "Essa descoberta está transformando a forma como compreendemos a matéria e a energia."
+    },
+
+   {
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Jogadora",
+        dialogo: "Caramba! Isso parece muito importante."
+    },
+
+    {
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Marie Curie",
+        dialogo: "Acredito que você está pronta para a sua próxima descoberta..."
+    },
+
+    {
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Jogadora",
+        dialogo: "Descoberta? E porque preciso usar essas coisas?"
+    },
+
+    {
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Marie Curie",
+        dialogo: "Não se preocupe, na área das ciências é sempre bem-vindo utilizar equipamentos e vestimentas adequadas."
+    },
+
+    {
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Marie Curie",
+        dialogo: "Esses equipamentos são usados quando estamos no laboratório para garantir a nossa integridade..."
+    },
+
+{
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Jogadora",
+        dialogo: "Hum... faz sentido, até."
+    },
+
+{
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Marie Curie",
+        dialogo: "Ótimo. Agora que está pronta, quero lhe mostrar algo que tem chamado minha atenção."
+    },
+
+{
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Jogadora",
+        dialogo: "Mostrar o quê?"
+    },
+
+// experimento Marie Curie
+  //  {
+   //     tipo: "experimentoMarie",
+    //    cenario: "src/images/cenarios/mariecurie/marieempe.png",
+    //    falante: "Marie Curie",
+   //     dialogo: "Quando estiver pronta, pode começar."
+   // },
+
+//       {
+//      cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
+//        tipo: "investigacaoMarie"
+//   },
+{
         cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
         falante: "Marie Curie",
-        dialogo: "Quando estiver pronta, pode começar."
+        dialogo: "Observe a bancada."
     },
 
-    {
+{
         cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
-        tipo: "investigacaoMarie"
+        tipo: "investigacaoMarie",
+        falante: "Marie Curie",
+        dialogo: "Suspeito que uma dessas amostras contenha um elemento radioativo chamado urânio. Mas não se preocupe. Essas doses estão controladas.."
+   
     },
 
-    {
+{
         cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
-        tipo: "perguntaFinalMarie"
+        falante: "Marie Curie",
+        dialogo: "Observe atentamente o eletroscópio. Este aparelho é capaz de detectar pequenas interações elétricas no ambiente."
     },
 
-    {
+{
         cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
-        tipo: "respostaErradaMarie"
+        falante: "Marie Curie",
+        dialogo: "Quando materiais radioativos estão por perto, eles podem modificar o comportamento do ar ao seu redor."
     },
 
-    {
+{
+        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
+        falante: "Marie Curie",
+        dialogo: "Quando ele recebe carga elétrica, as duas folhas ficam com cargas iguais e se repelem, afastando-se uma da outra."
+    },
+
+{
+        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
+        falante: "Marie Curie",
+        dialogo: "Interessante. Parece que esta amostra não afetou o instrumento."
+    },
+
+{
+        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena02.png",
+        falante: "Marie Curie",
+        dialogo: "Muito interessante. Esta amostra produziu um resultado diferente."
+    },
+
+{
+        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
+        falante: "Marie Curie",
+        dialogo: "Qual das amostras provavelmente contém urânio?"
+    },
+// resposta incorreta para o experimento da Marie
+//    {
+//        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
+//        tipo: "respostaErradaMarie"
+//    },
+{
+        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
+        tipo: "respostaErradaMarie",
+        falante: "Marie Curie",
+        dialogo: "Observe os resultados novamente."
+    },
+
+  //  {
+  //      cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
+  //      tipo: "perguntaFinalMarie"
+  //  },
+  
+{
+        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
+        falante: "Marie Curie",
+        dialogo: "Qual das amostras provocou uma alteração no eletroscópio?"
+    },
+// resposta correta para o experimento da Marie
+//    {
+//        id: "respostaCertaMarie",
+//        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
+//        falante: "Marie Curie",
+//        dialogo: "Excelente observação! Logo, a Amostra B provavelmente contém urânio."
+//    },
+{
+        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena02.png",
         id: "respostaCertaMarie",
-        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
         falante: "Marie Curie",
-        dialogo: "Excelente observação! Logo, a Amostra B provavelmente contém urânio."
-    },
-    {
-        cenario: "src/images/cenarios/mariecurie/experimento/experimento-cena01.png",
-        falante: "Marie Curie",
-        dialogo: "EXPLICAÇÃO DEPOIS DO EXPERIMENTO"
+        dialogo: "Excelente observação!"
     },
 
-    //Amuleto- cena na época da Marie
-    {
-        cenario: "src/images/cenarios/adalovelace/amuleto.png",
-        falante: "Jogadora",
-        dialogo: "Mds, um amuleto."
+{
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Marie Curie",
+        dialogo: "A radiação emitida pelo urânio alterou o ar ao redor do eletroscópio, fazendo suas folhas se moverem."
     },
-    {
-        cenario: "src/images/cenarios/adalovelace/amuletoECristal.png",
-        falante: "Jogadora",
-        dialogo: "Toma esse cristal"
+
+// explicação depois do experimento da Marie
+
+{
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Marie Curie",
+        dialogo: "Foi estudando esse tipo de efeito que descobri que alguns elementos liberam energia naturalmente, um fenômeno que chamamos de radioatividade."
     },
-    {
+
+{
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Jogadora",
+        dialogo: "Como uma mulher tão importante para a humanidade não tem seu devido reconhecimento?"
+    },
+
+{
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Marie Curie",
+        dialogo: "Jogadora, não é fácil para as mulheres serem ouvidas na ciência."
+    },
+
+{
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Marie Curie",
+        dialogo: "Muitas precisam trabalhar dobrado para que suas descobertas sejam levadas a sério."
+    },
+
+{
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Marie Curie",
+        dialogo: "Você deve sempre lembrar que observar, pensar, questionar e raciocinar tudo ao nosso redor é a base para o conhecimento científico."
+    },
+
+{
+        cenario: "src/images/cenarios/mariecurie/marieempe.png",
+        falante: "Marie Curie",
+        dialogo: "E também... eu gostaria que ficasse com isto."
+    },
+
+{
+        cenario: "src/images/cenarios/mariecurie/amuletoECristal.png",
+        falante: "Jogadora",
+        dialogo: "Outro cristal?"
+    },
+
+{
+        cenario: "src/images/cenarios/mariecurie/amuletoECristal.png",
+        falante: "Marie Curie",
+        dialogo: "Sim. Agora, coloque-o em seu amuleto. Boa viagem!"
+    },
+
+{
+        cenario: "src/images/cenarios/mariecurie/amuletoComCristal.png",
         id: "amuletoCompletoMarie",
-        cenario: "src/images/cenarios/adalovelace/amuletoComCristal.png",
+        falante: "Jogadora",
+        dialogo: "Obrigada, Marie."
     },
 
     // Rosalind Franklin
