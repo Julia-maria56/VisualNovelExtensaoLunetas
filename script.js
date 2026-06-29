@@ -623,7 +623,7 @@ const cenas = [
     {
         cenario: "src/images/cenarios/mariecurie/marieempe.png",
         falante: "Marie Curie",
-        dialogo: "E também... eu gostaria que ficasse com isto."
+        dialogo: "E também, eu gostaria que ficasse com isto."
     },
 
     {
@@ -742,13 +742,7 @@ const cenas = [
     {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Rosalind Franklin",
-        dialogo: "Gostaria que fosse tão simples."
-    },
-
-    {
-        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
-        falante: "Rosalind Franklin",
-        dialogo: "Uma parte do meu trabalho é compartilhada sem minha autorização e ajuda outros cientistas a desenvolver o modelo do DNA.,"
+        dialogo: "Gostaria que fosse tão simples. Uma parte do meu trabalho é compartilhada sem minha autorização e ajuda outros cientistas a desenvolver o modelo do DNA."
     },
 
     {
@@ -760,7 +754,7 @@ const cenas = [
     {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Jogadora",
-        dialogo: "Isso é um absurdo! Primeiro a Ada Lovelace, depois a Marie Curie... e agora você."
+        dialogo: "Isso é um absurdo! Primeiro a Ada Lovelace, depois a Marie Curie... E agora você."
     },
 
     {
@@ -774,6 +768,7 @@ const cenas = [
         falante: "Rosalind Franklin",
         dialogo: "Nem todas receberam o mesmo reconhecimento ao longo da história. Mas o conhecimento permanece, e isso é o mais importante."
     },
+
     //experimento Rosalind Franklin
     {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
@@ -802,12 +797,7 @@ const cenas = [
         tipo: "amassarRosalind"
     },
 
-    {
-        cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena3.png",
-        tipo: "misturarRosalind",
-        falante: "Rosalind Franklin",
-        dialogo: "A lise dissolve as membranas celulares, liberando o material que existe dentro delas, incluindo o DNA."
-    },
+   
 
     {
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena3.png",
@@ -815,10 +805,15 @@ const cenas = [
         falante: "Rosalind Franklin",
         dialogo: "O próximo passo é remover os pedaços maiores que podem atrapalhar nossa observação."
     },
-
     {
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena4.png",
         tipo: "filtrarRosalind",
+       
+    },
+
+    {
+        cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena4.png",
+        // tipo: "filtrarRosalind",
         falante: "Rosalind Franklin",
         dialogo: "Por fim, adicione o álcool gelado."
     },
@@ -942,7 +937,7 @@ const cenas = [
     {
         cenario: "src/images/cenarios/rosalindfrankiln/amuletoComCristal.png",
         falante: "Jogadora",
-        dialogo: "Eu vou guardar isso com cuidado. Tchau!"
+        dialogo: "Eu vou guardar isso com cuidado. Adeus!"
     },
 
     {
@@ -961,26 +956,21 @@ const cenas = [
     {
         cenario: "src/images/transicao/clarao.png",
         falante: "Jogadora",
-        dialogo: "Nossa, quantas mulheres incriveis a humanidade tem... Eu literalmente vi um DNA…"
+        dialogo: "Nossa, quantas mulheres incríveis a humanidade tem..."
     },
 
     {
         cenario: "src/images/transicao/clarao.png",
         falante: "Jogadora",
-        dialogo: "Agora, eu quero saber quem será a próxima nessa jornada, estou empolgada!"
+        dialogo: "Agora, eu estou empolgada para saber quem será a próxima nessa jornada!"
     },
 
     // Katherine Johnson
-    {
-        cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
-        falante: "Jogadora",
-        dialogo: "Uau..."
-    },
 
     {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Jogadora",
-        dialogo: "Esse lugar é realmente diferente dos outros laboratórios. Tem alguma coisa relacionada ao espaço aqui."
+        dialogo: "Nossa... Esse lugar é realmente diferente dos outros laboratórios. Tem alguma coisa relacionada ao espaço aqui."
     },
 
 
@@ -1021,15 +1011,9 @@ const cenas = [
     {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
-        dialogo: "Sou sim!"
+        dialogo: "Sou sim! Sou matemática e trabalho para a NASA."
     },
 
-
-    {
-        cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
-        falante: "Katherine Johnson",
-        dialogo: "Sou matemática e trabalho para a NASA."
-    },
 
     {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
@@ -1128,7 +1112,7 @@ const cenas = [
 
     {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
-        falante: "Katherine Johnson",
+        falante: "Jogadora",
         dialogo: "Mas por que mudar o ângulo faz diferença?"
     },
 
@@ -1159,7 +1143,7 @@ const cenas = [
     {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
-        dialogo: "O alcance é a distância que o foguete percorre no chão, desde o ponto onde foi lançado até o ponto onde ele cai.?"
+        dialogo: "O alcance é a distância que o foguete percorre no chão, desde o ponto onde foi lançado até o ponto onde ele cai."
     },
 
     {
@@ -1205,12 +1189,6 @@ const cenas = [
 
     //explicação Katherine
 
-
-    {
-        cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
-        falante: "Katherine Johnson",
-        dialogo: "Excelente!"
-    },
 
     {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
@@ -1364,11 +1342,7 @@ const cenas = [
         dialogo: "O último cristal…"
     },
 
-    {
-        cenario: "src/images/cenarios/adalovelace/amuleto.png",
-        falante: "Jogadora",
-        dialogo: "Cada um deles guarda uma parte da sua jornada: a curiosidade de aprender, a coragem de tentar e a determinação de continuar."
-    },
+ 
     {
         cenario: "src/images/cenarios/adalovelace/amuletoECristal.png",
         falante: "Jogadora",
