@@ -237,7 +237,7 @@ display: flex;
 #overlay form button,
 #reiniciar-btn {
     cursor: pointer;
-    margin-top: 50px;
+    margin-top: 25px;
     background-color: #837bb7;
     border: none;
     font-size: 24px;

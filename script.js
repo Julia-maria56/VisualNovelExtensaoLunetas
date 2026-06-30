@@ -1515,10 +1515,6 @@ const cenas = [
 
 ];
 
-
-
-
-
 // Relacionamos os elementos do HTML ao Javascript
 const cenarioElemento = document.getElementById('cenario');
 const caixaDeDialogoElemento = document.getElementById('caixa-de-dialogo');
