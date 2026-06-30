@@ -147,6 +147,10 @@ display: flex;
     transition: background-color 0.1s ease;
     width: 100%;          /* fica sempre 100%, sem mudar no hover */
     box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 #dialogo:hover {
