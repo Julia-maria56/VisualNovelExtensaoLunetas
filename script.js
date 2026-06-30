@@ -251,7 +251,7 @@ const cenas = [
     {
         cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
         falante: "Ada Lovelace",
-        dialogo: "Vou lhe explicar o experimento. Você deve começá-lo após a minha autorização."
+        dialogo: "Vou lhe explicar o que você deve fazer. Você deve começá-lo após a minha autorização."
     },
     {
         cenario: "src/images/cenarios/adalovelace/experimento/experimento.png",
@@ -352,7 +352,7 @@ const cenas = [
     },
     {
         cenario: "src/images/cenarios/adalovelace/amuletoECristal.png",
-        falante: "Jogadora",
+        falante: "Ada Lovelace",
         dialogo: "Você vai descobrir. Agora, vou lhe dar um objeto muito importante. Tome cuidado com ele, pois será útil em sua jornada."
     },
     // {
@@ -361,10 +361,9 @@ const cenas = [
     //     dialogo: "Tome cuidado com ele, pois será útil em sua jornada."
     // },
     {
-        id: "amuletoCompletoAda",
         cenario: "src/images/cenarios/adalovelace/amuletoComCristal.png",
         falante: "Ada Lovelace",
-        dialogo: "Protagonista, encaixe este cristal no seu amuleto. Boa viagem!"
+        dialogo: "{nome}, encaixe este cristal no seu amuleto. Boa viagem!"
     },
 
     // Tela branca
@@ -463,7 +462,7 @@ const cenas = [
     {
         cenario: "src/images/cenarios/mariecurie/marieempe.png",
         falante: "Jogadora",
-        dialogo: "Hum... faz sentido."
+        dialogo: "Hum... Faz sentido."
     },
 
     {
@@ -605,7 +604,7 @@ const cenas = [
     {
         cenario: "src/images/cenarios/mariecurie/marieempe.png",
         falante: "Marie Curie",
-        dialogo: "Jogadora, não é fácil para as mulheres serem ouvidas na ciência."
+        dialogo: "{nome}, não é fácil para as mulheres serem ouvidas na ciência."
     },
 
     {
@@ -672,7 +671,7 @@ const cenas = [
     {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Rosalind Franklin",
-        dialogo: "Você não parece surpresa por estar aqui, protagonista."
+        dialogo: "Você não parece surpresa por estar aqui, {nome}."
     },
 
     {
@@ -797,7 +796,7 @@ const cenas = [
         tipo: "amassarRosalind"
     },
 
-   
+
 
     {
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena3.png",
@@ -808,7 +807,7 @@ const cenas = [
     {
         cenario: "src/images/cenarios/rosalindfrankiln/experimentos/cena4.png",
         tipo: "filtrarRosalind",
-       
+
     },
 
     {
@@ -856,6 +855,11 @@ const cenas = [
         dialogo: "Conseguiu sim. Normalmente ele fica protegido dentro das células e não pode ser visto a olho nu."
     },
 
+    {
+        cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
+        falante: "Rosalind Franklin",
+        dialogo: "Primeiro, você amassou o morango para quebrar parte de suas células."
+    },
     {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Rosalind Franklin",
@@ -944,7 +948,7 @@ const cenas = [
         id: "amuletoCompletoRosalind",
         cenario: "src/images/cenarios/rosalindfrankiln/amuletoComCristal.png",
         falante: "Rosalind Franklin",
-        dialogo: "Tenho certeza de que vai. Boa viagem, Protagonista."
+        dialogo: "Tenho certeza de que vai. Boa viagem, {nome}."
     },
 
     //  {
@@ -997,7 +1001,7 @@ const cenas = [
     {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
-        dialogo: "Olá, Protagonista! Seja bem-vinda ao meu laboratório, querida! Meu nome é Katherine Johnson."
+        dialogo: "Olá, {nome}! Seja bem-vinda ao meu laboratório, querida! Meu nome é Katherine Johnson."
     },
 
 
@@ -1192,12 +1196,6 @@ const cenas = [
 
     {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
-        falante: "Katherine Johnson",
-        dialogo: "O lançamento de 45° possui o maior alcance horizontal"
-    },
-
-    {
-        cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Jogadora",
         dialogo: "Mas por que justamente 45°?"
     },
@@ -1265,14 +1263,7 @@ const cenas = [
     {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
-        dialogo: "Exatamente."
-    },
-
-
-    {
-        cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
-        falante: "Katherine Johnson",
-        dialogo: "Na matemática e na engenharia, muitas vezes a melhor solução está no equilíbrio entre diferentes fatores."
+        dialogo: "Isso mesmo! Na matemática e na engenharia, muitas vezes a melhor solução está no equilíbrio entre diferentes fatores."
     },
 
 
@@ -1342,7 +1333,7 @@ const cenas = [
         dialogo: "O último cristal…"
     },
 
- 
+
     {
         cenario: "src/images/cenarios/adalovelace/amuletoECristal.png",
         falante: "Jogadora",
@@ -1352,7 +1343,7 @@ const cenas = [
         id: "amuletoCompletoKatherine",
         cenario: "src/images/cenarios/adalovelace/amuletoComCristal.png",
         falante: "Katherine Johnson",
-        dialogo: "Continue seguindo sua trajetória, protagonista, Quem sabe até onde ela pode levar você?"
+        dialogo: "Continue seguindo sua trajetória, {nome}, Quem sabe até onde ela pode levar você?"
     },
     {
         cenario: "src/images/cenarios/adalovelace/amuletoComCristal.png",
@@ -1374,7 +1365,7 @@ const cenas = [
 
     // Sala de aula - final
 
-   {
+    {
         cenario: "src/images/cenarios/escola/inicioEscola.png",
         falante: "Jogadora",
         dialogo: "O quê? Eu voltei? Então…"
@@ -1383,7 +1374,7 @@ const cenas = [
     {
         cenario: "src/images/cenarios/escola/inicioEscola.png",
         falante: "Jogadora",
-        dialogo: "foi tudo um sonho?"
+        dialogo: "Foi tudo um sonho?"
     },
 
     {
@@ -1411,12 +1402,6 @@ const cenas = [
     },
 
     {
-        cenario: "src/images/cenarios/escola/inicioEscola.png",
-        falante: "Jogadora",
-        dialogo: "Tantas mulheres mudaram o mundo e não receberam o reconhecimento que mereciam."
-    },
-
-        {
         cenario: "src/images/cenarios/escola/inicioEscola.png",
         falante: "Jogadora",
         dialogo: "Antes eu achava que ciência era só decorar fórmulas, fazer contas difíceis e tirar notas em provas."
@@ -1455,10 +1440,10 @@ const cenas = [
     {
         cenario: "src/images/cenarios/escola/inicioEscola.png",
         falante: "Jogadora",
-        dialogo: "Melhor guardar minhas coisas, tá quase na hora de ir embora."
+        dialogo: "Melhor guardar minhas coisas, está quase na hora de ir embora."
     },
 
-        {
+    {
         cenario: "src/images/cenarios/escola/inicioEscola.png",
         falante: "Jogadora",
         dialogo: "Espera um pouco."
@@ -1470,7 +1455,7 @@ const cenas = [
         dialogo: "O que é isso?"
     },
 
-//INT. LABORATÓRIO - DIA (futuro) - Cena final
+    //INT. LABORATÓRIO - DIA (futuro) - Cena final
 
 
     {
@@ -1497,19 +1482,19 @@ const cenas = [
         dialogo: "Assim como Marie, Ada, Rosalind e Katherine fizeram antes de mim."
     },
 
-        {
+    {
         cenario: "src/images/cenarios/mariecurie/protagonistaempe.png",
         falante: "Jogadora",
         dialogo: "Aquelas cientistas me ensinaram que a ciência não pertence a um tipo  específico de pessoa."
     },
 
-        {
+    {
         cenario: "src/images/cenarios/mariecurie/protagonistaempe.png",
         falante: "Jogadora",
         dialogo: "Ela pertence a todos que têm coragem de questionar, aprender e descobrir."
     },
 
-        {
+    {
         cenario: "src/images/cenarios/mariecurie/protagonistaempe.png",
         falante: "Jogadora",
         dialogo: "E espero que, no futuro, outras meninas também descubram aquilo que eu descobri."
@@ -1604,6 +1589,7 @@ function trocarRostoPersonagem(falante) {
 
 // Exibe uma fala na caixa de diálogo (Adiciona nome do personagem, fala e retrato)
 function mostrarDialogo(falante, dialogo) {
+
     caixaDeDialogoElemento.style.display = 'flex'; // garante que a caixa de diálogo esteja visível
     falanteElemento.textContent = falante; // define o nome de quem está falando
     dialogoElemento.textContent = dialogo; // define o texto da fala
@@ -1931,13 +1917,19 @@ function mostrarCena(indice) {
 
     cenarioElemento.style.backgroundImage = `url(${cena.cenario})`; // atualiza a imagem de fundo conforme a cena
     limparBotoes(); // remove qualquer botão que estivesse na tela anteriormente
+    const textoDialogo = (cena.dialogo ?? "").replace("{nome}", nomeJogadora);
 
+    console.log("Nome:", nomeJogadora);
+    console.log("Original:", cena.dialogo);
+    console.log("Substituído:", textoDialogo);
+
+    mostrarDialogo(
+        cena.falante === "Jogadora" ? nomeJogadora : (cena.falante ?? ""),
+        textoDialogo
+    );
     if (cena.tipo === "trajetoria60Katherine") {
 
-        mostrarDialogo(
-            cena.falante,
-            cena.dialogo
-        );
+       
 
         aoClicarNoDialogo(function () {
 
@@ -2125,10 +2117,10 @@ function mostrarCena(indice) {
     }
 
     // Cena normal com diálogo
-    mostrarDialogo( // para cenas sem "tipo" especial, mostra o diálogo normalmente
-        cena.falante === 'Jogadora' ? nomeJogadora : (cena.falante ?? ''), // se o falante for "Jogadora", usa o nome digitado; senão usa o nome do falante (ou string vazia se não houver)
-        cena.dialogo ?? '' // usa o texto do diálogo, ou string vazia se não houver
-    );
+   mostrarDialogo(
+    cena.falante === "Jogadora" ? nomeJogadora : (cena.falante ?? ""),
+    textoDialogo
+);
 }
 
 // Avança para a próxima cena ao clicar na caixa de diálogo
