@@ -158,7 +158,7 @@ const cenas = [
     {
         cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
         falante: "Jogadora",
-        dialogo: "Seu escritório? Então quem é você?"
+        dialogo: "Seu escritório? Então, quem é você?"
     },
 
     {
