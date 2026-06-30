@@ -4,113 +4,57 @@
     margin-top: 3%;
 }
 
+.comoJogar-img{
+    width: 100%;
+    height:600px;
+}
+
+.comoJogar-img img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    padding: 20px 10px;
+    padding: 70px 10px; 
     width: 70%;
     height: auto;
     gap: 100px;
+    margin-top: 10px;
 }
 
-.container-card-esquerda {
-    width: 95%;
-     position: relative;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.card-branco-esquerda {
-    background-color: #FEF5E6;
-    width: 90%;
-    min-height: 300px;
-    height: auto;
-    position: absolute;
-    top: 40px;
-    /* desce o card branco */
-    left: 0;
-    z-index: 1;
+.card{
     border-radius: 10px;
-    box-shadow: -4px 0px 4px rgba(0, 0, 0, 0.25);
-
-    border: 1px #000000;
-
-}
-
-.card-roxo-direita {
-    border-radius: 10px;
-    background-color: #342d59;
-    color: white;
-    width: 90%;
-    min-height: 300px;
-    height: auto;
-    position: relative;
-    z-index: 2;
-    box-shadow: -4px 0px 4px rgba(0, 0, 0, 0.25);
-    padding: 25px 30px;
-    
-}
-
-.card-roxo-direita h3, .card-roxo-esquerda h3 {
-    font-family: "Sora";
-    font-size: 25px;
-}
-
-.card-roxo-direita p, .card-roxo-esquerda p {
-    font-family: "Nunito";
-    font-size: 18px;
-    text-align: left;
-}
-
-.container-card-direita{
-    width: 95%;
-    position: relative;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;   
-}
-
-.card-branco-direita{
-    background-color: #FEF5E6;
-    width: 90%;
-    min-height: 300px;
-    height: auto;
-    position: absolute;
-    top: 40px;
-    /* desce o card branco */
-    right: 0;
-    z-index: 1;
-    border-radius: 10px;
-    box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
-    border: 1px #000000;
-}
-
-.card-roxo-esquerda{
-     border-radius: 10px;
-    background-color: #342d59;
-    color: white;
-    width: 90%;
-    min-height: 300px;
+    background-color: #fef5e6;
+     width: 80%;
+    min-height: 100px;
     height: auto;
     position: relative;
     z-index: 2;
     box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
-    padding: 25px 30px;
+    padding: 30px 20px;
 }
 
-.card-roxo-esquerda h3{
-    text-align: right;
+.card p{
+    color: black;
+    font-weight: 600;
+    font-size:17px;
+    padding-left: 10px;
 }
 
-.card-roxo-direita ul {
+.card h3{
+    font-size:26px;
+}
+
+.card ul {
     padding-left: 30px;
 }
 
-.card-roxo-direita ul li{
+.card ul li{
     font-size:17px;
 }
