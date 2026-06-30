@@ -1371,10 +1371,160 @@ const cenas = [
         falante: "Jogadora",
         dialogo: "Consegui todos os cristais. Qual será a minha próxima missão?"
     },
-    {
-        cenario: "src/images/cenarios/adalovelace/escritorio-Adamaior.png",
+
+    // Sala de aula - final
+
+   {
+        cenario: "src/images/cenarios/escola/inicioEscola.png",
         falante: "Jogadora",
-        dialogo: "Quer ser a sexta passageira?"
+        dialogo: "O quê? Eu voltei? Então…"
+    },
+
+    {
+        cenario: "src/images/cenarios/escola/inicioEscola.png",
+        falante: "Jogadora",
+        dialogo: "foi tudo um sonho?"
+    },
+
+    {
+        cenario: "src/images/cenarios/escola/inicioEscola.png",
+        falante: "Jogadora",
+        dialogo: "Ada Lovelace, Marie Curie, Rosalind Franklin, Katherine Johnson..."
+    },
+
+    {
+        cenario: "src/images/cenarios/escola/inicioEscola.png",
+        falante: "Jogadora",
+        dialogo: "Aprendi tanto com elas: Sobre lógica. Sobre observação. Sobre descobrir coisas que ninguém tinha descoberto antes."
+    },
+
+    {
+        cenario: "src/images/cenarios/escola/inicioEscola.png",
+        falante: "Jogadora",
+        dialogo: "Tantas mulheres mudaram o mundo e não receberam o reconhecimento que mereciam."
+    },
+
+    {
+        cenario: "src/images/cenarios/escola/inicioEscola.png",
+        falante: "Jogadora",
+        dialogo: "Engraçado..."
+    },
+
+    {
+        cenario: "src/images/cenarios/escola/inicioEscola.png",
+        falante: "Jogadora",
+        dialogo: "Tantas mulheres mudaram o mundo e não receberam o reconhecimento que mereciam."
+    },
+
+        {
+        cenario: "src/images/cenarios/escola/inicioEscola.png",
+        falante: "Jogadora",
+        dialogo: "Antes eu achava que ciência era só decorar fórmulas, fazer contas difíceis e tirar notas em provas."
+    },
+
+    {
+        cenario: "src/images/cenarios/escola/inicioEscola.png",
+        falante: "Jogadora",
+        dialogo: "Mas elas me mostraram que ciência é fazer perguntas, é ser curiosa, é tentar entender como o mundo funciona."
+    },
+
+    {
+        cenario: "src/images/cenarios/escola/inicioEscola.png",
+        falante: "Jogadora",
+        dialogo: "Se eu nunca tivesse passado por tudo isso, talvez continuasse acreditando que ciência não era para mim."
+    },
+
+    {
+        cenario: "src/images/cenarios/escola/inicioEscola.png",
+        falante: "Jogadora",
+        dialogo: "Agora eu percebo que talvez eu nunca tenha dado uma chance para ela."
+    },
+
+    {
+        cenario: "src/images/cenarios/escola/inicioEscola.png",
+        falante: "Jogadora",
+        dialogo: "Na verdade…"
+    },
+
+    {
+        cenario: "src/images/cenarios/escola/inicioEscola.png",
+        falante: "Jogadora",
+        dialogo: "Acho que pela primeira vez consigo me imaginar fazendo parte desse mundo."
+    },
+
+    {
+        cenario: "src/images/cenarios/escola/inicioEscola.png",
+        falante: "Jogadora",
+        dialogo: "Melhor guardar minhas coisas, tá quase na hora de ir embora."
+    },
+
+        {
+        cenario: "src/images/cenarios/escola/inicioEscola.png",
+        falante: "Jogadora",
+        dialogo: "Espera um pouco."
+    },
+
+    {
+        cenario: "src/images/cenarios/escola/inicioEscola.png",
+        falante: "Jogadora",
+        dialogo: "O que é isso?"
+    },
+
+//INT. LABORATÓRIO - DIA (futuro) - Cena final
+
+
+    {
+        cenario: "src/images/cenarios/mariecurie/protagonistaempe.png",
+        falante: "Jogadora",
+        dialogo: "Alguns anos depois..."
+    },
+
+    {
+        cenario: "src/images/cenarios/mariecurie/protagonistaempe.png",
+        falante: "Jogadora",
+        dialogo: "As histórias delas mudaram a minha."
+    },
+
+    {
+        cenario: "src/images/cenarios/mariecurie/protagonistaempe.png",
+        falante: "Jogadora",
+        dialogo: "A curiosidade virou interesse. O interesse virou estudo. E o estudo se transformou em uma profissão."
+    },
+
+    {
+        cenario: "src/images/cenarios/mariecurie/protagonistaempe.png",
+        falante: "Jogadora",
+        dialogo: "Assim como Marie, Ada, Rosalind e Katherine fizeram antes de mim."
+    },
+
+        {
+        cenario: "src/images/cenarios/mariecurie/protagonistaempe.png",
+        falante: "Jogadora",
+        dialogo: "Aquelas cientistas me ensinaram que a ciência não pertence a um tipo  específico de pessoa."
+    },
+
+        {
+        cenario: "src/images/cenarios/mariecurie/protagonistaempe.png",
+        falante: "Jogadora",
+        dialogo: "Ela pertence a todos que têm coragem de questionar, aprender e descobrir."
+    },
+
+        {
+        cenario: "src/images/cenarios/mariecurie/protagonistaempe.png",
+        falante: "Jogadora",
+        dialogo: "E espero que, no futuro, outras meninas também descubram aquilo que eu descobri."
+    },
+
+    {
+        cenario: "src/images/cenarios/mariecurie/protagonistaempe.png",
+        falante: "Jogadora",
+        dialogo: "Que a ciência também pode ser para elas."
+    },
+
+    {
+        cenario: "src/images/cenarios/mariecurie/protagonistaempe.png",
+        falante: "Jogadora",
+        dialogo: "E você? Quer ser a sexta passageira?"
     },
 
 
