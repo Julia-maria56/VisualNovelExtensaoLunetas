@@ -935,7 +935,7 @@ const cenas = [
     {
         cenario: "src/images/cenarios/adalovelace/amuletoECristal.png",
         falante: "Rosalind Franklin",
-        dialogo: "Agora coloque-o em seu amuleto e continue sua jornada."
+        dialogo: "Agora, coloque-o em seu amuleto e continue sua jornada."
     },
 
     {
@@ -1338,8 +1338,8 @@ const cenas = [
 
     {
         cenario: "src/images/cenarios/adalovelace/amuletoECristal.png",
-        falante: "Jogadora",
-        dialogo: "Agora coloque-o em seu amuleto."
+        falante: "Katherine Johnson",
+        dialogo: "Coloque-o em seu amuleto."
     },
     {
         id: "amuletoCompletoKatherine",
