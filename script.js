@@ -33,13 +33,13 @@ const cenas = [
     //Escola
 
     {
-        cenario: "src/images/IMG_1065.png",
+        cenario: "src/images/cenarios/adalovelace/escritorioAda.png",
         falante: "Professora",
         dialogo: "Desde muito tempo, homens e mulheres dedicam suas vidas à ciência para entender o mundo e criar coisas que antes pareciam impossíveis."
     },
 
     {
-        cenario: "src/images/cenarios/escola/inicioEscola.png",
+        cenario: "src/images/cenarios/mariecurie/laboratorioMarie.png",
         falante: "Professora",
         dialogo: "Porém, desde que eu iniciei minha carreira, sempre percebi como as conquistas das cientistas mulheres possuem pouco reconhecimento pelas pessoas."
     },
@@ -390,7 +390,7 @@ const cenas = [
     {
         cenario: "src/images/cenarios/mariecurie/marieempe.png",
         falante: "Marie Curie",
-        dialogo: "Olá, Jogadora. Você já deve estar familiarizada com a situação e deve me conhecer também."
+        dialogo: "Olá, {nome}. Você já deve estar familiarizada com a situação e deve me conhecer também."
     },
 
     {
@@ -741,7 +741,7 @@ const cenas = [
     {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Rosalind Franklin",
-        dialogo: "Gostaria que fosse tão simples. Uma parte do meu trabalho é compartilhada sem minha autorização e ajuda outros cientistas a desenvolver o modelo do DNA."
+        dialogo: "Gostaria que fosse tão simples. Infelizmente, uma parte do meu trabalho foi compartilhada sem a minha autorização e ajudou outros cientistas a desenvolver o modelo do DNA."
     },
 
     {
@@ -911,7 +911,7 @@ const cenas = [
     {
         cenario: "src/images/cenarios/rosalindfrankiln/lab-rosalind.png",
         falante: "Rosalind Franklin",
-        dialogo: "A ciência costuma ser assim. Muitas das coisas mais importantes do mundo não podem ser vistas à primeira vista."
+        dialogo: "A ciência costuma ser assim. Muitas das coisas mais importantes do mundo nem sempre são percebidas à primeira vista."
     },
 
     {
@@ -1229,7 +1229,7 @@ const cenas = [
     {
         cenario: "src/images/cenarios/katherinejohnson/escritorio-Katherinemaior.png",
         falante: "Katherine Johnson",
-        dialogo: "O foguete sobe muito mais alto, mas grande parte de sua velocidade é utilizada para ganhar altitude."
+        dialogo: "O foguete sobe mais alto, mas grande parte de sua velocidade é utilizada para ganhar altitude."
     },
 
     {
@@ -1526,7 +1526,7 @@ const overlayElemento = document.getElementById('overlay');
 const botoesCenaElemento = document.getElementById('botoes-cena');
 const comecarBotaoElemento = document.getElementById('comecar-btn');
 const botaoFinalizarAda = document.getElementById("finalizar-ada");
-const elementosLogo = document.getElementById("elementos-logo");
+// const elementosLogo = document.getElementById("elementos-logo");
 
 
 
@@ -2591,7 +2591,7 @@ function criarBotaoFinalizarAda() {
 
 comecarBotaoElemento.addEventListener('click', function (event) { // registra o clique no botão "JOGAR"
     event.preventDefault(); // previne o comportamento padrão (ex: envio de formulário)
-    elementosLogo.style.display = "none";
+    // elementosLogo.style.display = "none";
     const inputNome = document.getElementById('nome-jogadora'); // obtém o campo de input do nome
     nomeJogadora = inputNome.value.trim(); // armazena o nome digitado, removendo espaços extras
 
@@ -2610,7 +2610,7 @@ comecarBotaoElemento.addEventListener('click', function (event) { // registra o 
 
 function finalizarJogo() {
     cenaAtual = 0; // reseta o índice da cena para o início
-    elementosLogo.style.display = "flex";
+    // elementosLogo.style.display = "flex";
     amostraAMarieFoiAnalisada = false; // reseta o estado da Amostra A
     amostraBMarieFoiAnalisada = false; // reseta o estado da Amostra B
     cenarioElemento.style.backgroundImage = 'none'; // remove a imagem de fundo da cena
@@ -2637,7 +2637,7 @@ function finalizarJogo() {
 
         document.getElementById('comecar-btn').addEventListener('click', function (event) { // registra o clique no novo botão "JOGAR"
             event.preventDefault(); // previne comportamento padrão
-            elementosLogo.style.display = "none";
+            // elementosLogo.style.display = "none";
 
             const inputNome = document.getElementById('nome-jogadora'); // obtém o novo campo de input
             nomeJogadora = inputNome.value.trim(); // armazena o novo nome digitado
@@ -2653,51 +2653,4 @@ function finalizarJogo() {
             mostrarCena(cenaAtual); // reinicia o jogo a partir da cena 0
         });
     });
-}
-
-const slides = [
-    {
-        imagem: "src/images/rosalind.jpg",
-        texto: "Clique na caixa de diálogo para avançar a história."
-    },
-    {
-        imagem: "src/images/katherine.jpg",
-        texto: "Durante a aventura aparecerão desafios interativos."
-    },
-    {
-        imagem: "src/images/tutorial/marie.png",
-        texto: "Escolha a alternativa correta para continuar."
-    }
-];
-
-let indice = 0;
-
-const imagem = document.getElementById("imagem-slide");
-const texto = document.getElementById("texto-slide");
-
-function atualizarSlide(){
-    imagem.src = slides[indice].imagem;
-    texto.textContent = slides[indice].texto;
-}
-
-atualizarSlide();
-
-document.getElementById("btn-proximo").onclick = () => {
-    indice++;
-
-    if(indice >= slides.length){
-        indice = 0;
-    }
-
-    atualizarSlide();
-}
-
-document.getElementById("btn-anterior").onclick = () => {
-    indice--;
-
-    if(indice < 0){
-        indice = slides.length - 1;
-    }
-
-    atualizarSlide();
 }
